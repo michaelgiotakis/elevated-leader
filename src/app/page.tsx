@@ -9,41 +9,7 @@ import { CTA_LINKS } from "@/lib/site";
 
 // ─── Placeholder data ────────────────────────────────────────────────────────
 
-const PILLARS = [
-  {
-    id: "identity",
-    label: "Identity",
-    eyebrowColor: "text-muted-rose",
-    heading: "Pillar One: Identity",
-    body: "Placeholder copy describing the Identity pillar — who the leader is becoming and how clarity of identity drives every decision.",
-  },
-  {
-    id: "leverage",
-    label: "Leverage",
-    eyebrowColor: "text-bronze",
-    heading: "Pillar Two: Leverage",
-    body: "Placeholder copy describing the Leverage pillar — how to build systems, delegate effectively, and stop being the bottleneck.",
-  },
-  {
-    id: "structure",
-    label: "Structure",
-    eyebrowColor: "text-slate",
-    heading: "Pillar Three: Structure",
-    body: "Placeholder copy describing the Structure pillar — the operational architecture that allows a business to run without constant input.",
-  },
-];
 
-const COURSES = [
-  { number: "01", title: "Course Title Placeholder" },
-  { number: "02", title: "Course Title Placeholder" },
-  { number: "03", title: "Course Title Placeholder" },
-  { number: "04", title: "Course Title Placeholder" },
-  { number: "05", title: "Course Title Placeholder" },
-  { number: "06", title: "Course Title Placeholder" },
-  { number: "07", title: "Course Title Placeholder" },
-  { number: "08", title: "Course Title Placeholder" },
-  { number: "09", title: "Course Title Placeholder" },
-];
 
 const STEPS = [
   {
@@ -278,99 +244,215 @@ export default function HomePage() {
       </Section>
 
       {/* ── 3. DIAGNOSTIC OVERVIEW ──────────────────────────────────────── */}
-      <Section className="bg-warm-stone/20">
+      <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>
-          <div className="max-w-2xl mx-auto text-center">
-            <Eyebrow>Free Assessment</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
-              Start With the Leadership Diagnostic
+
+          {/* Header */}
+          <div className="max-w-2xl mb-16 md:mb-20">
+            <Eyebrow>The Elevated Leader Method</Eyebrow>
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
+              Diagnose Before You Decide What to Fix
             </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/60 mb-10 leading-relaxed">
-              Placeholder description of the diagnostic — what it measures, how
-              long it takes, and what the leader will know at the end of it.
+            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed mb-5">
+              Most founders try to solve what feels urgent. The problem is,
+              urgency rarely equals importance.
             </p>
-            <Button href={CTA_LINKS.diagnostic} variant="primary" external>
-              Take the Free Diagnostic
+            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+              The Elevated Leader Diagnostic shows you exactly where your
+              business is breaking down across three core levers:
+            </p>
+          </div>
+
+          {/* Three lever blocks */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-muted-rose mb-8" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-6">
+                Identity
+              </p>
+              <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian mb-5 leading-snug">
+                Elevate Your Self
+              </h3>
+              <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
+                How you think, decide, and show up as a leader. This is where
+                clarity, standards, and self-leadership either expand your
+                business—or quietly cap it.
+              </p>
+            </Card>
+
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-slate mb-8" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-6">
+                Structure
+              </p>
+              <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian mb-5 leading-snug">
+                Streamline Your Structure
+              </h3>
+              <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
+                How your business operates day-to-day. Systems, roles,
+                workflows, and decision paths—this is where complexity either
+                compounds or collapses.
+              </p>
+            </Card>
+
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-6">
+                Leverage
+              </p>
+              <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian mb-5 leading-snug">
+                Unlock Your Leverage
+              </h3>
+              <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
+                How you multiply your time and impact. This is where delegation,
+                ownership, and scale either free you—or keep everything
+                dependent on you.
+              </p>
+            </Card>
+          </div>
+
+          {/* Supporting line */}
+          <p className="font-sans text-base md:text-lg font-medium text-obsidian/70 border-l-2 border-bronze pl-5 max-w-xl mb-16 md:mb-20">
+            Each lever is broken into three dimensions—giving you a 9-point
+            diagnostic across your entire business.
+          </p>
+
+          {/* CTA */}
+          <div className="border-t border-warm-stone pt-12 md:pt-16">
+            <p className="font-sans text-base md:text-lg font-semibold text-obsidian mb-8 leading-snug">
+              Start with the diagnostic. Then build what actually matters.
+            </p>
+            <Button href="/diagnostic" variant="primary">
+              Take the Diagnostic
             </Button>
           </div>
+
         </Container>
       </Section>
 
-      {/* ── 4. THREE PILLARS ────────────────────────────────────────────── */}
-      <Section>
-        <Container>
-          <div className="max-w-xl mb-14">
-            <Eyebrow>The Framework</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
-              Three Pillars of Elevated Leadership
-            </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/60 leading-relaxed">
-              Placeholder intro — the three pillars and how they form a complete
-              framework for building a business that operates without the leader
-              as a bottleneck.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {PILLARS.map((pillar) => (
-              <Card key={pillar.id}>
-                <p className={`font-sans text-xs font-semibold tracking-[0.2em] uppercase mb-4 ${pillar.eyebrowColor}`}>
-                  {pillar.label}
-                </p>
-                <h3 className="font-sans font-semibold text-xl md:text-[22px] text-obsidian mb-4 leading-snug">
-                  {pillar.heading}
-                </h3>
-                <p className="font-sans text-sm md:text-base text-obsidian/60 leading-relaxed">
-                  {pillar.body}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* ── 5. COURSES / SYSTEM ─────────────────────────────────────────── */}
+      {/* ── 4. SYSTEM BREAKDOWN ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-14">
-            <Eyebrow>The Complete System</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
-              Nine Courses. One Complete Transformation.
+
+          {/* Header */}
+          <div className="max-w-2xl mb-16 md:mb-20">
+            <Eyebrow>The 9-Course System</Eyebrow>
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
+              Build a Business That Runs Without You
             </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/60 leading-relaxed">
-              Placeholder intro — each course is a focused module inside a
-              coherent system, designed to be taken in sequence or guided by
-              your diagnostic results.
+            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+              Each lever is broken into three focused modules. Together, they
+              form a complete system designed to remove you as the bottleneck
+              and build a business that operates with clarity, structure, and
+              leverage.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {COURSES.map((course) => (
-              <Card key={course.number} className="flex gap-5 items-start">
-                <span className="font-sans text-xs font-semibold tracking-widest text-bronze shrink-0 pt-1">
-                  {course.number}
-                </span>
-                <div>
-                  <h3 className="font-sans font-semibold text-base text-obsidian mb-2">
-                    {course.title}
-                  </h3>
-                  <p className="font-sans text-sm text-obsidian/50 leading-relaxed">
-                    Placeholder one-line description of this course.
-                  </p>
+          {/* Three columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
+
+            {/* Identity */}
+            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-muted-rose mb-8" />
+              <div className="min-h-[5.5rem]">
+                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-4">
+                  Identity
+                </p>
+                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
+                  Elevate Your Self
+                </h3>
+              </div>
+              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">01</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Leadership Identity</p>
                 </div>
-              </Card>
-            ))}
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">02</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Decision Standards</p>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">03</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Personal Operating System</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Structure */}
+            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-slate mb-8" />
+              <div className="min-h-[5.5rem]">
+                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-4">
+                  Structure
+                </p>
+                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
+                  Streamline Your Structure
+                </h3>
+              </div>
+              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">04</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Roles &amp; Responsibilities</p>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">05</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Systems &amp; Workflows</p>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">06</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Operational Clarity</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Leverage */}
+            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
+              <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
+              <div className="min-h-[5.5rem]">
+                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-4">
+                  Leverage
+                </p>
+                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
+                  Unlock Your Leverage
+                </h3>
+              </div>
+              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">07</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Delegation &amp; Ownership</p>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">08</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Team Leverage</p>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">09</span>
+                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Scale Architecture</p>
+                </div>
+              </div>
+            </Card>
+
           </div>
 
-          <div className="mt-12">
-            <Button href="/courses" variant="secondary">
-              View All Courses
+          {/* Supporting line */}
+          <p className="font-sans text-base md:text-lg font-medium text-obsidian/70 border-l-2 border-bronze pl-5 max-w-xl mb-12 md:mb-14">
+            Take what you need—or build the full system.
+          </p>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-5">
+            <Button href="/courses" variant="primary">
+              Explore the Full System
+            </Button>
+            <Button href="/diagnostic" variant="secondary">
+              Take the Diagnostic
             </Button>
           </div>
+
         </Container>
       </Section>
 
-      {/* ── 6. FOUNDING COHORT ──────────────────────────────────────────── */}
+      {/* ── 5. FOUNDING COHORT ──────────────────────────────────────────── */}
       <section className="bg-obsidian py-20 md:py-28">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
