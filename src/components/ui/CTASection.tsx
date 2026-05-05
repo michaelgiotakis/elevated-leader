@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 interface CTASectionProps {
   heading: string;
   subheading?: string;
+  body?: string;
   primaryLabel: string;
   primaryHref: string;
   primaryExternal?: boolean;
@@ -14,6 +15,7 @@ interface CTASectionProps {
 export function CTASection({
   heading,
   subheading,
+  body,
   primaryLabel,
   primaryHref,
   primaryExternal = false,
@@ -28,8 +30,13 @@ export function CTASection({
             {heading}
           </h2>
           {subheading && (
-            <p className="font-sans text-warm-stone text-lg mb-10 leading-relaxed">
+            <p className="font-sans text-warm-stone text-lg mb-5 leading-relaxed">
               {subheading}
+            </p>
+          )}
+          {body && (
+            <p className="font-sans text-ivory/70 text-base mb-10 leading-relaxed">
+              {body}
             </p>
           )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

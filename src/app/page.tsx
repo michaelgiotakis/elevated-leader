@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/ui/CTASection";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { Section } from "@/components/ui/Section";
 import { CTA_LINKS } from "@/lib/site";
 
@@ -14,23 +15,23 @@ import { CTA_LINKS } from "@/lib/site";
 const STEPS = [
   {
     number: "01",
-    title: "Take the Diagnostic",
-    body: "Placeholder step description — what the diagnostic reveals and why it matters as a starting point.",
+    title: "Diagnose the Real Bottleneck",
+    body: "See exactly where your business is breaking across identity, structure, and leverage.",
   },
   {
     number: "02",
-    title: "Identify Your Focus Area",
-    body: "Placeholder step description — how the diagnostic results map to specific courses and pillars.",
+    title: "Focus on What Moves the Business",
+    body: "Stop reacting to urgency. Work on the one area that actually unlocks growth.",
   },
   {
     number: "03",
-    title: "Work Through the System",
-    body: "Placeholder step description — how the nine courses build on each other in sequence.",
+    title: "Build Systems That Remove You",
+    body: "Put the right structure in place so the business stops relying on you day to day.",
   },
   {
     number: "04",
-    title: "Build the Business That Runs Itself",
-    body: "Placeholder step description — the outcome and transformation after completing the system.",
+    title: "Scale Without Adding Complexity",
+    body: "Grow without increasing chaos, dependency, or decision load.",
   },
 ];
 
@@ -38,27 +39,27 @@ const FAQ_ITEMS = [
   {
     question: "Who is The Elevated Leader for?",
     answer:
-      "Placeholder answer describing the ideal client — business owners, founders, or senior leaders at a specific stage of growth.",
+      "This is for founders already running a real business, typically in the $1M–$5M range, who feel like they've become the bottleneck. If you're still early-stage or figuring things out, this won't be the right fit.",
   },
   {
-    question: "How does the 9-course system work?",
+    question: "How does the diagnostic work?",
     answer:
-      "Placeholder answer explaining the structure of the system — how the courses are sequenced and how they build on each other.",
+      "The diagnostic takes around 7 minutes. It scores your business across identity, structure, and leverage, then shows where things are breaking down and what to focus on next.",
   },
   {
-    question: "What is the Founding Cohort?",
+    question: "Do I need to go through everything?",
     answer:
-      "Placeholder answer explaining the founding cohort offer — the exclusive early-access pricing, bonuses, and what makes it different.",
+      "No. You can start with the lever that matters most. The system is designed so you can go deep where needed without wasting time elsewhere.",
   },
   {
-    question: "How long does it take to complete?",
+    question: "Why is this priced this way?",
     answer:
-      "Placeholder answer about time commitment — the expected pace, the minimum viable progress per week, and typical timelines.",
+      "Pricing will increase as the system becomes more widely available.",
   },
   {
-    question: "What if I'm not sure where to start?",
+    question: "What happens after I purchase?",
     answer:
-      "Placeholder answer pointing to the diagnostic as the entry point and clarifying how it removes the guesswork.",
+      "You'll get immediate access to your selected modules, along with clear direction on how to work through them based on your diagnostic results.",
   },
 ];
 
@@ -85,16 +86,19 @@ export default function HomePage() {
               <h1 className="font-heading text-[48px] md:text-[56px] lg:text-[64px] leading-[1.02] text-ivory mb-8 tracking-[-0.02em]">
                 How Elevated Is Your Leadership for a $1–5M Business?
               </h1>
-              <p className="font-sans text-base md:text-lg text-ivory/75 mb-6 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-ivory/75 mb-5 leading-relaxed">
                 In just 7 minutes, the Elevated Leader Diagnostic scores your
-                identity, structure, and leverage across 9 dimensions so you can
+                identity, structure, and leverage across 9 dimensions. You&apos;ll
                 see exactly what&apos;s stopping your business from running
                 without you.
               </p>
+              <p className="font-sans text-base md:text-lg text-warm-stone mb-5 leading-relaxed">
+                Most businesses at this level don&apos;t break because of
+                strategy. They break because the founder becomes the bottleneck.
+              </p>
               <p className="font-sans text-sm text-warm-stone mb-12 leading-relaxed">
-                Designed specifically for female founders leading $1–5M
-                companies who are done with generic advice and ready for clear,
-                grounded direction.
+                Designed for female founders leading $1–5M companies who are
+                done with generic advice and ready for clear, grounded direction.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 mb-8">
                 <Button href="/diagnostic" variant="primary" className="px-10 py-5">
@@ -185,11 +189,10 @@ export default function HomePage() {
               Business
             </h2>
             <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed max-w-xl">
-              Most of the business advice aimed at women is built for getting to
-              six figures or crossing the first million. Almost none of it speaks
-              to what happens next—when you&apos;re leading a real company, with
-              real people, real complexity, and a calendar that never seems to
-              let up.
+              Most business advice for women is built for getting to six figures
+              or crossing the first million. Almost none of it addresses what
+              comes next, when you&apos;re running a real company with real
+              people, real complexity, and a calendar that never seems to let up.
             </p>
           </div>
 
@@ -200,24 +203,24 @@ export default function HomePage() {
 
           {/* Problem cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
-            <Card className="bg-warm-stone/10 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve outgrown &ldquo;hustle harder&rdquo; and vague
                 &ldquo;CEO mindset&rdquo; platitudes.
               </p>
             </Card>
-            <Card className="bg-warm-stone/10 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve hired a team… but you&apos;re still the brain,
                 bottleneck, and safety net.
               </p>
             </Card>
-            <Card className="bg-warm-stone/10 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
-                You&apos;ve tried adding tools, offers, and tactics—and somehow
+                You&apos;ve tried adding tools, offers, and tactics. And somehow
                 it all feels heavier.
               </p>
             </Card>
@@ -229,7 +232,7 @@ export default function HomePage() {
               The Elevated Leader exists for this stage.
             </p>
             <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed mb-8">
-              Not for beginners, not for hobby businesses—but for the women
+              Not for beginners, not for hobby businesses. Built for the women
               already in the arena, ready for a business that runs without them.
             </p>
             <Link
@@ -276,7 +279,7 @@ export default function HomePage() {
               <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
                 How you think, decide, and show up as a leader. This is where
                 clarity, standards, and self-leadership either expand your
-                business—or quietly cap it.
+                business, or quietly cap it.
               </p>
             </Card>
 
@@ -290,7 +293,7 @@ export default function HomePage() {
               </h3>
               <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
                 How your business operates day-to-day. Systems, roles,
-                workflows, and decision paths—this is where complexity either
+                workflows, and decision paths. This is where complexity either
                 compounds or collapses.
               </p>
             </Card>
@@ -305,7 +308,7 @@ export default function HomePage() {
               </h3>
               <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
                 How you multiply your time and impact. This is where delegation,
-                ownership, and scale either free you—or keep everything
+                ownership, and scale either free you, or keep everything
                 dependent on you.
               </p>
             </Card>
@@ -313,7 +316,7 @@ export default function HomePage() {
 
           {/* Supporting line */}
           <p className="font-sans text-base md:text-lg font-medium text-obsidian/70 border-l-2 border-bronze pl-5 max-w-xl mb-16 md:mb-20">
-            Each lever is broken into three dimensions—giving you a 9-point
+            Each lever is broken into three dimensions, giving you a 9-point
             diagnostic across your entire business.
           </p>
 
@@ -341,10 +344,9 @@ export default function HomePage() {
               Build a Business That Runs Without You
             </h2>
             <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-              Each lever is broken into three focused modules. Together, they
-              form a complete system designed to remove you as the bottleneck
-              and build a business that operates with clarity, structure, and
-              leverage.
+              Each lever is broken into three focused modules. Together they
+              form a complete system, built to remove you as the bottleneck and
+              create a business that runs without you.
             </p>
           </div>
 
@@ -365,15 +367,15 @@ export default function HomePage() {
               <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">01</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Leadership Identity</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Leadership Identity</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">02</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Decision Standards</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Decision Standards</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">03</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Personal Operating System</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Personal Operating System</p>
                 </div>
               </div>
             </Card>
@@ -392,15 +394,15 @@ export default function HomePage() {
               <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">04</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Roles &amp; Responsibilities</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Roles &amp; Responsibilities</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">05</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Systems &amp; Workflows</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Systems &amp; Workflows</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">06</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Operational Clarity</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Operational Clarity</p>
                 </div>
               </div>
             </Card>
@@ -419,15 +421,15 @@ export default function HomePage() {
               <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">07</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Delegation &amp; Ownership</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Delegation &amp; Ownership</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">08</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Team Leverage</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Team Leverage</p>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">09</span>
-                  <p className="font-sans text-sm font-medium text-obsidian/80 leading-snug">Scale Architecture</p>
+                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Scale Architecture</p>
                 </div>
               </div>
             </Card>
@@ -436,7 +438,7 @@ export default function HomePage() {
 
           {/* Supporting line */}
           <p className="font-sans text-base md:text-lg font-medium text-obsidian/70 border-l-2 border-bronze pl-5 max-w-xl mb-12 md:mb-14">
-            Take what you need—or build the full system.
+            Take what you need, or build the full system.
           </p>
 
           {/* CTA */}
@@ -453,43 +455,126 @@ export default function HomePage() {
       </Section>
 
       {/* ── 5. FOUNDING COHORT ──────────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28">
+      <section className="bg-obsidian py-24 md:py-36">
         <Container>
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-bronze mb-4">
-              Limited Availability
+
+          {/* Header */}
+          <div className="max-w-2xl mb-16 md:mb-20">
+            <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-6">
+              Founding Access
             </p>
-            <h2 className="font-heading text-[32px] md:text-[44px] leading-tight text-ivory mb-5">
-              Join the Founding Cohort
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-ivory mb-8">
+              This Isn&apos;t Built for Everyone
             </h2>
-            <p className="font-sans text-base md:text-lg text-warm-stone mb-10 leading-relaxed">
-              Placeholder description of the Founding Cohort offer — the
-              exclusive early-access pricing, what is included, how many spaces
-              are available, and why now is the moment to act.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href={CTA_LINKS.checkout} variant="primary" external>
-                Secure Your Place
-              </Button>
-              <Button href="/flagship" variant="ghost">
-                Learn More
-              </Button>
+            <div className="space-y-5">
+              <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed">
+                The Elevated Leader isn&apos;t a mass-market program.
+              </p>
+              <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed">
+                It&apos;s being built deliberately, with a small group of founders
+                ready to lead at a higher level and build businesses that
+                don&apos;t depend on them.
+              </p>
+              <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed">
+                Right now, access is intentionally limited.
+              </p>
             </div>
           </div>
+
+          {/* Two columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-16 md:mb-20">
+            {/* Left */}
+            <div className="border-t border-warm-stone/30 pt-10 md:pr-16 lg:pr-20">
+              <h3 className="font-sans font-semibold text-lg md:text-xl text-ivory mb-6">
+                Why this exists
+              </h3>
+              <p className="font-sans text-base text-warm-stone leading-relaxed mb-5">
+                Most programs are built for reach.
+                This is built for precision.
+              </p>
+              <p className="font-sans text-base text-warm-stone leading-relaxed mb-5">
+                Rather than launching to thousands, this is being built with a
+                smaller group, so the system gets refined, pressure-tested, and
+                developed properly from the inside out.
+              </p>
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-bronze mb-5">
+                That means:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-base text-warm-stone">no noise</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-base text-warm-stone">no generic advice</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-base text-warm-stone">no watered-down frameworks</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right */}
+            <div className="border-t border-warm-stone/30 md:border-l border-warm-stone/30 mt-12 md:mt-0 pt-12 md:pt-10 md:pl-16 lg:pl-20">
+              <h3 className="font-sans font-semibold text-lg md:text-xl text-ivory mb-6">
+                What that means for you
+              </h3>
+              <div className="space-y-5">
+                <p className="font-sans text-base text-warm-stone leading-relaxed">
+                  You&apos;re accessing the full system before it&apos;s been
+                  widely released.
+                </p>
+                <p className="font-sans text-base text-warm-stone leading-relaxed">
+                  Pricing and positioning will shift as this grows.
+                </p>
+                <p className="font-sans text-base text-warm-stone leading-relaxed">
+                  Right now, this is the entry point for founders who recognise
+                  the gap and are ready to close it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Statement */}
+          <div className="max-w-2xl mb-12 md:mb-14">
+            <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed mb-1">
+              This is not for beginners.
+            </p>
+            <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed mb-8 md:mb-10">
+              This is not for hobby businesses.
+            </p>
+            <p className="font-sans text-lg md:text-xl font-semibold text-ivory leading-snug">
+              This is for founders already in motion, ready to build something
+              that runs without them.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-5">
+            <Button href="/courses" variant="primary">
+              Explore the System
+            </Button>
+            <Button href="/diagnostic" variant="ghost">
+              Take the Diagnostic
+            </Button>
+          </div>
+
         </Container>
       </section>
 
       {/* ── 7. HOW IT WORKS ─────────────────────────────────────────────── */}
-      <Section>
+      <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-14">
+          <div className="max-w-xl mb-16 md:mb-20">
             <Eyebrow>The Process</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
               How It Works
             </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/60 leading-relaxed">
-              Placeholder intro — a simple overview of the journey from first
-              touch to transformation, in four clear steps.
+            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+              The path to a self-running business is clear. Most founders skip
+              straight to tactics. This is the right order.
             </p>
           </div>
 
@@ -519,7 +604,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-14 lg:gap-20">
             <div>
               <Eyebrow>Common Questions</Eyebrow>
-              <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
+              <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
                 Frequently Asked Questions
               </h2>
               <Button href="/faq" variant="secondary">
@@ -527,18 +612,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="space-y-10">
-              {FAQ_ITEMS.map((item, i) => (
-                <div key={i} className="border-b border-warm-stone pb-10 last:border-b-0 last:pb-0">
-                  <h3 className="font-sans font-semibold text-base md:text-lg text-obsidian mb-3">
-                    {item.question}
-                  </h3>
-                  <p className="font-sans text-sm md:text-base text-obsidian/60 leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FAQAccordion items={FAQ_ITEMS} />
           </div>
         </Container>
       </Section>
@@ -546,7 +620,8 @@ export default function HomePage() {
       {/* ── 9. FINAL CTA ────────────────────────────────────────────────── */}
       <CTASection
         heading="Ready to lead differently?"
-        subheading="Take the free diagnostic and discover exactly where to focus first."
+        subheading="Most founders don't need more information. They need clarity on what to fix next."
+        body="Start with the diagnostic. Then build what actually matters."
         primaryLabel="Take the Diagnostic"
         primaryHref={CTA_LINKS.diagnostic}
         primaryExternal

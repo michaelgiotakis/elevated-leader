@@ -69,4 +69,8 @@ body {
   .bg-warm-stone\/10 { background-color: rgba(212, 199, 183, 0.10); }
   .bg-warm-stone\/15 { background-color: rgba(212, 199, 183, 0.15); }
   .bg-warm-stone\/20 { background-color: rgba(212, 199, 183, 0.20); }
+
+  /* Border opacity variants */
+  .border-warm-stone\/30 { border-color: rgba(212, 199, 183, 0.30); }
+  .border-warm-stone\/40 { border-color: rgba(212, 199, 183, 0.40); }
 }
