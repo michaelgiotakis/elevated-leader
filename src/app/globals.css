@@ -1,26 +1,72 @@
 @import "tailwindcss";
+@source "../**/*.{ts,tsx,js,jsx}";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand Colors */
+  --color-obsidian: #060708;
+  --color-ivory: #f6f1e9;
+  --color-warm-stone: #d4c7b7;
+  --color-muted-rose: #c98c8c;
+  --color-rosewood: #7b4444;
+  --color-bronze: #b8864c;
+  --color-eucalyptus: #3e5f52;
+  --color-slate: #323847;
+
+  /* Typography */
+  --font-sans: var(--font-montserrat);
+  --font-heading: var(--font-playfair);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f1e9;
+  color: #060708;
+}
+
+/*
+  Explicit brand utilities — hardcoded hex values guarantee correct rendering
+  regardless of Tailwind v4 scanning behaviour or color-mix() support.
+  These shadow the @theme-generated utilities and win via cascade order.
+*/
+@layer utilities {
+  /* Backgrounds */
+  .bg-obsidian { background-color: #060708; }
+  .bg-ivory    { background-color: #f6f1e9; }
+  .bg-warm-stone { background-color: #d4c7b7; }
+  .bg-bronze   { background-color: #b8864c; }
+  .bg-rosewood { background-color: #7b4444; }
+  .bg-muted-rose { background-color: #c98c8c; }
+  .bg-eucalyptus { background-color: #3e5f52; }
+  .bg-slate    { background-color: #323847; }
+
+  /* Text */
+  .text-obsidian  { color: #060708; }
+  .text-ivory     { color: #f6f1e9; }
+  .text-warm-stone { color: #d4c7b7; }
+  .text-bronze    { color: #b8864c; }
+  .text-rosewood  { color: #7b4444; }
+  .text-muted-rose { color: #c98c8c; }
+  .text-eucalyptus { color: #3e5f52; }
+  .text-slate     { color: #323847; }
+
+  /* Borders */
+  .border-obsidian  { border-color: #060708; }
+  .border-ivory     { border-color: #f6f1e9; }
+  .border-warm-stone { border-color: #d4c7b7; }
+  .border-bronze    { border-color: #b8864c; }
+
+  /* Hover states used by Button component */
+  .hover\:bg-rosewood:hover  { background-color: #7b4444; }
+  .hover\:bg-obsidian:hover  { background-color: #060708; }
+  .hover\:bg-ivory:hover     { background-color: #f6f1e9; }
+  .hover\:text-ivory:hover   { color: #f6f1e9; }
+  .hover\:text-obsidian:hover { color: #060708; }
+
+  /* Background opacity variants — explicit rgba for Tailwind v4 reliability */
+  .bg-warm-stone\/10 { background-color: rgba(212, 199, 183, 0.10); }
+  .bg-warm-stone\/15 { background-color: rgba(212, 199, 183, 0.15); }
+  .bg-warm-stone\/20 { background-color: rgba(212, 199, 183, 0.20); }
 }
