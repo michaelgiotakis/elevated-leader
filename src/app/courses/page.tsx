@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { CourseSelector } from "@/components/ui/CourseSelector";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Section } from "@/components/ui/Section";
 import { CTA_LINKS } from "@/lib/site";
 
@@ -30,25 +32,33 @@ export default function CoursesPage() {
         </Container>
       </section>
 
-      {/* ── 2. HOW TO USE ───────────────────────────────────────────────── */}
+      {/* ── 2. BUILD YOUR SYSTEM ─────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl">
-            <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-6">
-              How to Use This
-            </p>
-            <div className="space-y-4">
+          <div className="max-w-2xl">
+            <Eyebrow>Build Your System</Eyebrow>
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
+              Choose the Bottleneck You Want to Remove
+            </h2>
+            <div className="space-y-4 mb-8">
               <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                Start with the diagnostic. It shows you where your business is
-                breaking.
+                You can start with a single module, go deep into one lever, or
+                build the full system across all three.
               </p>
               <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                Then choose the course or courses that fix that area.
-              </p>
-              <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                You can go deep in one lever or build across all three.
+                Most founders don&apos;t need more information. They need
+                clarity on what is slowing the business down.
               </p>
             </div>
+            <p className="font-sans text-sm text-obsidian/50">
+              Not sure where to start?{" "}
+              <Link
+                href="/diagnostic"
+                className="text-bronze font-medium underline underline-offset-2 decoration-1 hover:text-obsidian transition-colors duration-150"
+              >
+                Take the diagnostic first →
+              </Link>
+            </p>
           </div>
         </Container>
       </Section>
