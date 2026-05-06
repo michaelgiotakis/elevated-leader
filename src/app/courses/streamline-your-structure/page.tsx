@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/ui/CTASection";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { LeverNav } from "@/components/ui/LeverNav";
 import { Section } from "@/components/ui/Section";
 import { CTA_LINKS } from "@/lib/site";
 
@@ -93,6 +94,9 @@ export default function StreamlineYourStructurePage() {
           </div>
         </Container>
       </section>
+
+      {/* ── LEVER NAV ───────────────────────────────────────────────────── */}
+      <LeverNav activeLever="structure" />
 
       {/* ── 2. WHY THIS LEVER MATTERS ────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">

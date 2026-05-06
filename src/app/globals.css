@@ -73,4 +73,13 @@ body {
   /* Border opacity variants */
   .border-warm-stone\/30 { border-color: rgba(212, 199, 183, 0.30); }
   .border-warm-stone\/40 { border-color: rgba(212, 199, 183, 0.40); }
+  .border-warm-stone\/60 { border-color: rgba(212, 199, 183, 0.60); }
+
+  /* Lever accent opacity variants (LeverNav active states) */
+  .bg-muted-rose\/10     { background-color: rgba(201, 140, 140, 0.10); }
+  .bg-slate\/10          { background-color: rgba(50,  56,  71,  0.10); }
+  .bg-eucalyptus\/10     { background-color: rgba(62,  95,  82,  0.10); }
+  .border-muted-rose\/30 { border-color: rgba(201, 140, 140, 0.30); }
+  .border-slate\/30      { border-color: rgba(50,  56,  71,  0.30); }
+  .border-eucalyptus\/30 { border-color: rgba(62,  95,  82,  0.30); }
 }
