@@ -26,27 +26,36 @@ const SIGNS: ReactNode[] = [
 const MODULES = [
   {
     num: "04",
-    title: "Roles & Responsibilities",
+    codename: "ALIGNMENT",
+    framework: "The Vision Vehicle",
+    descriptor: "One Destination, One Business",
+    slug: "alignment",
     description:
-      "Define who owns what so your team stops waiting for you to make every call.",
+      "The Vision Vehicle aligns every part of the business to a single clear direction so the team moves toward one destination — without constant founder redirection, reinterpretation, or course correction.",
     outcome:
-      "People know what they own, where decisions sit, and what no longer needs to come back to you.",
+      "A unified strategic direction the team operates from without requiring you to re-explain, re-prioritise, or redirect daily.",
   },
   {
     num: "05",
-    title: "Systems & Workflows",
+    codename: "PRECISION",
+    framework: "The One Focus",
+    descriptor: "Profit per Capacity Unit",
+    slug: "precision",
     description:
-      "Document the processes that keep the business running without relying on memory, heroics, or constant founder input.",
+      "The One Focus identifies and protects the highest-leverage profit focus so the business grows without spreading capacity across too many competing priorities and diminishing returns.",
     outcome:
-      "Work moves with less friction because the path is visible, repeatable, and easier to improve.",
+      "A clear profit focus that maximises output per unit of capacity — without fragmenting team energy or founder attention.",
   },
   {
     num: "06",
-    title: "Operational Clarity",
+    codename: "AWARENESS",
+    framework: "The Altitude System",
+    descriptor: "30k / 20k / 10k OS",
+    slug: "awareness",
     description:
-      "Create a clear operating picture so priorities, meetings, responsibilities, and execution rhythm stop competing with each other.",
+      "The Altitude System builds your ability to move fluidly between strategic vision, operational direction, and ground-level execution — without losing perspective or being pulled permanently into the weeds.",
     outcome:
-      "The business becomes easier to run because the important work has a clear place to live.",
+      "An operating rhythm that allows clear leadership at every altitude without losing strategic clarity or descending into micro-management.",
   },
 ];
 
@@ -170,26 +179,31 @@ export default function StreamlineYourStructurePage() {
            * accent lines, numbers, titles, descriptions, dividers, and outcomes.
            * On mobile the md: classes are absent and modules stack as blocks.
            */}
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-x-14 md:gap-y-0 md:[grid-template-rows:repeat(7,auto)]">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-x-14 md:gap-y-0 md:[grid-template-rows:repeat(8,auto)]">
             {MODULES.map((mod) => (
               <div
                 key={mod.num}
-                className="md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/span_7]"
+                className="md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/span_8]"
               >
                 {/* Row 1 — Accent line */}
                 <div className="pb-5">
                   <div className="w-6 h-0.5 bg-slate" />
                 </div>
 
-                {/* Row 2 — Module number */}
-                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate pb-3">
-                  {mod.num}
+                {/* Row 2 — Number + codename */}
+                <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-slate pb-3">
+                  {mod.num} — {mod.codename}
                 </p>
 
-                {/* Row 3 — Title */}
-                <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug tracking-tight pb-8">
-                  {mod.title}
-                </h3>
+                {/* Row 3 — Framework + descriptor */}
+                <div className="pb-8">
+                  <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug tracking-tight mb-2">
+                    {mod.framework}
+                  </h3>
+                  <p className="font-sans text-[11px] text-obsidian/50 leading-snug">
+                    {mod.descriptor}
+                  </p>
+                </div>
 
                 {/* Row 4 — Description */}
                 <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed pb-4">
@@ -208,6 +222,30 @@ export default function StreamlineYourStructurePage() {
                 <p className="font-sans text-sm text-obsidian/70 leading-relaxed">
                   {mod.outcome}
                 </p>
+
+                {/* Row 8 — Module actions */}
+                <div className="pt-6 flex items-center justify-between gap-3">
+                  <Link
+                    href={`/courses/${mod.slug}`}
+                    className="font-sans text-[11px] font-semibold text-obsidian hover:text-bronze transition-colors duration-150 flex items-center gap-1.5"
+                  >
+                    View Module
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                      <path d="M1 4H9M6.5 1.5L9 4L6.5 6.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="/courses"
+                    className="flex items-center gap-1.5 font-sans text-[10px] text-obsidian/40 hover:text-obsidian/60 transition-colors duration-150"
+                  >
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" aria-hidden="true">
+                      <path d="M1 1H3L4.68 8.39A1 1 0 0 0 5.66 9H11A1 1 0 0 0 11.97 8.27L13 4H4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="5.5" cy="11.5" r="0.75" fill="currentColor" />
+                      <circle cx="10.5" cy="11.5" r="0.75" fill="currentColor" />
+                    </svg>
+                    Quick Add
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

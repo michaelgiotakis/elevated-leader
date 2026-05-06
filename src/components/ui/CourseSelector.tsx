@@ -11,8 +11,10 @@ const FULL_SYSTEM_PRICE = 997;
 
 interface Course {
   id: string;
-  title: string;
-  description: string;
+  codename: string;
+  framework: string;
+  descriptor: string;
+  slug: string;
 }
 
 interface Lever {
@@ -38,21 +40,24 @@ const LEVERS: Lever[] = [
     courses: [
       {
         id: "01",
-        title: "Leadership Identity",
-        description:
-          "Clarify how you think and lead so decisions become fast and clear.",
+        codename: "PERCEPTION",
+        framework: "The Evolution Model",
+        descriptor: "Identity & Self-Concept",
+        slug: "perception",
       },
       {
         id: "02",
-        title: "Decision Standards",
-        description:
-          "Set the criteria that let you say yes or no with speed and certainty.",
+        codename: "PRESENCE",
+        framework: "The Optimisation Cycle",
+        descriptor: "Bandwidth & Regulation",
+        slug: "presence",
       },
       {
         id: "03",
-        title: "Personal Operating System",
-        description:
-          "Build the rhythms that protect your focus and keep you performing.",
+        codename: "INTELLIGENCE",
+        framework: "The Leadership Codes",
+        descriptor: "Clarity & Decision Intelligence",
+        slug: "intelligence",
       },
     ],
   },
@@ -67,20 +72,24 @@ const LEVERS: Lever[] = [
     courses: [
       {
         id: "04",
-        title: "Roles & Responsibilities",
-        description:
-          "Make ownership clear so your team stops waiting for your input.",
+        codename: "ALIGNMENT",
+        framework: "The Vision Vehicle",
+        descriptor: "One Destination, One Business",
+        slug: "alignment",
       },
       {
         id: "05",
-        title: "Systems & Workflows",
-        description: "Document the processes that run the business without you.",
+        codename: "PRECISION",
+        framework: "The One Focus",
+        descriptor: "Profit per Capacity Unit",
+        slug: "precision",
       },
       {
         id: "06",
-        title: "Operational Clarity",
-        description:
-          "Remove ambiguity so nothing important gets missed or dropped.",
+        codename: "AWARENESS",
+        framework: "The Altitude System",
+        descriptor: "30k / 20k / 10k OS",
+        slug: "awareness",
       },
     ],
   },
@@ -95,21 +104,24 @@ const LEVERS: Lever[] = [
     courses: [
       {
         id: "07",
-        title: "Delegation & Ownership",
-        description:
-          "Hand off real accountability so you can step back without losing control.",
+        codename: "FLOW",
+        framework: "The Cruise Control",
+        descriptor: "Self-Sustaining Client Journeys",
+        slug: "flow",
       },
       {
         id: "08",
-        title: "Team Leverage",
-        description:
-          "Build a team that moves with autonomy and clear direction.",
+        codename: "EMPOWER",
+        framework: "The Autonomy Blueprint",
+        descriptor: "Seats, Owners & Rhythm",
+        slug: "empower",
       },
       {
         id: "09",
-        title: "Scale Architecture",
-        description:
-          "Create the structure that grows revenue without growing complexity.",
+        codename: "HARMONISE",
+        framework: "The Progressive Edge",
+        descriptor: "Calm, Integrated Tech",
+        slug: "harmonise",
       },
     ],
   },
@@ -246,44 +258,54 @@ export function CourseSelector() {
                   {lever.courses.map((course) => {
                     const isSelected = selected.has(course.id);
                     return (
-                      <div key={course.id}>
-                        <button
-                          onClick={() => toggle(course.id)}
-                          aria-pressed={isSelected}
-                          className={[
-                            "w-full text-left rounded px-5 py-4 border-2 transition-all duration-150 cursor-pointer",
-                            isSelected
-                              ? "border-bronze bg-warm-stone/15 shadow-sm"
-                              : "border-warm-stone bg-ivory hover:border-warm-stone/80 hover:shadow-sm",
-                          ].join(" ")}
-                        >
-                          <div className="flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                              <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">
+                      <div
+                        key={course.id}
+                        className={[
+                          "rounded border-2 transition-all duration-150",
+                          isSelected
+                            ? "border-bronze bg-warm-stone/15 shadow-sm"
+                            : "border-warm-stone bg-ivory hover:shadow-sm",
+                        ].join(" ")}
+                      >
+                        {/* ── Info area ── */}
+                        <div className="px-5 pt-4 pb-3">
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex gap-3">
+                              <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 mt-0.5">
                                 {course.id}
                               </span>
-                              <span
-                                className={`font-sans text-sm leading-snug ${
-                                  isSelected
-                                    ? "font-semibold text-obsidian"
-                                    : "font-medium text-obsidian/70"
-                                }`}
-                              >
-                                {course.title}
-                              </span>
+                              <div>
+                                <p
+                                  className={`font-sans text-[10px] font-bold tracking-[0.18em] uppercase leading-tight mb-1.5 ${
+                                    isSelected ? "text-obsidian" : "text-obsidian/65"
+                                  }`}
+                                >
+                                  {course.codename}
+                                </p>
+                                <p
+                                  className={`font-sans text-xs leading-snug mb-1 ${
+                                    isSelected ? "text-obsidian/70" : "text-obsidian/50"
+                                  }`}
+                                >
+                                  {course.framework}
+                                </p>
+                                <p
+                                  className={`font-sans text-[10px] leading-snug ${
+                                    isSelected ? "text-obsidian/45" : "text-obsidian/30"
+                                  }`}
+                                >
+                                  {course.descriptor}
+                                </p>
+                              </div>
                             </div>
+                            {/* Selected check */}
                             <span
                               aria-hidden="true"
-                              className={`shrink-0 transition-opacity duration-150 ${
+                              className={`shrink-0 transition-opacity duration-150 mt-0.5 ${
                                 isSelected ? "opacity-100" : "opacity-0"
                               }`}
                             >
-                              <svg
-                                width="13"
-                                height="10"
-                                viewBox="0 0 13 10"
-                                fill="none"
-                              >
+                              <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
                                 <path
                                   d="M1 5L4.5 9L12 1"
                                   stroke="#B8864C"
@@ -294,10 +316,51 @@ export function CourseSelector() {
                               </svg>
                             </span>
                           </div>
-                        </button>
-                        <p className="mt-1.5 pl-5 font-sans text-xs text-obsidian/50 leading-snug line-clamp-2">
-                          {course.description}
-                        </p>
+                        </div>
+
+                        {/* ── Action row ── */}
+                        <div className="px-5 pb-3.5 pt-3 border-t border-warm-stone/40 flex items-center justify-between gap-3">
+                          {/* Primary: View Module */}
+                          <Link
+                            href={`/courses/${course.slug}`}
+                            className="font-sans text-[11px] font-semibold text-obsidian hover:text-bronze transition-colors duration-150 flex items-center gap-1.5"
+                          >
+                            View Module
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                              <path d="M1 4H9M6.5 1.5L9 4L6.5 6.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </Link>
+
+                          {/* Secondary: Quick Add */}
+                          <button
+                            onClick={() => toggle(course.id)}
+                            aria-pressed={isSelected}
+                            className={[
+                              "flex items-center gap-1.5 font-sans text-[10px] transition-colors duration-150 cursor-pointer",
+                              isSelected
+                                ? "text-bronze"
+                                : "text-obsidian/40 hover:text-obsidian/70",
+                            ].join(" ")}
+                          >
+                            {isSelected ? (
+                              <>
+                                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" aria-hidden="true">
+                                  <path d="M1 4.5L3.8 7.5L10 1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                <span>Added</span>
+                              </>
+                            ) : (
+                              <>
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" aria-hidden="true">
+                                  <path d="M1 1H3L4.68 8.39A1 1 0 0 0 5.66 9H11A1 1 0 0 0 11.97 8.27L13 4H4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                                  <circle cx="5.5" cy="11.5" r="0.75" fill="currentColor" />
+                                  <circle cx="10.5" cy="11.5" r="0.75" fill="currentColor" />
+                                </svg>
+                                <span>Quick Add</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
                       </div>
                     );
                   })}

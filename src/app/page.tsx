@@ -391,13 +391,16 @@ export default function HomePage() {
               </p>
               <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
                 {[
-                  { num: "01", title: "Leadership Identity" },
-                  { num: "02", title: "Decision Standards" },
-                  { num: "03", title: "Personal Operating System" },
+                  { num: "01", codename: "PERCEPTION", framework: "The Evolution Model" },
+                  { num: "02", codename: "PRESENCE", framework: "The Optimisation Cycle" },
+                  { num: "03", codename: "INTELLIGENCE", framework: "The Leadership Codes" },
                 ].map((m) => (
                   <div key={m.num} className="flex items-baseline gap-3">
                     <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
-                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                    <div>
+                      <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-obsidian leading-tight">{m.codename}</p>
+                      <p className="font-sans text-xs text-obsidian/55 leading-snug">{m.framework}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -422,13 +425,16 @@ export default function HomePage() {
               </p>
               <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
                 {[
-                  { num: "04", title: "Roles & Responsibilities" },
-                  { num: "05", title: "Systems & Workflows" },
-                  { num: "06", title: "Operational Clarity" },
+                  { num: "04", codename: "ALIGNMENT", framework: "The Vision Vehicle" },
+                  { num: "05", codename: "PRECISION", framework: "The One Focus" },
+                  { num: "06", codename: "AWARENESS", framework: "The Altitude System" },
                 ].map((m) => (
                   <div key={m.num} className="flex items-baseline gap-3">
                     <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
-                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                    <div>
+                      <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-obsidian leading-tight">{m.codename}</p>
+                      <p className="font-sans text-xs text-obsidian/55 leading-snug">{m.framework}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -453,13 +459,16 @@ export default function HomePage() {
               </p>
               <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
                 {[
-                  { num: "07", title: "Delegation & Ownership" },
-                  { num: "08", title: "Team Leverage" },
-                  { num: "09", title: "Scale Architecture" },
+                  { num: "07", codename: "FLOW", framework: "The Cruise Control" },
+                  { num: "08", codename: "EMPOWER", framework: "The Autonomy Blueprint" },
+                  { num: "09", codename: "HARMONISE", framework: "The Progressive Edge" },
                 ].map((m) => (
                   <div key={m.num} className="flex items-baseline gap-3">
                     <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
-                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                    <div>
+                      <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-obsidian leading-tight">{m.codename}</p>
+                      <p className="font-sans text-xs text-obsidian/55 leading-snug">{m.framework}</p>
+                    </div>
                   </div>
                 ))}
               </div>

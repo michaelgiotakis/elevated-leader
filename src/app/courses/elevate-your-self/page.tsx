@@ -25,27 +25,36 @@ const SIGNS = [
 const MODULES = [
   {
     num: "01",
-    title: "Leadership Identity",
+    codename: "PERCEPTION",
+    framework: "The Evolution Model",
+    descriptor: "Identity & Self-Concept",
+    slug: "perception",
     description:
-      "Clarify who you are as a leader, what standards you hold, and how your identity shapes every decision inside the business.",
+      "The Evolution Model reframes how you see yourself as a leader. You clarify your self-concept, identify the patterns driving your current leadership, and build the internal identity that holds under pressure and scale.",
     outcome:
-      "You stop leading from reaction and start leading from a clear internal standard.",
+      "A clear self-concept that allows you to lead from who you are becoming rather than reacting from who you have been.",
   },
   {
     num: "02",
-    title: "Decision Standards",
+    codename: "PRESENCE",
+    framework: "The Optimisation Cycle",
+    descriptor: "Bandwidth & Regulation",
+    slug: "presence",
     description:
-      "Build a clean decision-making framework so you stop second-guessing, over-explaining, or changing direction under pressure.",
+      "The Optimisation Cycle builds the internal regulation and personal bandwidth that allows you to lead consistently from your best state — rather than from depletion, reactivity, or accumulated noise.",
     outcome:
-      "You make faster, cleaner decisions without needing constant external validation.",
+      "Optimised personal capacity that protects your leadership quality regardless of external pressure or pace.",
   },
   {
     num: "03",
-    title: "Personal Operating System",
+    codename: "INTELLIGENCE",
+    framework: "The Leadership Codes",
+    descriptor: "Clarity & Decision Intelligence",
+    slug: "intelligence",
     description:
-      "Design the rhythms, boundaries, and personal structures that protect your focus, energy, and leadership capacity.",
+      "The Leadership Codes develop the decision intelligence and leadership clarity that turns reactive choices into deliberate, high-quality standards — made fast, and held consistently across the business.",
     outcome:
-      "You stop running the business from depletion and create a leadership rhythm that can actually hold growth.",
+      "Decisions made from a clear internal code rather than urgency, approval-seeking, or external pressure.",
   },
 ];
 
@@ -171,26 +180,31 @@ export default function ElevateYourSelfPage() {
            * accent lines, numbers, titles, descriptions, dividers, and outcomes.
            * On mobile the md: classes are absent and modules stack as blocks.
            */}
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-x-14 md:gap-y-0 md:[grid-template-rows:repeat(7,auto)]">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-x-14 md:gap-y-0 md:[grid-template-rows:repeat(8,auto)]">
             {MODULES.map((mod) => (
               <div
                 key={mod.num}
-                className="md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/span_7]"
+                className="md:grid md:[grid-template-rows:subgrid] md:[grid-row:1/span_8]"
               >
                 {/* Row 1 — Accent line */}
                 <div className="pb-5">
                   <div className="w-6 h-0.5 bg-muted-rose" />
                 </div>
 
-                {/* Row 2 — Module number */}
-                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose pb-3">
-                  {mod.num}
+                {/* Row 2 — Number + codename */}
+                <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-muted-rose pb-3">
+                  {mod.num} — {mod.codename}
                 </p>
 
-                {/* Row 3 — Title */}
-                <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug pb-8">
-                  {mod.title}
-                </h3>
+                {/* Row 3 — Framework + descriptor */}
+                <div className="pb-8">
+                  <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug tracking-tight mb-2">
+                    {mod.framework}
+                  </h3>
+                  <p className="font-sans text-[11px] text-obsidian/50 leading-snug">
+                    {mod.descriptor}
+                  </p>
+                </div>
 
                 {/* Row 4 — Description */}
                 <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed pb-6">
@@ -209,6 +223,30 @@ export default function ElevateYourSelfPage() {
                 <p className="font-sans text-sm text-obsidian/70 leading-relaxed">
                   {mod.outcome}
                 </p>
+
+                {/* Row 8 — Module actions */}
+                <div className="pt-6 flex items-center justify-between gap-3">
+                  <Link
+                    href={`/courses/${mod.slug}`}
+                    className="font-sans text-[11px] font-semibold text-obsidian hover:text-bronze transition-colors duration-150 flex items-center gap-1.5"
+                  >
+                    View Module
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                      <path d="M1 4H9M6.5 1.5L9 4L6.5 6.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="/courses"
+                    className="flex items-center gap-1.5 font-sans text-[10px] text-obsidian/40 hover:text-obsidian/60 transition-colors duration-150"
+                  >
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" aria-hidden="true">
+                      <path d="M1 1H3L4.68 8.39A1 1 0 0 0 5.66 9H11A1 1 0 0 0 11.97 8.27L13 4H4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="5.5" cy="11.5" r="0.75" fill="currentColor" />
+                      <circle cx="10.5" cy="11.5" r="0.75" fill="currentColor" />
+                    </svg>
+                    Quick Add
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
