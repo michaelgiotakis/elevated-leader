@@ -268,7 +268,7 @@ export default function HomePage() {
 
           {/* Three lever blocks */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
               <div className="w-10 h-0.5 bg-muted-rose mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-6">
                 Identity
@@ -281,9 +281,17 @@ export default function HomePage() {
                 clarity, standards, and self-leadership either expand your
                 business, or quietly cap it.
               </p>
+              <div className="mt-6 md:mt-auto pt-5 border-t border-warm-stone/40">
+                <Link
+                  href="/courses/elevate-your-self"
+                  className="font-sans text-sm font-medium text-bronze/75 hover:text-bronze hover:underline underline-offset-2 decoration-1 transition-colors duration-150"
+                >
+                  Explore Identity →
+                </Link>
+              </div>
             </Card>
 
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
               <div className="w-10 h-0.5 bg-slate mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-6">
                 Structure
@@ -296,9 +304,17 @@ export default function HomePage() {
                 workflows, and decision paths. This is where complexity either
                 compounds or collapses.
               </p>
+              <div className="mt-6 md:mt-auto pt-5 border-t border-warm-stone/40">
+                <Link
+                  href="/courses/streamline-your-structure"
+                  className="font-sans text-sm font-medium text-bronze/75 hover:text-bronze hover:underline underline-offset-2 decoration-1 transition-colors duration-150"
+                >
+                  Explore Structure →
+                </Link>
+              </div>
             </Card>
 
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200">
+            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
               <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-6">
                 Leverage
@@ -311,6 +327,14 @@ export default function HomePage() {
                 ownership, and scale either free you, or keep everything
                 dependent on you.
               </p>
+              <div className="mt-6 md:mt-auto pt-5 border-t border-warm-stone/40">
+                <Link
+                  href="/courses/unlock-your-leverage"
+                  className="font-sans text-sm font-medium text-bronze/75 hover:text-bronze hover:underline underline-offset-2 decoration-1 transition-colors duration-150"
+                >
+                  Explore Leverage →
+                </Link>
+              </div>
             </Card>
           </div>
 
@@ -350,89 +374,96 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Three columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
+          {/* Progression layout */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2.5rem_1fr_2.5rem_1fr] gap-12 md:gap-0 mb-20 md:mb-24">
 
-            {/* Identity */}
-            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
-              <div className="w-10 h-0.5 bg-muted-rose mb-8" />
-              <div className="min-h-[5.5rem]">
-                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-4">
-                  Identity
-                </p>
-                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
-                  Elevate Your Self
-                </h3>
+            {/* Lever 1: Identity */}
+            <div className="flex flex-col">
+              <div className="w-8 h-0.5 bg-muted-rose mb-6" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-3">
+                Identity
+              </p>
+              <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian mb-3 leading-snug">
+                Elevate Your Self
+              </h3>
+              <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
+                How you think, decide, and show up as a leader.
+              </p>
+              <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
+                {[
+                  { num: "01", title: "Leadership Identity" },
+                  { num: "02", title: "Decision Standards" },
+                  { num: "03", title: "Personal Operating System" },
+                ].map((m) => (
+                  <div key={m.num} className="flex items-baseline gap-3">
+                    <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
+                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                  </div>
+                ))}
               </div>
-              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">01</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Leadership Identity</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">02</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Decision Standards</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">03</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Personal Operating System</p>
-                </div>
-              </div>
-            </Card>
+            </div>
 
-            {/* Structure */}
-            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
-              <div className="w-10 h-0.5 bg-slate mb-8" />
-              <div className="min-h-[5.5rem]">
-                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-4">
-                  Structure
-                </p>
-                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
-                  Streamline Your Structure
-                </h3>
-              </div>
-              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">04</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Roles &amp; Responsibilities</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">05</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Systems &amp; Workflows</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">06</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Operational Clarity</p>
-                </div>
-              </div>
-            </Card>
+            {/* Connector */}
+            <div className="hidden md:flex items-start justify-center pt-12 text-warm-stone/40 text-sm">
+              →
+            </div>
 
-            {/* Leverage */}
-            <Card className="rounded p-12 md:p-14 shadow-sm hover:shadow transition-shadow duration-200">
-              <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
-              <div className="min-h-[5.5rem]">
-                <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-4">
-                  Leverage
-                </p>
-                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug">
-                  Unlock Your Leverage
-                </h3>
+            {/* Lever 2: Structure */}
+            <div className="flex flex-col">
+              <div className="w-8 h-0.5 bg-slate mb-6" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-3">
+                Structure
+              </p>
+              <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian mb-3 leading-snug">
+                Streamline Your Structure
+              </h3>
+              <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
+                How your business runs day-to-day without depending on you.
+              </p>
+              <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
+                {[
+                  { num: "04", title: "Roles & Responsibilities" },
+                  { num: "05", title: "Systems & Workflows" },
+                  { num: "06", title: "Operational Clarity" },
+                ].map((m) => (
+                  <div key={m.num} className="flex items-baseline gap-3">
+                    <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
+                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                  </div>
+                ))}
               </div>
-              <div className="mt-6 pt-6 border-t border-warm-stone space-y-3.5">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">07</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Delegation &amp; Ownership</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">08</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Team Leverage</p>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-sans text-[9px] font-normal tabular-nums text-warm-stone shrink-0 w-5">09</span>
-                  <p className="font-sans text-base font-medium text-obsidian/80 leading-snug">Scale Architecture</p>
-                </div>
+            </div>
+
+            {/* Connector */}
+            <div className="hidden md:flex items-start justify-center pt-12 text-warm-stone/40 text-sm">
+              →
+            </div>
+
+            {/* Lever 3: Leverage */}
+            <div className="flex flex-col">
+              <div className="w-8 h-0.5 bg-eucalyptus mb-6" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-3">
+                Leverage
+              </p>
+              <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian mb-3 leading-snug">
+                Unlock Your Leverage
+              </h3>
+              <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
+                How you multiply your time and scale without growing complexity.
+              </p>
+              <div className="mt-8 md:mt-auto border-t border-warm-stone pt-5 space-y-3.5">
+                {[
+                  { num: "07", title: "Delegation & Ownership" },
+                  { num: "08", title: "Team Leverage" },
+                  { num: "09", title: "Scale Architecture" },
+                ].map((m) => (
+                  <div key={m.num} className="flex items-baseline gap-3">
+                    <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 w-4">{m.num}</span>
+                    <p className="font-sans text-sm font-medium text-obsidian/75 leading-snug">{m.title}</p>
+                  </div>
+                ))}
               </div>
-            </Card>
+            </div>
 
           </div>
 

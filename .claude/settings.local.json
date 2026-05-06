@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\micha\\\\Documents\\\\Projects\\\\elevated-leader\\\\src\\\\app\\\\courses\\\\elevate-your-self\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Host \"Directory ready\")"
+    ]
+  }
+}
