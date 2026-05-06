@@ -2,6 +2,7 @@ import Link from "next/link";
 import { NAV_LINKS, SITE_NAME, CTA_LINKS } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { MobileNav } from "@/components/layout/MobileNav";
 
 export function Header() {
   return (
@@ -27,24 +28,13 @@ export function Header() {
             ))}
           </nav>
 
-          <Button
-            href={CTA_LINKS.diagnostic}
-            variant="primary"
-            external
-            className="hidden md:inline-block"
-          >
-            Take the Diagnostic
-          </Button>
+          <div className="hidden md:block">
+            <Button href={CTA_LINKS.diagnostic} variant="primary" external>
+              Take the Diagnostic
+            </Button>
+          </div>
 
-          {/* Mobile nav placeholder — expand in a future iteration */}
-          <button
-            aria-label="Open menu"
-            className="md:hidden flex flex-col gap-1.5 p-2"
-          >
-            <span className="block w-6 h-px bg-obsidian" />
-            <span className="block w-6 h-px bg-obsidian" />
-            <span className="block w-6 h-px bg-obsidian" />
-          </button>
+          <MobileNav />
         </div>
       </Container>
     </header>
