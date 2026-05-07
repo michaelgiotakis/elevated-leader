@@ -205,19 +205,64 @@ export default function MethodPage() {
       {/* ── 3. THE THREE LEVER SYSTEM ────────────────────────────────────── */}
       <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>
-          <div className="max-w-2xl mb-14">
-            <Eyebrow>The System</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
-              The Three Levers Behind a Self-Running Business
-            </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/65 leading-relaxed">
-              Every founder bottleneck traces back to one of three root causes.
-              Identity, Structure, or Leverage — and most businesses are missing
-              all three working in concert.
-            </p>
+
+          {/* Editorial split — narrative left, monolith right */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-24 mb-14 md:mb-20">
+
+            {/* Left — section intro + strategic insights */}
+            <div className="lg:w-[44%] shrink-0">
+              <Eyebrow>The System</Eyebrow>
+              <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-6">
+                The Three Levers Behind a Self-Running Business
+              </h2>
+              <p className="font-sans text-base md:text-lg text-obsidian/65 leading-relaxed mb-10">
+                Every founder bottleneck traces back to one of three root causes.
+                Identity, Structure, or Leverage — and most businesses are missing
+                all three working in concert.
+              </p>
+              <div className="space-y-5">
+                {[
+                  "Identity shapes the decisions, standards, and culture the business operates from.",
+                  "Structure defines whether operations run through the founder or independent of them.",
+                  "Leverage determines whether growth creates freedom or compounds dependency.",
+                ].map((line, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <span className="font-sans text-bronze shrink-0 mt-1 select-none">—</span>
+                    <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed">
+                      {line}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right — Operating System Monolith */}
+            <div className="mt-16 lg:mt-0 flex-1 flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-[520px] lg:max-w-none lg:scale-[1.17] lg:origin-right">
+                {/* Soft radial warmth — binds the sculpture into the section atmosphere */}
+                <div
+                  className="absolute -inset-10 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse 80% 70% at 50% 54%, rgba(212,199,183,0.38) 0%, transparent 70%)",
+                  }}
+                  aria-hidden="true"
+                />
+                <Image
+                  src="/images/frameworks/operating-system-monolith.png"
+                  alt="The Operating System — Identity, Structure, Leverage, Freedom"
+                  width={900}
+                  height={720}
+                  className="relative w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
+
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+          {/* Lever cards */}
+          <div className="pt-14 md:pt-16 border-t border-warm-stone/60 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
             {LEVERS.map((lever) => (
               <div
                 key={lever.id}
@@ -249,23 +294,9 @@ export default function MethodPage() {
               </div>
             ))}
           </div>
+
         </Container>
       </Section>
-
-      {/* ── BUSINESS OPERATING SYSTEM VISUAL ────────────────────────────── */}
-      <section className="bg-ivory py-20 md:py-28 border-t border-warm-stone">
-        <Container>
-          <div className="max-w-[1100px] mx-auto">
-            <Image
-              src="/images/frameworks/business-operating-system.png"
-              alt="The Three-Lever Business Operating System — Identity, Structure, Leverage"
-              width={1100}
-              height={688}
-              className="w-full h-auto"
-            />
-          </div>
-        </Container>
-      </section>
 
       {/* ── 4. WHY MOST PROGRAMS FAIL ────────────────────────────────────── */}
       <section className="bg-obsidian py-20 md:py-28">

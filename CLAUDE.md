@@ -136,3 +136,148 @@ Always follow this structure exactly:
 ## GOAL
 
 Build a premium, conversion-focused website that feels like a high-end strategic brand, not a generic online course site.
+
+## LEVER-SPECIFIC EDITORIAL ENVIRONMENTS
+
+The Elevated Leader ecosystem uses distinct emotional editorial environments for each core Lever.
+
+These are NOT simple colour themes.
+
+Each Lever represents:
+- a psychological atmosphere
+- a visual identity system
+- an emotional transformation territory
+- a cinematic editorial world
+
+All future page design, module pages, imagery, layout rhythm, and visual direction must remain consistent with these environments.
+
+---
+
+### ELEVATE YOUR SELF
+Emotional Territory:
+Identity.
+Self-concept.
+Internal leadership.
+Emotional sophistication.
+Psychological recalibration.
+Sovereign feminine leadership.
+
+Visual Direction:
+- Deep Midnight Slate / Navy tones
+- Cinematic editorial imagery
+- Luxury feminine atmosphere
+- Psychological depth
+- Soft environmental lighting
+- Introspective composition
+- Elegant asymmetry
+- Spacious typography rhythm
+- Emotionally intelligent pacing
+
+Primary Hero Background:
+#1F2633
+or closely matched cinematic midnight slate tones.
+
+Imagery Style:
+Editorial founder photography.
+Environmental storytelling.
+Luxury atmosphere.
+Strategic feminine energy.
+
+Reference Feeling:
+Hermès × Vogue × luxury transformation editorial.
+
+IMPORTANT:
+This lever should NEVER feel:
+- corporate
+- startup-like
+- SaaS
+- funnel-heavy
+- “girlboss coaching”
+- hyper feminine fluff
+
+This world should feel:
+calm,
+powerful,
+grounded,
+intelligent,
+editorial,
+and emotionally sophisticated.
+
+---
+
+### STREAMLINE YOUR STRUCTURE
+Emotional Territory:
+Operational clarity.
+Architectural simplicity.
+Structured leadership.
+Elegant systems.
+Grounded execution.
+
+Visual Direction:
+- Warm Stone
+- Ivory
+- Slate
+- Architectural spacing
+- Calm precision
+- Luxury operational clarity
+- Sophisticated structure
+- Refined minimalism
+
+Imagery Style:
+Systems symbolism.
+Architectural composition.
+Elegant workflows.
+Structured operational environments.
+
+This world should feel:
+clear,
+intentional,
+composed,
+and operationally luxurious.
+
+---
+
+### UNLOCK YOUR LEVERAGE
+Emotional Territory:
+Freedom.
+Expansion.
+Scale.
+Lightness.
+Liberation from dependency.
+Spacious growth.
+
+Visual Direction:
+- Eucalyptus
+- Bronze
+- Warm neutrals
+- Elevated spaciousness
+- Expansion-oriented layouts
+- Sophisticated optimism
+- Refined momentum
+
+Imagery Style:
+Freedom symbolism.
+Leadership expansion.
+Team empowerment.
+Strategic spaciousness.
+Elegant leverage systems.
+
+This world should feel:
+expansive,
+light,
+elevated,
+and powerfully freeing.
+
+---
+
+IMPORTANT GLOBAL RULE
+
+The site must NEVER feel:
+- like a template
+- like a SaaS product
+- like a startup UI
+- like a coaching funnel
+- like generic luxury coaching
+
+The Elevated Leader should feel like:
+a prestige editorial transformation brand for high-performing female founders.

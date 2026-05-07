@@ -69,26 +69,26 @@ const ARCHITECTURAL_OUTCOMES = [
   },
 ];
 
-const STEPS = [
+const STAGES = [
   {
-    number: "01",
-    title: "Diagnose the Real Bottleneck",
-    body: "See exactly where your business is breaking across identity, structure, and leverage.",
+    num: "01",
+    title: "See the Bottleneck",
+    body: "You stop treating overwhelm as a time problem and finally see the operating pattern creating it.",
   },
   {
-    number: "02",
-    title: "Focus on What Moves the Business",
-    body: "Stop reacting to urgency. Work on the one area that actually unlocks growth.",
+    num: "02",
+    title: "Rebuild the Foundation",
+    body: "Identity, structure, and leverage begin operating together instead of against each other.",
   },
   {
-    number: "03",
-    title: "Build Systems That Remove You",
-    body: "Put the right structure in place so the business stops relying on you day to day.",
+    num: "03",
+    title: "Remove Founder Dependency",
+    body: "The business stops routing everything back through you.",
   },
   {
-    number: "04",
-    title: "Scale Without Adding Complexity",
-    body: "Grow without increasing chaos, dependency, or decision load.",
+    num: "04",
+    title: "Scale with Spaciousness",
+    body: "Growth no longer increases pressure, complexity, and emotional weight.",
   },
 ];
 
@@ -623,37 +623,62 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── 7. HOW IT WORKS ─────────────────────────────────────────────── */}
+      {/* ── 7. THE PATHWAY ──────────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-16 md:mb-20">
-            <Eyebrow>The Process</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
-              How It Works
+
+          {/* Header */}
+          <div className="max-w-2xl mb-20 md:mb-28">
+            <Eyebrow>The Pathway</Eyebrow>
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-6">
+              From Founder Dependence to Operational Freedom
             </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-              The path to a self-running business is clear. Most founders skip
-              straight to tactics. This is the right order.
+            <p className="font-sans text-base md:text-lg text-obsidian/60 leading-relaxed max-w-xl">
+              The Elevated Leader method is designed to remove you as the centre
+              of the business — without sacrificing growth, standards, or control.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-            {STEPS.map((step) => (
-              <div key={step.number} className="flex gap-6">
-                <span className="font-sans text-xs font-semibold tracking-widest text-bronze shrink-0 pt-1.5">
-                  {step.number}
-                </span>
-                <div>
-                  <h3 className="font-sans font-semibold text-lg md:text-xl text-obsidian mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="font-sans text-sm md:text-base text-obsidian/60 leading-relaxed">
-                    {step.body}
+          {/* Transformation progression */}
+          <div className="relative">
+
+            {/* Desktop horizontal connector — sits behind the node markers */}
+            <div
+              className="hidden md:block absolute left-0 right-0 h-px bg-bronze/20"
+              style={{ top: "7px" }}
+              aria-hidden="true"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-14 md:gap-8 lg:gap-10">
+              {STAGES.map((stage) => (
+                <div key={stage.num}>
+
+                  {/* Node marker */}
+                  <div className="relative z-10 w-3.5 h-3.5 rounded-full border border-bronze/50 bg-ivory flex items-center justify-center mb-10 md:mb-12">
+                    <div className="w-[5px] h-[5px] rounded-full bg-bronze/60" />
+                  </div>
+
+                  {/* Stage number */}
+                  <p className="font-sans text-[9px] font-semibold tracking-[0.4em] uppercase text-bronze/55 mb-5">
+                    {stage.num}
                   </p>
+
+                  {/* Stage title */}
+                  <h3 className="font-sans font-semibold text-[17px] md:text-[18px] text-obsidian leading-snug tracking-tight mb-5">
+                    {stage.title}
+                  </h3>
+
+                  {/* Body */}
+                  <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
+                    {stage.body}
+                  </p>
+
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
           </div>
+
         </Container>
       </Section>
 

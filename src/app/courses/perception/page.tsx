@@ -104,90 +104,117 @@ const RELATED = [
 export default function PerceptionPage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-28 md:py-44">
-        <Container>
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 mb-12" aria-label="Breadcrumb">
-            <Link
-              href="/courses"
-              className="font-sans text-[10px] text-ivory/30 hover:text-ivory/60 transition-colors duration-150"
-            >
-              Courses
-            </Link>
-            <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
-            <Link
-              href="/courses/elevate-your-self"
-              className="font-sans text-[10px] text-muted-rose/60 hover:text-muted-rose transition-colors duration-150"
-            >
-              Elevate Your Self
-            </Link>
-            <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
-            <span className="font-sans text-[10px] text-ivory/40">PERCEPTION</span>
-          </nav>
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#232937" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[860px]">
 
-          <div className="max-w-3xl">
-            {/* Module label */}
-            <div className="mb-10">
-              <div className="w-10 h-px bg-muted-rose mb-5" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-muted-rose">
-                Identity Lever — Module 01
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-2 mb-12" aria-label="Breadcrumb">
+                <Link
+                  href="/courses"
+                  className="font-sans text-[10px] text-ivory/25 hover:text-ivory/50 transition-colors duration-150"
+                >
+                  Courses
+                </Link>
+                <span className="font-sans text-[10px] text-ivory/15" aria-hidden="true">→</span>
+                <Link
+                  href="/courses/elevate-your-self"
+                  className="font-sans text-[10px] text-muted-rose/50 hover:text-muted-rose transition-colors duration-150"
+                >
+                  Elevate Your Self
+                </Link>
+                <span className="font-sans text-[10px] text-ivory/15" aria-hidden="true">→</span>
+                <span className="font-sans text-[10px] text-ivory/35">PERCEPTION</span>
+              </nav>
+
+              {/* Module eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-muted-rose mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-muted-rose">
+                  Identity Lever — Module 01
+                </p>
+              </div>
+
+              <p className="font-sans text-[11px] font-bold tracking-[0.3em] uppercase text-muted-rose mb-4">
+                PERCEPTION
               </p>
+
+              <h1 className="font-heading text-[40px] md:text-[52px] lg:text-[54px] leading-[1.05] text-ivory mb-8 tracking-tight">
+                The Leader You Present and the Self You Inhabit Are Not the Same
+                Woman.
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug">
+                Most leadership work addresses behaviour. PERCEPTION goes beneath
+                it.
+              </p>
+
+              <p className="font-sans text-base md:text-lg text-ivory/55 leading-relaxed mb-12">
+                This is the recalibration of the identity architecture shaping
+                how you lead, carry pressure, make decisions, and move through
+                your business — at the level where sustainable transformation
+                actually begins.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start gap-5 mb-8">
+                <a
+                  href="#purchase"
+                  className="font-sans font-semibold tracking-widest uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-6 py-3 sm:text-sm sm:px-8 sm:py-4 inline-block"
+                >
+                  Enrol in PERCEPTION
+                </a>
+                <Button href="/courses/elevate-your-self" variant="ghost">
+                  Explore The Lever
+                </Button>
+              </div>
+
+              <p className="font-sans text-xs text-ivory/25 leading-relaxed">
+                ${MODULE_PRICE} for this module &nbsp;·&nbsp; or complete Elevate
+                Your Self from ${LEVER_PRICE}
+              </p>
+
             </div>
-
-            <p className="font-sans text-[11px] font-bold tracking-[0.3em] uppercase text-muted-rose mb-4">
-              PERCEPTION
-            </p>
-
-            <h1 className="font-heading text-[42px] md:text-[62px] leading-[1.05] text-ivory mb-8 tracking-tight">
-              The Leader You Present and the Self You Inhabit Are Not the Same
-              Woman.
-            </h1>
-
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug max-w-2xl">
-              Most leadership work addresses behaviour. PERCEPTION goes beneath
-              it.
-            </p>
-
-            <p className="font-sans text-base md:text-lg text-ivory/60 leading-relaxed mb-12 max-w-xl">
-              This is the recalibration of the identity architecture shaping how
-              you lead, carry pressure, make decisions, and move through your
-              business — at the level where sustainable transformation actually
-              begins.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start gap-5 mb-8">
-              {/* Primary CTA — scrolls to pricing */}
-              <a
-                href="#purchase"
-                className="font-sans font-semibold tracking-widest uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-6 py-3 sm:text-sm sm:px-8 sm:py-4 inline-block"
-              >
-                Enrol in PERCEPTION
-              </a>
-              <Button href="/courses/elevate-your-self" variant="ghost">
-                Explore The Lever
-              </Button>
-            </div>
-
-            <p className="font-sans text-xs text-ivory/30 leading-relaxed">
-              ${MODULE_PRICE} for this module &nbsp;·&nbsp; or complete Elevate
-              Your Self from ${LEVER_PRICE}
-            </p>
           </div>
-        </Container>
-      </section>
 
-      {/* ── EDITORIAL VISUAL ─────────────────────────────────────────────── */}
-      <div className="bg-obsidian overflow-hidden">
-        <Image
-          src="/images/editorial/perception-editorial.png"
-          alt="PERCEPTION — The Evolution Model"
-          width={1400}
-          height={875}
-          className="w-full h-auto"
-          priority
-        />
-      </div>
+          {/* Right — editorial atmosphere */}
+          <div className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]" style={{ backgroundColor: "#232937" }}>
+            <Image
+              src="/images/editorial/homepage-editorial-hero.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-[42%_12%] lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — slate into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #232937 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from slate */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #232937 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile bottom dissolve — image fades back into slate */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to top, #232937 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
+      </section>
 
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
@@ -219,7 +246,7 @@ export default function PerceptionPage() {
               </p>
             </div>
 
-            <div className="my-10 border-l-2 border-muted-rose pl-6 py-1">
+            <div className="my-10 border-l-2 border-muted-rose pl-8 py-2 md:ml-8">
               <p className="font-sans text-base md:text-lg font-semibold text-obsidian leading-snug">
                 The business organises itself around your psychological
                 architecture. If that architecture was built on proving,
@@ -326,7 +353,7 @@ export default function PerceptionPage() {
             ))}
           </div>
 
-          <div className="mt-10 max-w-lg">
+          <div className="mt-10 max-w-sm">
             <p className="font-sans text-sm text-ivory/40 leading-relaxed">
               These are not aspirational labels. They are the natural result of
               identity architecture that has been deliberately mapped, examined,
@@ -349,7 +376,7 @@ export default function PerceptionPage() {
             </p>
           </div>
 
-          <ul className="max-w-2xl space-y-5">
+          <ul className="max-w-2xl space-y-7">
             {CHANGES.map((item, i) => (
               <li key={i} className="flex items-start gap-5">
                 <span
@@ -358,15 +385,15 @@ export default function PerceptionPage() {
                 >
                   —
                 </span>
-                <span className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
+                <span className="font-sans text-base md:text-lg text-obsidian/80 leading-[1.8]">
                   {item}
                 </span>
               </li>
             ))}
           </ul>
 
-          <div className="mt-14 md:mt-16 max-w-xl">
-            <p className="font-sans text-base md:text-lg font-semibold text-obsidian leading-snug border-l-2 border-muted-rose pl-5">
+          <div className="mt-16 md:mt-20 max-w-lg md:ml-10">
+            <p className="font-sans text-base md:text-lg font-semibold text-obsidian leading-relaxed border-l-2 border-muted-rose pl-5">
               This is not a module about thinking differently. It is a module
               about becoming someone for whom different thinking is natural.
             </p>
@@ -428,42 +455,42 @@ export default function PerceptionPage() {
       </Section>
 
       {/* ── 7. THE COST OF STAYING ───────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">
+      <section className="bg-obsidian py-24 md:py-36 border-t border-warm-stone/30">
         <Container>
-          <div className="max-w-xl mb-12 md:mb-16">
+          <div className="max-w-xl mb-14 md:mb-20">
             <Eyebrow>A Calm Truth</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-ivory">
               What Continues If Nothing Changes
             </h2>
           </div>
 
-          <div className="max-w-2xl space-y-6">
-            <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed">
+          <div className="max-w-2xl space-y-8">
+            <p className="font-sans text-base md:text-lg text-ivory/65 leading-[1.85]">
               The identity architecture underneath does not self-correct with
               time, success, or scale. In the absence of deliberate
               recalibration, it compounds.
             </p>
-            <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed">
+            <p className="font-sans text-base md:text-lg text-ivory/65 leading-[1.85]">
               Growth amplifies the pattern, not the freedom. Each new level of
               success requires more from the same internal architecture —
               producing more pressure, more emotional load, more of the feeling
               that something is permanently, quietly wrong.
             </p>
-            <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed">
+            <p className="font-sans text-base md:text-lg text-ivory/65 leading-[1.85]">
               The team grows more dependent on your presence. The business
               requires more of your nervous system to hold. The emotional
               exhaustion becomes so normal it no longer registers as exhaustion
               — only as the cost of doing what you do.
             </p>
-            <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed">
+            <p className="font-sans text-base md:text-lg text-ivory/70 leading-[1.85]">
               Success arrives. The internal experience of success does not. And
               over time, the gap between external achievement and internal
               spaciousness becomes the defining feature of a life built on
               survival rather than sovereignty.
             </p>
 
-            <div className="pt-4 border-t border-warm-stone/20">
-              <p className="font-sans text-base md:text-lg font-semibold text-ivory/80 leading-snug">
+            <div className="pt-10 md:pt-12 border-t border-warm-stone/20 md:ml-8">
+              <p className="font-sans text-base md:text-lg font-semibold text-ivory/80 leading-relaxed">
                 This is not inevitable. It is addressable. PERCEPTION is where
                 that work begins.
               </p>
@@ -475,43 +502,44 @@ export default function PerceptionPage() {
       {/* ── 8. PURCHASE OPTIONS ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone" id="purchase">
         <Container>
-          <div className="max-w-xl mb-12 md:mb-16">
+          <div className="max-w-xl mb-16 md:mb-20">
             <Eyebrow>Begin the Recalibration</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
               Choose Your Entry Point
             </h2>
-            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+            <p className="font-sans text-base md:text-lg text-obsidian/60 leading-relaxed">
               Start with PERCEPTION alone, or go deeper with the complete
               Identity lever — the integrated path through all three modules.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+
             {/* Option 1 — Module only */}
-            <div className="bg-ivory border border-warm-stone p-8 md:p-10 flex flex-col">
-              <div className="w-5 h-px bg-muted-rose mb-6" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-3">
+            <div className="bg-ivory border border-warm-stone/50 p-10 md:p-12 flex flex-col">
+              <div className="w-5 h-px bg-muted-rose mb-8" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-4">
                 Single Module
               </p>
-              <h3 className="font-sans font-bold text-[22px] text-obsidian leading-snug mb-3">
+              <h3 className="font-sans font-bold text-[22px] text-obsidian leading-snug mb-4">
                 PERCEPTION
               </h3>
-              <p className="font-sans text-sm text-obsidian/60 leading-relaxed mb-6 flex-1">
+              <p className="font-sans text-sm text-obsidian/55 leading-relaxed mb-8 flex-1">
                 The Evolution Model — Identity & Self-Concept. The full
                 PERCEPTION module, including all frameworks, exercises, and
                 integration assets.
               </p>
-              <div className="border-t border-warm-stone pt-6">
-                <p className="font-sans text-[12px] text-obsidian/35 mb-1">
+              <div className="border-t border-warm-stone/50 pt-8">
+                <p className="font-sans text-[11px] text-obsidian/30 mb-2">
                   Module price
                 </p>
-                <p className="font-sans font-bold text-3xl text-obsidian leading-none mb-6">
+                <p className="font-sans font-bold text-3xl text-obsidian leading-none mb-8">
                   ${MODULE_PRICE}
                 </p>
                 {/* TODO: Replace href with module-specific Stripe checkout link */}
                 <Link
                   href="/courses"
-                  className="block w-full font-sans font-semibold tracking-widest uppercase bg-obsidian text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] sm:text-sm py-4 text-center"
+                  className="block w-full font-sans font-semibold tracking-widest uppercase border border-obsidian/30 text-obsidian hover:bg-obsidian hover:text-ivory transition-colors duration-200 text-[11px] sm:text-sm py-4 text-center"
                 >
                   Enrol in PERCEPTION
                 </Link>
@@ -519,38 +547,41 @@ export default function PerceptionPage() {
             </div>
 
             {/* Option 2 — Lever bundle (featured) */}
-            <div className="bg-obsidian border-2 border-muted-rose/30 p-8 md:p-10 flex flex-col relative">
-              <div className="w-5 h-px bg-muted-rose mb-6" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-3">
+            <div
+              className="border border-muted-rose/20 p-10 md:p-12 flex flex-col relative"
+              style={{ backgroundColor: "#232937" }}
+            >
+              <div className="w-5 h-px bg-muted-rose mb-8" />
+              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-4">
                 Complete Lever
               </p>
-              <h3 className="font-sans font-bold text-[22px] text-ivory leading-snug mb-3">
+              <h3 className="font-sans font-bold text-[22px] text-ivory leading-snug mb-4">
                 Elevate Your Self
               </h3>
-              <p className="font-sans text-sm text-ivory/60 leading-relaxed mb-4 flex-1">
+              <p className="font-sans text-sm text-ivory/55 leading-relaxed mb-6 flex-1">
                 All three Identity modules — PERCEPTION, PRESENCE, and
                 INTELLIGENCE — as one integrated transformation pathway.
               </p>
-              <ul className="space-y-1.5 mb-6">
+              <ul className="space-y-2.5 mb-8">
                 {["PERCEPTION — The Evolution Model", "PRESENCE — The Optimisation Cycle", "INTELLIGENCE — The Leadership Codes"].map((mod) => (
                   <li key={mod} className="flex items-center gap-2.5">
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
                       <path d="M1 4L3.5 6.5L9 1" stroke="#C98C8C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="font-sans text-[11px] text-ivory/60 leading-snug">{mod}</span>
+                    <span className="font-sans text-[11px] text-ivory/50 leading-snug">{mod}</span>
                   </li>
                 ))}
               </ul>
-              <div className="border-t border-warm-stone/20 pt-6">
-                <div className="flex items-baseline gap-3 mb-1">
-                  <p className="font-sans text-[12px] text-ivory/25 line-through">
+              <div className="border-t pt-8" style={{ borderColor: "rgba(212,199,183,0.12)" }}>
+                <div className="flex items-baseline gap-3 mb-2">
+                  <p className="font-sans text-[12px] text-ivory/20 line-through">
                     ${MODULE_PRICE * 3}
                   </p>
-                  <p className="font-sans text-[11px] font-semibold text-muted-rose">
+                  <p className="font-sans text-[11px] font-semibold text-muted-rose/80">
                     Save $44
                   </p>
                 </div>
-                <p className="font-sans font-bold text-3xl text-ivory leading-none mb-6">
+                <p className="font-sans font-bold text-3xl text-ivory leading-none mb-8">
                   ${LEVER_PRICE}
                 </p>
                 {/* TODO: Replace href with lever-specific Stripe checkout link */}
@@ -562,9 +593,10 @@ export default function PerceptionPage() {
                 </Link>
               </div>
             </div>
+
           </div>
 
-          <p className="font-sans text-xs text-obsidian/35 mt-8 max-w-sm leading-relaxed">
+          <p className="font-sans text-xs text-obsidian/30 mt-10 max-w-sm leading-relaxed">
             Instant access after purchase. Build at your own pace. Each module
             is a permanent asset in your leadership library.
           </p>
