@@ -11,7 +11,63 @@ import { CTA_LINKS } from "@/lib/site";
 
 // ─── Placeholder data ────────────────────────────────────────────────────────
 
-
+const ARCHITECTURAL_OUTCOMES = [
+  {
+    title: "Clear Leadership",
+    description: "Lead from clarity instead of carrying constant emotional pressure.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <polygon points="11,2 20,11 11,20 2,11" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Self-Running Operations",
+    description: "Systems maintain consistency without your constant involvement.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M18 11a7 7 0 1 1-2.1-5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+        <polyline points="16,3 16,8 11,8" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Team Accountability",
+    description: "Ownership becomes distributed instead of flowing back through you.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <circle cx="11" cy="4" r="2" stroke="currentColor" strokeWidth="1" />
+        <circle cx="4" cy="17" r="2" stroke="currentColor" strokeWidth="1" />
+        <circle cx="18" cy="17" r="2" stroke="currentColor" strokeWidth="1" />
+        <line x1="11" y1="6" x2="5.2" y2="15.3" stroke="currentColor" strokeWidth="1" />
+        <line x1="11" y1="6" x2="16.8" y2="15.3" stroke="currentColor" strokeWidth="1" />
+        <line x1="6" y1="17" x2="16" y2="17" stroke="currentColor" strokeWidth="1" />
+      </svg>
+    ),
+  },
+  {
+    title: "Sustainable Growth",
+    description: "Revenue scales without complexity consuming the business.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <polyline points="2,18 8,12 13,15 20,6" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        <polyline points="15,6 20,6 20,11" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Spacious Leadership",
+    description: "Success no longer depends entirely on your nervous system.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M7,2 L2,2 L2,7" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M15,2 L20,2 L20,7" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7,20 L2,20 L2,15" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M15,20 L20,20 L20,15" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+];
 
 const STEPS = [
   {
@@ -70,12 +126,12 @@ export default function HomePage() {
   return (
     <>
       {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-36 md:py-52">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center">
+      <section className="bg-obsidian relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[880px]">
 
-            {/* Copy */}
-            <div>
+          {/* Copy — z-10 floats above the background image on desktop */}
+          <div className="relative z-10 flex items-center lg:w-[44%] px-6 md:px-10 lg:px-16 py-24 md:py-28 lg:py-20">
+            <div className="w-full max-w-[560px]">
               {/* Eyebrow with bronze accent line */}
               <div className="mb-9">
                 <div className="w-10 h-px bg-bronze mb-5" />
@@ -84,20 +140,20 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <h1 className="font-heading text-[48px] md:text-[56px] lg:text-[64px] leading-[1.02] text-ivory mb-8 tracking-[-0.02em]">
+              <h1 className="font-heading text-[48px] md:text-[56px] lg:text-[60px] leading-[1.02] text-ivory mb-8 tracking-[-0.02em]">
                 How Elevated Is Your Leadership for a $1–5M Business?
               </h1>
-              <p className="font-sans text-base md:text-lg text-ivory/75 mb-5 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-ivory/75 mb-5 leading-relaxed max-w-[480px]">
                 In just 7 minutes, the Elevated Leader Diagnostic scores your
                 identity, structure, and leverage across 9 dimensions. You&apos;ll
                 see exactly what&apos;s stopping your business from running
                 without you.
               </p>
-              <p className="font-sans text-base md:text-lg text-warm-stone mb-5 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-warm-stone mb-5 leading-relaxed max-w-[480px]">
                 Most businesses at this level don&apos;t break because of
                 strategy. They break because the founder becomes the bottleneck.
               </p>
-              <p className="font-sans text-sm text-warm-stone mb-12 leading-relaxed">
+              <p className="font-sans text-sm text-warm-stone mb-12 leading-relaxed max-w-[440px]">
                 Designed for female founders leading $1–5M companies who are
                 done with generic advice and ready for clear, grounded direction.
               </p>
@@ -114,68 +170,30 @@ export default function HomePage() {
                 studio behind The Elevated Leader method.
               </p>
             </div>
-
-            {/* Scorecard Visual */}
-            <div className="bg-ivory border border-warm-stone rounded p-10 lg:p-14">
-              <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-bronze mb-1.5">
-                Elevated Leader
-              </p>
-              <p className="font-sans text-base font-semibold text-obsidian mb-10">
-                Leadership Diagnostic
-              </p>
-
-              <div className="space-y-8 mb-10">
-                {[
-                  { label: "Identity", note: "Who you are as a leader" },
-                  { label: "Structure", note: "How your business operates" },
-                  { label: "Leverage", note: "How you multiply your time" },
-                ].map((dim) => (
-                  <div key={dim.label} className="space-y-2.5">
-                    <div className="flex items-center justify-between gap-4">
-                      <span className="font-sans text-sm font-semibold text-obsidian">
-                        {dim.label}
-                      </span>
-                      <span className="font-sans text-xs tabular-nums text-obsidian/40 shrink-0">
-                        — /10
-                      </span>
-                    </div>
-                    <div className="h-px bg-warm-stone w-full" />
-                    <p className="font-sans text-[11px] text-warm-stone leading-snug">
-                      {dim.note}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-t border-warm-stone pt-7 space-y-5 mb-7">
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-start">
-                  <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-bronze pt-0.5">
-                    9 Dimensions
-                  </span>
-                  <p className="font-sans text-xs text-obsidian/60 leading-relaxed">
-                    Scored across identity, structure, and leverage
-                  </p>
-                </div>
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-start">
-                  <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-bronze pt-0.5">
-                    30–90 Day Focus
-                  </span>
-                  <p className="font-sans text-xs text-obsidian/60 leading-relaxed">
-                    Your personalised priority action area
-                  </p>
-                </div>
-              </div>
-
-              <div className="border-t border-warm-stone pt-7">
-                <p className="font-sans text-[11px] text-obsidian/50 leading-relaxed">
-                  Take the diagnostic to reveal your scores and see where to
-                  focus first.
-                </p>
-              </div>
-            </div>
-
           </div>
-        </Container>
+
+          {/* Editorial Image — mobile: stacks below copy, object-cover shows upper composition.
+              Desktop: absolute layer at 62% width. Switching to object-contain renders the
+              full image at ~0.94× scale — no vertical cropping — revealing the complete
+              editorial scene (woman, books, table, coffee, vase, window light, atmosphere).
+              Obsidian bg fills the side gaps; short gradient blends the left edge in. */}
+          <div className="relative h-[72vw] overflow-hidden bg-obsidian lg:absolute lg:right-0 lg:inset-y-0 lg:w-[62%]">
+            <Image
+              src="/images/editorial/homepage-editorial-hero.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 62vw"
+              className="object-cover object-[center_20%] lg:object-contain lg:object-top"
+              priority
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #060708 0%, transparent 22%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
       </section>
 
       {/* ── 2. WHY THIS EXISTS ──────────────────────────────────────────── */}
@@ -658,20 +676,44 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* ── ARCHITECTURE VISUAL ──────────────────────────────────────────── */}
-      <section className="bg-ivory py-20 md:py-36 border-t border-warm-stone">
+      {/* ── THE RESULT ───────────────────────────────────────────────────── */}
+      <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-[1200px] mx-auto">
-            <Image
-              src="/images/frameworks/business-runs-itself-architecture.png"
-              alt="The Self-Running Business Architecture — The Elevated Leader System"
-              width={1200}
-              height={750}
-              className="w-full h-auto"
-            />
+          <div className="max-w-2xl mb-16 md:mb-20">
+            <Eyebrow>The Result</Eyebrow>
+            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
+              A Business That Runs Itself<br className="hidden md:block" />
+              Is Built Intentionally
+            </h2>
+            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+              When identity, structure, and leverage align, the business develops
+              its own momentum. Clarity replaces urgency. Ownership distributes
+              across the team. Systems sustain results without your presence.
+              Growth becomes something the business does — not something you carry.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            {ARCHITECTURAL_OUTCOMES.map((outcome) => (
+              <div
+                key={outcome.title}
+                className="group border border-warm-stone p-7 xl:p-8 hover:border-bronze/50 transition-colors duration-300"
+              >
+                <div className="text-obsidian/40 group-hover:text-obsidian/60 transition-colors duration-300 mb-6">
+                  {outcome.icon}
+                </div>
+                <div className="w-4 h-px bg-bronze mb-5" />
+                <h3 className="font-sans font-semibold text-[14px] md:text-[15px] text-obsidian leading-snug mb-3 tracking-wide">
+                  {outcome.title}
+                </h3>
+                <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
+                  {outcome.description}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
-      </section>
+      </Section>
 
       {/* ── 9. FINAL CTA ────────────────────────────────────────────────── */}
       <CTASection
