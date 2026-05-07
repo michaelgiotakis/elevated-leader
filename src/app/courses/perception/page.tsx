@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Section } from "@/components/ui/Section";
@@ -404,7 +403,7 @@ export default function PerceptionPage() {
       {/* ── 5. WHAT'S INCLUDED ───────────────────────────────────────────── */}
       <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-12 md:mb-16">
+          <div className="max-w-xl mb-14 md:mb-20">
             <Eyebrow>What&apos;s Inside</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
               The Assets Inside PERCEPTION
@@ -415,17 +414,17 @@ export default function PerceptionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {DELIVERABLES.map((item) => (
-              <Card key={item.title} className="p-8 md:p-10">
-                <div className="w-5 h-px bg-muted-rose mb-5" />
-                <h3 className="font-sans font-semibold text-[15px] text-obsidian leading-snug mb-3">
+              <div key={item.title} className="bg-ivory border border-warm-stone/30 p-10 md:p-12">
+                <div className="w-5 h-px bg-muted-rose mb-6" />
+                <h3 className="font-sans font-semibold text-[15px] text-obsidian leading-snug mb-4">
                   {item.title}
                 </h3>
                 <p className="font-sans text-sm text-obsidian/60 leading-relaxed">
                   {item.description}
                 </p>
-              </Card>
+              </div>
             ))}
           </div>
         </Container>
@@ -434,21 +433,25 @@ export default function PerceptionPage() {
       {/* ── 6. WHO THIS IS FOR ───────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-12 md:mb-16">
+          <div className="max-w-xl mb-14 md:mb-20">
             <Eyebrow>Is This for You?</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian">
               This Module Is For You If&hellip;
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
             {FOR_WHOM.map((item, i) => (
-              <Card key={i} className="p-8 md:p-10">
-                <div className="w-6 h-0.5 bg-muted-rose mb-5" />
+              <div
+                key={i}
+                className="border border-warm-stone/25 p-10 md:p-12"
+                style={{ backgroundColor: "rgba(212,199,183,0.07)" }}
+              >
+                <div className="w-6 h-0.5 bg-muted-rose mb-6" />
                 <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                   {item}
                 </p>
-              </Card>
+              </div>
             ))}
           </div>
         </Container>
@@ -606,7 +609,7 @@ export default function PerceptionPage() {
       {/* ── 9. RELATED MODULES ───────────────────────────────────────────── */}
       <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-12 md:mb-16">
+          <div className="max-w-xl mb-14 md:mb-20">
             <Eyebrow>The Full Lever</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian">
               The Rest of Elevate Your Self
@@ -618,10 +621,10 @@ export default function PerceptionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
             {RELATED.map((mod) => (
-              <Card key={mod.num} className="p-8 md:p-10 flex flex-col">
-                <div className="w-6 h-0.5 bg-muted-rose mb-4" />
+              <div key={mod.num} className="bg-ivory border border-warm-stone/30 p-10 md:p-12 flex flex-col">
+                <div className="w-6 h-0.5 bg-muted-rose mb-5" />
                 <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-muted-rose mb-3">
                   {mod.num} — {mod.codename}
                 </p>
@@ -631,12 +634,12 @@ export default function PerceptionPage() {
                 <p className="font-sans text-[11px] text-obsidian/50 mb-4 leading-snug">
                   {mod.descriptor}
                 </p>
-                <p className="font-sans text-sm text-obsidian/60 leading-relaxed mb-6 flex-1">
+                <p className="font-sans text-sm text-obsidian/60 leading-relaxed mb-8 flex-1">
                   {mod.description}
                 </p>
 
                 {/* Actions */}
-                <div className="border-t border-warm-stone pt-4 flex items-center justify-between gap-3">
+                <div className="border-t border-warm-stone/30 pt-6 flex items-center justify-between gap-3">
                   <Link
                     href={`/courses/${mod.slug}`}
                     className="font-sans text-[11px] font-semibold text-obsidian hover:text-bronze transition-colors duration-150 flex items-center gap-1.5"
@@ -658,7 +661,7 @@ export default function PerceptionPage() {
                     Quick Add
                   </Link>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
 

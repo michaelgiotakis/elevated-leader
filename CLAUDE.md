@@ -281,3 +281,114 @@ The site must NEVER feel:
 
 The Elevated Leader should feel like:
 a prestige editorial transformation brand for high-performing female founders.
+
+## EDITORIAL ATMOSPHERE COLOUR SYSTEM
+
+IMPORTANT:
+Dark sections throughout The Elevated Leader ecosystem should NOT use harsh flat black unless intentionally specified.
+
+The brand now uses:
+cinematic layered midnight tones
+to create emotional continuity and luxury editorial atmosphere.
+
+Avoid:
+- flat black section stacking
+- high-contrast SaaS alternation
+- abrupt dark/light transitions
+
+The site should feel:
+cinematic,
+editorial,
+psychologically sophisticated,
+and emotionally immersive.
+
+---
+
+### ELEVATE YOUR SELF — DARK ATMOSPHERE SYSTEM
+
+These tones create:
+psychological depth,
+editorial femininity,
+emotional sophistication,
+and cinematic continuity.
+
+#### Primary Midnight Slate
+Used for:
+- hero sections
+- primary emotional atmosphere
+- cinematic editorial environments
+
+HEX:
+#1F2633
+
+Feeling:
+rich,
+deep,
+editorial,
+premium,
+emotionally intelligent.
+
+---
+
+#### Deep Cinematic Navy
+Used for:
+- psychologically deeper sections
+- framework/emotional depth sections
+- Evolution Model backgrounds
+
+HEX:
+#161D29
+
+Feeling:
+introspective,
+grounded,
+psychological,
+cinematic,
+luxurious.
+
+---
+
+#### Atmospheric Slate Overlay
+Used for:
+- subtle tonal variation
+- layered dark section transitions
+- hover states
+- soft atmospheric depth
+
+HEX:
+#232937
+
+Feeling:
+softened darkness,
+editorial continuity,
+luxury restraint.
+
+---
+
+### IMPORTANT ATMOSPHERE RULES
+
+Dark sections should:
+- transition tonally
+- feel emotionally connected
+- maintain cinematic continuity
+
+Dark sections should NOT:
+- abruptly alternate
+- feel like SaaS section blocks
+- create harsh visual resets
+
+The user should feel:
+they are moving through one cohesive emotional editorial environment.
+
+---
+
+### GLOBAL EDITORIAL PRINCIPLE
+
+The Elevated Leader does NOT use colour as decoration.
+
+Colour is used to create:
+- emotional territory
+- psychological pacing
+- cinematic atmosphere
+- editorial sophistication
+- transformation environments
