@@ -207,67 +207,140 @@ export default function DiagnosticPage() {
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="max-w-2xl">
-            <Eyebrow>The Real Problem</Eyebrow>
-            <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-10">
-              Most Founders Are Solving the Wrong Problem
-            </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] lg:gap-x-12 xl:gap-x-16">
 
-            <div className="space-y-6">
+            {/* Left — editorial copy */}
+            <div className="lg:self-start">
+              <Eyebrow>The Real Problem</Eyebrow>
+              <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-10">
+                Most Founders Are Solving the Wrong Problem
+              </h2>
+
+              <div className="space-y-6">
+                <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+                  At $1M–$5M, the business is working. But it is working in a way
+                  that still requires you to carry too much of it.
+                </p>
+                <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+                  You are present in decisions that should not need you. You are
+                  rescuing work that should not break. You are holding the
+                  standard because the system does not hold it for you.
+                </p>
+                <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+                  So you push harder. You try more strategy, more information,
+                  more effort. But the harder you push, the heavier everything
+                  feels. Scale creates new dependencies where the old ones barely
+                  existed. Growth increases complexity faster than it increases
+                  freedom.
+                </p>
+                <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
+                  The problem is rarely the offer, the team, or the market.
+                </p>
+              </div>
+
+              {/* Callout block */}
+              <div className="my-10 border-l-2 border-bronze pl-6 py-1">
+                <p className="font-sans text-base md:text-lg font-semibold text-obsidian leading-snug">
+                  Most high-performing founders at this stage are not struggling
+                  because they lack capability. They are leading businesses built
+                  on invisible dependency — where the founder is the linchpin of
+                  too many moving parts, without ever choosing to be.
+                </p>
+              </div>
+
               <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                At $1M–$5M, the business is working. But it is working in a way
-                that still requires you to carry too much of it.
-              </p>
-              <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                You are present in decisions that should not need you. You are
-                rescuing work that should not break. You are holding the
-                standard because the system does not hold it for you.
-              </p>
-              <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                So you push harder. You try more strategy, more information,
-                more effort. But the harder you push, the heavier everything
-                feels. Scale creates new dependencies where the old ones barely
-                existed. Growth increases complexity faster than it increases
-                freedom.
-              </p>
-              <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-                The problem is rarely the offer, the team, or the market.
+                The operating system underneath the business has never been
+                clearly mapped, diagnosed, or addressed. And no one has ever shown
+                you exactly where to look.
               </p>
             </div>
 
-            {/* Callout block */}
-            <div className="my-10 border-l-2 border-bronze pl-6 py-1">
-              <p className="font-sans text-base md:text-lg font-semibold text-obsidian leading-snug">
-                Most high-performing founders at this stage are not struggling
-                because they lack capability. They are leading businesses built
-                on invisible dependency — where the founder is the linchpin of
-                too many moving parts, without ever choosing to be.
-              </p>
+            {/* Right — atmospheric pressure field */}
+            <div className="relative mt-16 lg:mt-0 min-h-[480px]">
+
+              {/* Atmospheric artwork — fills the full column */}
+              <Image
+                src="/images/editorial/invisible-pressure-atmosphere.png"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 460px"
+                className="object-contain"
+                aria-hidden="true"
+              />
+
+              {/* Center — INVISIBLE PRESSURE */}
+              <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 px-3 py-2"
+                style={{ backgroundColor: "rgba(246,241,233,0.72)" }}
+              >
+                <p className="font-sans text-[9px] font-bold tracking-[0.4em] uppercase text-obsidian/80 whitespace-nowrap">
+                  INVISIBLE PRESSURE
+                </p>
+                <p className="font-sans text-[9px] text-obsidian/40 mt-1.5 leading-snug" style={{ maxWidth: "128px" }}>
+                  The unseen weight you carry every day.
+                </p>
+              </div>
+
+              {/* Decision Pressure — upper left */}
+              <div className="absolute top-[6%] left-0 z-10" style={{ maxWidth: "100px" }}>
+                <div className="w-3 h-px bg-bronze/40 mb-2" />
+                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
+                  Decision Pressure
+                </p>
+                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
+                  Too many decisions depend on you.
+                </p>
+              </div>
+
+              {/* Operational Pressure — upper right */}
+              <div className="absolute top-[6%] right-0 text-right z-10" style={{ maxWidth: "100px" }}>
+                <div className="w-3 h-px bg-bronze/40 mb-2 ml-auto" />
+                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
+                  Operational Pressure
+                </p>
+                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
+                  Too many moving parts break without you.
+                </p>
+              </div>
+
+              {/* People Pressure — lower left */}
+              <div className="absolute bottom-[22%] left-0 z-10" style={{ maxWidth: "100px" }}>
+                <div className="w-3 h-px bg-bronze/40 mb-2" />
+                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
+                  People Pressure
+                </p>
+                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
+                  Too many people look to you for direction.
+                </p>
+              </div>
+
+              {/* Growth Pressure — lower right */}
+              <div className="absolute bottom-[22%] right-0 text-right z-10" style={{ maxWidth: "100px" }}>
+                <div className="w-3 h-px bg-bronze/40 mb-2 ml-auto" />
+                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
+                  Growth Pressure
+                </p>
+                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
+                  Too much growth creates more complexity.
+                </p>
+              </div>
+
+              {/* Standard Pressure — bottom center */}
+              <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 text-center z-10">
+                <div className="w-3 h-px bg-bronze/40 mb-2 mx-auto" />
+                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug whitespace-nowrap">
+                  Standard Pressure
+                </p>
+                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1 mx-auto" style={{ maxWidth: "120px" }}>
+                  The standard lives in you, not the system.
+                </p>
+              </div>
+
             </div>
 
-            <p className="font-sans text-base md:text-lg text-obsidian/70 leading-relaxed">
-              The operating system underneath the business has never been
-              clearly mapped, diagnosed, or addressed. And no one has ever shown
-              you exactly where to look.
-            </p>
           </div>
         </Container>
       </Section>
-
-      {/* ── INVISIBLE PRESSURE MAP VISUAL ───────────────────────────────── */}
-      <section className="bg-ivory py-20 md:py-28 border-t border-warm-stone">
-        <Container>
-          <div className="max-w-[900px] mx-auto">
-            <Image
-              src="/images/frameworks/invisible-pressure-map.png"
-              alt="The Invisible Pressure Map — where founder dependency accumulates across Identity, Structure, and Leverage"
-              width={900}
-              height={563}
-              className="w-full h-auto"
-            />
-          </div>
-        </Container>
-      </section>
 
       {/* ── 3. WHAT THE DIAGNOSTIC ACTUALLY REVEALS ─────────────────────── */}
       <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">
