@@ -71,38 +71,98 @@ const OUTCOMES = [
 export default function UnlockYourLeveragePage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-28 md:py-40">
-        <Container>
-          <div className="max-w-2xl">
-            <div className="mb-8">
-              <div className="w-10 h-px bg-eucalyptus mb-5" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-eucalyptus">
-                Leverage Lever
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#111816" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[860px]">
+
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-2 mb-12" aria-label="Breadcrumb">
+                <Link
+                  href="/courses"
+                  className="font-sans text-[10px] text-ivory/35 hover:text-ivory/65 transition-colors duration-150"
+                >
+                  Courses
+                </Link>
+                <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
+                <span className="font-sans text-[10px] text-ivory/45">Unlock Your Leverage</span>
+              </nav>
+
+              {/* Lever eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
+                  Leverage Lever
+                </p>
+              </div>
+
+              <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-8 tracking-tight">
+                Unlock Your Leverage
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug">
+                Scale without becoming the bottleneck again.
               </p>
-            </div>
-            <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-5 tracking-tight">
-              Unlock Your Leverage
-            </h1>
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-6 leading-snug">
-              Scale without becoming the bottleneck again.
-            </p>
-            <p className="font-sans text-base md:text-lg text-ivory/70 leading-relaxed mb-12">
-              This lever shows you how to multiply your time, output, and
-              impact. It builds the systems of delegation, ownership, and scale
-              so the business can grow without pulling you back into the centre
-              of everything.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <Button href="/courses" variant="primary">
-                Choose Leverage Modules
-              </Button>
-              <Button href={CTA_LINKS.diagnostic} variant="ghost" external>
-                Take the Diagnostic
-              </Button>
+
+              <p className="font-sans text-base md:text-lg text-ivory/70 leading-relaxed mb-12">
+                This lever shows you how to multiply your time, output, and
+                impact. It builds the systems of delegation, ownership, and scale
+                so the business can grow without pulling you back into the centre
+                of everything.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Button href="/courses" variant="primary">
+                  Choose Leverage Modules
+                </Button>
+                <Button href={CTA_LINKS.diagnostic} variant="ghost" external>
+                  Take the Diagnostic
+                </Button>
+              </div>
+
             </div>
           </div>
-        </Container>
+
+          {/* Right — editorial atmosphere */}
+          <div
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]"
+            style={{ backgroundColor: "#111816" }}
+          >
+            <Image
+              src="/images/editorial/leverage-hero-editorial.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-[50%_15%] lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — hero bg dissolves into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #111816 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from atmosphere */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #111816 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile bottom dissolve — image fades back into atmosphere */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to top, #111816 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
       </section>
 
       {/* ── LEVER NAV ───────────────────────────────────────────────────── */}

@@ -115,30 +115,30 @@ export default function PerceptionPage() {
               <nav className="flex items-center gap-2 mb-12" aria-label="Breadcrumb">
                 <Link
                   href="/courses"
-                  className="font-sans text-[10px] text-ivory/25 hover:text-ivory/50 transition-colors duration-150"
+                  className="font-sans text-[10px] text-ivory/35 hover:text-ivory/65 transition-colors duration-150"
                 >
                   Courses
                 </Link>
-                <span className="font-sans text-[10px] text-ivory/15" aria-hidden="true">→</span>
+                <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
                 <Link
                   href="/courses/elevate-your-self"
-                  className="font-sans text-[10px] text-muted-rose/50 hover:text-muted-rose transition-colors duration-150"
+                  className="font-sans text-[10px] text-muted-rose opacity-65 hover:opacity-100 transition-opacity duration-150"
                 >
                   Elevate Your Self
                 </Link>
-                <span className="font-sans text-[10px] text-ivory/15" aria-hidden="true">→</span>
-                <span className="font-sans text-[10px] text-ivory/35">PERCEPTION</span>
+                <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
+                <span className="font-sans text-[10px] text-ivory/45">PERCEPTION</span>
               </nav>
 
               {/* Module eyebrow */}
               <div className="mb-10">
-                <div className="w-10 h-px bg-muted-rose mb-5" />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-muted-rose">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
                   Identity Lever — Module 01
                 </p>
               </div>
 
-              <p className="font-sans text-[11px] font-bold tracking-[0.3em] uppercase text-muted-rose mb-4">
+              <p className="font-sans text-[11px] font-bold tracking-[0.3em] uppercase text-warm-stone mb-4">
                 PERCEPTION
               </p>
 

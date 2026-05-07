@@ -70,38 +70,95 @@ const OUTCOMES = [
 export default function ElevateYourSelfPage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-28 md:py-40">
-        <Container>
-          <div className="max-w-2xl">
-            <div className="mb-8">
-              <div className="w-10 h-px bg-muted-rose mb-5" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-muted-rose">
-                Identity Lever
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#232937" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[860px]">
+
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-2 mb-12" aria-label="Breadcrumb">
+                <Link
+                  href="/courses"
+                  className="font-sans text-[10px] text-ivory/35 hover:text-ivory/65 transition-colors duration-150"
+                >
+                  Courses
+                </Link>
+                <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
+                <span className="font-sans text-[10px] text-ivory/45">Elevate Your Self</span>
+              </nav>
+
+              {/* Lever eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
+                  Identity Lever
+                </p>
+              </div>
+
+              <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-8 tracking-tight">
+                Elevate Your Self
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug">
+                Lead from clarity instead of pressure.
               </p>
-            </div>
-            <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-5 tracking-tight">
-              Elevate Your Self
-            </h1>
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-6 leading-snug">
-              Lead from clarity instead of pressure.
-            </p>
-            <p className="font-sans text-base md:text-lg text-ivory/70 leading-relaxed mb-12">
-              This lever strengthens how you think, decide, regulate, and show
-              up as the leader of a $1M–$5M business. Because if your internal
-              operating system is unclear, every decision, hire, offer, and
-              system downstream becomes heavier than it needs to be.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <Button href="/courses" variant="primary">
-                Choose Identity Modules
-              </Button>
-              <Button href={CTA_LINKS.diagnostic} variant="ghost" external>
-                Take the Diagnostic
-              </Button>
+
+              <p className="font-sans text-base md:text-lg text-ivory/70 leading-relaxed mb-12">
+                This lever strengthens how you think, decide, regulate, and show
+                up as the leader of a $1M–$5M business. Because if your internal
+                operating system is unclear, every decision, hire, offer, and
+                system downstream becomes heavier than it needs to be.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Button href="/courses" variant="primary">
+                  Choose Identity Modules
+                </Button>
+                <Button href={CTA_LINKS.diagnostic} variant="ghost" external>
+                  Take the Diagnostic
+                </Button>
+              </div>
+
             </div>
           </div>
-        </Container>
+
+          {/* Right — editorial atmosphere */}
+          <div className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]" style={{ backgroundColor: "#232937" }}>
+            <Image
+              src="/images/editorial/homepage-editorial-hero.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-[42%_12%] lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — slate into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #232937 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from slate */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #232937 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile bottom dissolve — image fades back into slate */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to top, #232937 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
       </section>
 
       {/* ── LEVER NAV ───────────────────────────────────────────────────── */}

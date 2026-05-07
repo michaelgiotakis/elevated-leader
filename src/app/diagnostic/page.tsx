@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -135,78 +136,114 @@ const REALISATIONS = [
 export default function DiagnosticPage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section
-        className="bg-obsidian py-28 md:py-44 relative overflow-hidden"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(246,241,233,0.035) 1px, transparent 1px)",
-          backgroundSize: "36px 36px",
-        }}
-      >
-        <Container>
-          <div className="max-w-2xl relative z-10">
-            {/* Eyebrow */}
-            <div className="mb-10">
-              <div className="w-10 h-px bg-bronze mb-5" />
-              <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze">
-                The Elevated Leader Diagnostic
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#161D29", backgroundImage: "radial-gradient(ellipse 35% 55% at 5% 100%, rgba(184,134,76,0.055) 0%, transparent 50%)" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[900px]">
+
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-bronze mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze">
+                  The Elevated Leader Diagnostic
+                </p>
+              </div>
+
+              {/* Headline */}
+              <h1 className="font-heading text-[44px] md:text-[62px] leading-[1.06] text-ivory mb-7 tracking-tight">
+                Find the Bottleneck That&apos;s Keeping Your Business Heavy
+              </h1>
+
+              {/* Subheadline */}
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug">
+                You do not need more pressure, more information, or more effort.
               </p>
-            </div>
-
-            {/* Headline */}
-            <h1 className="font-heading text-[44px] md:text-[62px] leading-[1.06] text-ivory mb-7 tracking-tight">
-              Find the Bottleneck That&apos;s Keeping Your Business Heavy
-            </h1>
-
-            {/* Subheadline */}
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-5 leading-snug">
-              You do not need more pressure, more information, or more effort.
-            </p>
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-8 leading-snug">
-              You need clarity on what is actually slowing the business down.
-            </p>
-
-            {/* Supporting copy */}
-            <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed mb-12">
-              This diagnostic reveals where pressure, complexity, emotional
-              load, and operational dependency are accumulating across your
-              business — so you know exactly where to focus next.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-10">
-              <Button href={CTA_LINKS.diagnostic} variant="primary" external>
-                Start The Diagnostic
-              </Button>
-              <p className="font-sans text-sm text-ivory/40 leading-tight">
-                Takes approximately 15–20 minutes.
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium mb-8 leading-snug">
+                You need clarity on what is actually slowing the business down.
               </p>
-            </div>
 
-            {/* Reassurance */}
-            <div className="flex flex-col gap-2.5">
-              {[
-                "No fluff.",
-                "No generic advice.",
-                "No surface-level scoring.",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="w-3 h-px bg-bronze/60 shrink-0" />
-                  <p className="font-sans text-xs text-ivory/35 tracking-wide">
-                    {item}
-                  </p>
-                </div>
-              ))}
+              {/* Supporting copy */}
+              <p className="font-sans text-base md:text-lg text-ivory/65 leading-relaxed mb-12">
+                This diagnostic reveals where pressure, complexity, emotional
+                load, and operational dependency are accumulating across your
+                business — so you know exactly where to focus next.
+              </p>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-10">
+                <Button href={CTA_LINKS.diagnostic} variant="primary" external>
+                  Start The Diagnostic
+                </Button>
+                <p className="font-sans text-sm text-ivory/40 leading-tight">
+                  Takes approximately 15–20 minutes.
+                </p>
+              </div>
+
+              {/* Reassurance */}
+              <div className="flex flex-col gap-2.5">
+                {[
+                  "No fluff.",
+                  "No generic advice.",
+                  "No surface-level scoring.",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="w-3 h-px bg-bronze/60 shrink-0" />
+                    <p className="font-sans text-xs text-ivory/35 tracking-wide">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
-        </Container>
+
+          {/* Right — editorial atmosphere */}
+          <div
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]"
+            style={{ backgroundColor: "#161D29" }}
+          >
+            <Image
+              src="/images/editorial/diagnostic-hero-editorial.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-[55%_15%] lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — hero bg dissolves into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #161D29 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from atmosphere */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #161D29 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile bottom dissolve — image fades back into atmosphere */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to top, #161D29 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
       </section>
 
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] lg:gap-x-12 xl:gap-x-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_540px] lg:gap-x-10 xl:gap-x-12">
 
             {/* Left — editorial copy */}
             <div className="lg:self-start">
@@ -255,7 +292,7 @@ export default function DiagnosticPage() {
             </div>
 
             {/* Right — coded atmospheric pressure field */}
-            <div className="relative mt-16 lg:mt-0 min-h-[480px]">
+            <div className="relative mt-16 lg:mt-0 min-h-[560px]">
 
               {/* ── ATMOSPHERIC CORE ─────────────────────────────────── */}
 
@@ -266,8 +303,8 @@ export default function DiagnosticPage() {
                 aria-hidden="true"
               >
                 <div style={{
-                  width: "440px", height: "440px", borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(212,199,183,0.42) 0%, rgba(212,199,183,0.16) 45%, transparent 72%)",
+                  width: "540px", height: "540px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(212,199,183,0.44) 0%, rgba(212,199,183,0.18) 45%, transparent 72%)",
                   animation: "pressureGlow 9s ease-in-out infinite",
                 }} />
               </div>
@@ -279,8 +316,8 @@ export default function DiagnosticPage() {
                 aria-hidden="true"
               >
                 <div style={{
-                  width: "320px", height: "320px", borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(184,134,76,0.24) 0%, rgba(212,199,183,0.30) 38%, transparent 70%)",
+                  width: "420px", height: "420px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(184,134,76,0.26) 0%, rgba(212,199,183,0.32) 38%, transparent 70%)",
                   animation: "pressurePulse 7s ease-in-out infinite 0.8s",
                 }} />
               </div>
@@ -292,9 +329,9 @@ export default function DiagnosticPage() {
                 aria-hidden="true"
               >
                 <div style={{
-                  width: "180px", height: "180px", borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(184,134,76,0.45) 0%, rgba(184,134,76,0.18) 50%, transparent 100%)",
-                  filter: "blur(14px)",
+                  width: "230px", height: "230px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(184,134,76,0.48) 0%, rgba(184,134,76,0.20) 50%, transparent 100%)",
+                  filter: "blur(16px)",
                   animation: "pressurePulse 7s ease-in-out infinite 2s",
                 }} />
               </div>
@@ -304,10 +341,10 @@ export default function DiagnosticPage() {
                 className="absolute pointer-events-none"
                 style={{
                   top: "50%", left: "50%",
-                  width: "6px", height: "6px",
-                  marginTop: "-3px", marginLeft: "-3px",
+                  width: "7px", height: "7px",
+                  marginTop: "-3.5px", marginLeft: "-3.5px",
                   borderRadius: "50%",
-                  background: "rgba(184,134,76,0.70)",
+                  background: "rgba(184,134,76,0.82)",
                 }}
                 aria-hidden="true"
               />
@@ -320,13 +357,13 @@ export default function DiagnosticPage() {
                 aria-hidden="true"
               >
                 {/* Dashed radial lines — center (230,300) to each node */}
-                <line x1="230" y1="300" x2="22"  y2="74"  stroke="rgba(184,134,76,0.22)" strokeWidth="1.0" strokeDasharray="2,3" />
-                <line x1="230" y1="300" x2="438" y2="86"  stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
-                <line x1="230" y1="300" x2="14"  y2="338" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
-                <line x1="230" y1="300" x2="438" y2="470" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
-                <line x1="230" y1="300" x2="230" y2="566" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="22"  y2="74"  stroke="rgba(184,134,76,0.34)" strokeWidth="1.4" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="438" y2="86"  stroke="rgba(184,134,76,0.30)" strokeWidth="1.4" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="14"  y2="338" stroke="rgba(184,134,76,0.30)" strokeWidth="1.4" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="438" y2="470" stroke="rgba(184,134,76,0.30)" strokeWidth="1.4" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="230" y2="566" stroke="rgba(184,134,76,0.30)" strokeWidth="1.4" strokeDasharray="2,3" />
                 {/* Outer orbit ellipse */}
-                <ellipse cx="230" cy="300" rx="175" ry="145" fill="none" stroke="rgba(212,199,183,0.22)" strokeWidth="0.8" />
+                <ellipse cx="230" cy="300" rx="175" ry="145" fill="none" stroke="rgba(212,199,183,0.32)" strokeWidth="1.1" />
               </svg>
 
               {/* ── CENTER LABEL ─────────────────────────────────────── */}
@@ -335,11 +372,11 @@ export default function DiagnosticPage() {
                 style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
                 aria-hidden="true"
               >
-                <p className="font-sans text-[9px] font-bold tracking-[0.5em] uppercase text-obsidian/55 whitespace-nowrap">
+                <p className="font-sans text-[13px] font-bold tracking-[0.5em] uppercase text-obsidian/75 whitespace-nowrap">
                   INVISIBLE
                 </p>
-                <div className="mx-auto my-2" style={{ width: "20px", height: "1px", background: "rgba(184,134,76,0.55)" }} />
-                <p className="font-sans text-[9px] font-bold tracking-[0.5em] uppercase text-obsidian/55 whitespace-nowrap">
+                <div className="mx-auto my-2" style={{ width: "32px", height: "1px", background: "rgba(184,134,76,0.80)" }} />
+                <p className="font-sans text-[13px] font-bold tracking-[0.5em] uppercase text-obsidian/75 whitespace-nowrap">
                   PRESSURE
                 </p>
               </div>
@@ -351,12 +388,12 @@ export default function DiagnosticPage() {
                 className="absolute z-10"
                 style={{ top: "12%", left: "4%", animation: "pressureDrift 10s ease-in-out infinite 0s" }}
               >
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M8 2L8 8L4 14 M8 8L12 14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 2L8 8L4 14 M8 8L12 14" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
                 </svg>
-                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px" }} />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Decision</p>
-                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
+                <div style={{ width: "28px", height: "1px", background: "rgba(184,134,76,0.62)", margin: "8px 0 6px" }} />
+                <p className="font-sans text-[13px] font-semibold tracking-[0.32em] uppercase leading-tight text-obsidian/80">Decision</p>
+                <p className="font-sans text-[12px] tracking-[0.28em] uppercase leading-tight text-obsidian/62 mt-0.5">Pressure</p>
               </div>
 
               {/* Operational Pressure — upper right */}
@@ -365,15 +402,15 @@ export default function DiagnosticPage() {
                 style={{ top: "14%", right: "3%", animation: "pressureDrift 12s ease-in-out infinite 2s" }}
               >
                 <div className="flex justify-end">
-                  <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <circle cx="8" cy="8" r="5.5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
-                    <line x1="8" y1="2.5" x2="8" y2="13.5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
-                    <line x1="2.5" y1="8" x2="13.5" y2="8" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="8" r="5.5" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" />
+                    <line x1="8" y1="2.5" x2="8" y2="13.5" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" />
+                    <line x1="2.5" y1="8" x2="13.5" y2="8" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" />
                   </svg>
                 </div>
-                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px", marginLeft: "auto" }} />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Operational</p>
-                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
+                <div style={{ width: "28px", height: "1px", background: "rgba(184,134,76,0.62)", margin: "8px 0 6px", marginLeft: "auto" }} />
+                <p className="font-sans text-[13px] font-semibold tracking-[0.32em] uppercase leading-tight text-obsidian/80">Operational</p>
+                <p className="font-sans text-[12px] tracking-[0.28em] uppercase leading-tight text-obsidian/62 mt-0.5">Pressure</p>
               </div>
 
               {/* People Pressure — left middle */}
@@ -381,14 +418,14 @@ export default function DiagnosticPage() {
                 className="absolute z-10"
                 style={{ top: "56%", left: "2%", animation: "pressureDrift 11s ease-in-out infinite 1s" }}
               >
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <circle cx="6" cy="5" r="2" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
-                  <circle cx="10" cy="5" r="2" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
-                  <path d="M2 14Q3 10.5 6 10.5Q8 10 10 10.5Q13 10.5 14 14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="6" cy="5" r="2" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" />
+                  <circle cx="10" cy="5" r="2" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" />
+                  <path d="M2 14Q3 10.5 6 10.5Q8 10 10 10.5Q13 10.5 14 14" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
                 </svg>
-                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px" }} />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">People</p>
-                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
+                <div style={{ width: "28px", height: "1px", background: "rgba(184,134,76,0.62)", margin: "8px 0 6px" }} />
+                <p className="font-sans text-[13px] font-semibold tracking-[0.32em] uppercase leading-tight text-obsidian/80">People</p>
+                <p className="font-sans text-[12px] tracking-[0.28em] uppercase leading-tight text-obsidian/62 mt-0.5">Pressure</p>
               </div>
 
               {/* Growth Pressure — lower right */}
@@ -397,14 +434,14 @@ export default function DiagnosticPage() {
                 style={{ bottom: "22%", right: "3%", animation: "pressureDrift 9s ease-in-out infinite 3s" }}
               >
                 <div className="flex justify-end">
-                  <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M2 12L6 7L9 9L14 3" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M11 3L14 3L14 6" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M2 12L6 7L9 9L14 3" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M11 3L14 3L14 6" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
                   </svg>
                 </div>
-                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px", marginLeft: "auto" }} />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Growth</p>
-                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
+                <div style={{ width: "28px", height: "1px", background: "rgba(184,134,76,0.62)", margin: "8px 0 6px", marginLeft: "auto" }} />
+                <p className="font-sans text-[13px] font-semibold tracking-[0.32em] uppercase leading-tight text-obsidian/80">Growth</p>
+                <p className="font-sans text-[12px] tracking-[0.28em] uppercase leading-tight text-obsidian/62 mt-0.5">Pressure</p>
               </div>
 
               {/* Standard Pressure — bottom center */}
@@ -412,16 +449,16 @@ export default function DiagnosticPage() {
               <div className="absolute z-10" style={{ bottom: "6%", left: "50%", transform: "translateX(-50%)" }}>
                 <div className="text-center" style={{ animation: "pressureDrift 13s ease-in-out infinite 1.5s" }}>
                   <div className="flex justify-center">
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                      <line x1="8" y1="2" x2="8" y2="14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
-                      <line x1="3" y1="5" x2="13" y2="5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
-                      <line x1="4" y1="9" x2="12" y2="9" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
-                      <line x1="6" y1="13" x2="10" y2="13" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <line x1="8" y1="2" x2="8" y2="14" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="3" y1="5" x2="13" y2="5" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="4" y1="9" x2="12" y2="9" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="6" y1="13" x2="10" y2="13" stroke="rgba(184,134,76,0.85)" strokeWidth="1.3" strokeLinecap="round" />
                     </svg>
                   </div>
-                  <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px auto 6px" }} />
-                  <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65 whitespace-nowrap">Standard</p>
-                  <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5 whitespace-nowrap">Pressure</p>
+                  <div style={{ width: "28px", height: "1px", background: "rgba(184,134,76,0.62)", margin: "8px auto 6px" }} />
+                  <p className="font-sans text-[13px] font-semibold tracking-[0.32em] uppercase leading-tight text-obsidian/80 whitespace-nowrap">Standard</p>
+                  <p className="font-sans text-[12px] tracking-[0.28em] uppercase leading-tight text-obsidian/62 mt-0.5 whitespace-nowrap">Pressure</p>
                 </div>
               </div>
 
@@ -432,7 +469,7 @@ export default function DiagnosticPage() {
       </Section>
 
       {/* ── 3. WHAT THE DIAGNOSTIC ACTUALLY REVEALS ─────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">
+      <section className="py-20 md:py-28 border-t border-warm-stone/30" style={{ backgroundColor: "#0D1219" }}>
         <Container>
           <div className="max-w-xl mb-12 md:mb-16">
             <Eyebrow>What It Measures</Eyebrow>
@@ -558,7 +595,7 @@ export default function DiagnosticPage() {
       </Section>
 
       {/* ── 6. EMOTIONAL RECOGNITION ─────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">
+      <section className="py-20 md:py-28 border-t border-warm-stone/30" style={{ backgroundColor: "#110F0D" }}>
         <Container>
           <div className="max-w-xl mb-12 md:mb-16">
             <Eyebrow>What Founders Realise</Eyebrow>
@@ -626,7 +663,7 @@ export default function DiagnosticPage() {
       </Section>
 
       {/* ── 8. FINAL CTA ─────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-32 border-t border-warm-stone/30">
+      <section className="py-20 md:py-32 border-t border-warm-stone/30" style={{ backgroundColor: "#090D14", backgroundImage: "radial-gradient(ellipse 70% 45% at 50% 0%, rgba(184,134,76,0.055) 0%, transparent 55%)" }}>
         <Container>
           <div className="max-w-xl mx-auto text-center">
             <h2 className="font-heading text-[36px] md:text-[46px] text-ivory leading-[1.1] mb-6 tracking-tight">
