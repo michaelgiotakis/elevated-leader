@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -252,6 +253,21 @@ export default function DiagnosticPage() {
           </div>
         </Container>
       </Section>
+
+      {/* ── INVISIBLE PRESSURE MAP VISUAL ───────────────────────────────── */}
+      <section className="bg-ivory py-20 md:py-28 border-t border-warm-stone">
+        <Container>
+          <div className="max-w-[900px] mx-auto">
+            <Image
+              src="/images/frameworks/invisible-pressure-map.png"
+              alt="The Invisible Pressure Map — where founder dependency accumulates across Identity, Structure, and Leverage"
+              width={900}
+              height={563}
+              className="w-full h-auto"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* ── 3. WHAT THE DIAGNOSTIC ACTUALLY REVEALS ─────────────────────── */}
       <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">

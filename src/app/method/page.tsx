@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -250,6 +251,21 @@ export default function MethodPage() {
           </div>
         </Container>
       </Section>
+
+      {/* ── BUSINESS OPERATING SYSTEM VISUAL ────────────────────────────── */}
+      <section className="bg-ivory py-20 md:py-28 border-t border-warm-stone">
+        <Container>
+          <div className="max-w-[1100px] mx-auto">
+            <Image
+              src="/images/frameworks/business-operating-system.png"
+              alt="The Three-Lever Business Operating System — Identity, Structure, Leverage"
+              width={1100}
+              height={688}
+              className="w-full h-auto"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* ── 4. WHY MOST PROGRAMS FAIL ────────────────────────────────────── */}
       <section className="bg-obsidian py-20 md:py-28">

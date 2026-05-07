@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -656,6 +657,21 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      {/* ── ARCHITECTURE VISUAL ──────────────────────────────────────────── */}
+      <section className="bg-ivory py-20 md:py-36 border-t border-warm-stone">
+        <Container>
+          <div className="max-w-[1200px] mx-auto">
+            <Image
+              src="/images/frameworks/business-runs-itself-architecture.png"
+              alt="The Self-Running Business Architecture — The Elevated Leader System"
+              width={1200}
+              height={750}
+              className="w-full h-auto"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* ── 9. FINAL CTA ────────────────────────────────────────────────── */}
       <CTASection

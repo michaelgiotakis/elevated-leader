@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -69,6 +70,21 @@ export default function CoursesPage() {
           <CourseSelector />
         </Container>
       </Section>
+
+      {/* ── COURSE ECOSYSTEM VISUAL ──────────────────────────────────────── */}
+      <section className="bg-ivory py-20 md:py-28 border-t border-warm-stone">
+        <Container>
+          <div className="max-w-[1000px] mx-auto">
+            <Image
+              src="/images/frameworks/course-ecosystem-visual.png"
+              alt="The Elevated Leader Course Ecosystem — Three Levers, Nine Modules"
+              width={1000}
+              height={625}
+              className="w-full h-auto"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* ── 5. WHAT HAPPENS NEXT ────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">

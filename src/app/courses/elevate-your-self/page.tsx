@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -105,6 +106,17 @@ export default function ElevateYourSelfPage() {
 
       {/* ── LEVER NAV ───────────────────────────────────────────────────── */}
       <LeverNav activeLever="identity" />
+
+      {/* ── LEVER MOTIF ACCENT ───────────────────────────────────────────── */}
+      <div className="flex justify-center py-10 md:py-12 border-t border-warm-stone/20 bg-ivory" aria-hidden="true">
+        <Image
+          src="/images/motifs/lever-motifs.png"
+          alt=""
+          width={320}
+          height={160}
+          className="h-10 w-auto opacity-[0.15]"
+        />
+      </div>
 
       {/* ── 2. WHY THIS LEVER MATTERS ────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">

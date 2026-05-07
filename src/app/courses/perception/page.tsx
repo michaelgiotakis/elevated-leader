@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -175,6 +176,18 @@ export default function PerceptionPage() {
           </div>
         </Container>
       </section>
+
+      {/* ── EDITORIAL VISUAL ─────────────────────────────────────────────── */}
+      <div className="bg-obsidian overflow-hidden">
+        <Image
+          src="/images/editorial/perception-editorial.png"
+          alt="PERCEPTION — The Evolution Model"
+          width={1400}
+          height={875}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
 
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
       <Section className="border-t border-warm-stone">
