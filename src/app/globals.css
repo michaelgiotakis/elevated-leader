@@ -17,6 +17,21 @@
   --font-heading: var(--font-playfair);
 }
 
+/* Invisible Pressure composition — ambient motion */
+@keyframes pressureGlow {
+  0%, 100% { opacity: 0.75; }
+  50%       { opacity: 1;    }
+}
+@keyframes pressurePulse {
+  0%, 100% { opacity: 0.80; }
+  50%       { opacity: 1;    }
+}
+@keyframes pressureDrift {
+  0%, 100% { transform: translateY(0px);  }
+  33%       { transform: translateY(-3px); }
+  66%       { transform: translateY(2px);  }
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -255,85 +254,175 @@ export default function DiagnosticPage() {
               </p>
             </div>
 
-            {/* Right — atmospheric pressure field */}
+            {/* Right — coded atmospheric pressure field */}
             <div className="relative mt-16 lg:mt-0 min-h-[480px]">
 
-              {/* Atmospheric artwork — fills the full column */}
-              <Image
-                src="/images/editorial/invisible-pressure-atmosphere.png"
-                alt=""
-                fill
-                sizes="(max-width: 1024px) 100vw, 460px"
-                className="object-contain"
+              {/* ── ATMOSPHERIC CORE ─────────────────────────────────── */}
+
+              {/* Outer warmth field */}
+              <div
+                className="absolute pointer-events-none"
+                style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+                aria-hidden="true"
+              >
+                <div style={{
+                  width: "440px", height: "440px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(212,199,183,0.42) 0%, rgba(212,199,183,0.16) 45%, transparent 72%)",
+                  animation: "pressureGlow 9s ease-in-out infinite",
+                }} />
+              </div>
+
+              {/* Mid bronze haze */}
+              <div
+                className="absolute pointer-events-none"
+                style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+                aria-hidden="true"
+              >
+                <div style={{
+                  width: "320px", height: "320px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(184,134,76,0.24) 0%, rgba(212,199,183,0.30) 38%, transparent 70%)",
+                  animation: "pressurePulse 7s ease-in-out infinite 0.8s",
+                }} />
+              </div>
+
+              {/* Inner bronze core */}
+              <div
+                className="absolute pointer-events-none"
+                style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+                aria-hidden="true"
+              >
+                <div style={{
+                  width: "180px", height: "180px", borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(184,134,76,0.45) 0%, rgba(184,134,76,0.18) 50%, transparent 100%)",
+                  filter: "blur(14px)",
+                  animation: "pressurePulse 7s ease-in-out infinite 2s",
+                }} />
+              </div>
+
+              {/* Center anchor dot */}
+              <div
+                className="absolute pointer-events-none"
+                style={{
+                  top: "50%", left: "50%",
+                  width: "6px", height: "6px",
+                  marginTop: "-3px", marginLeft: "-3px",
+                  borderRadius: "50%",
+                  background: "rgba(184,134,76,0.70)",
+                }}
                 aria-hidden="true"
               />
 
-              {/* Center — INVISIBLE PRESSURE */}
-              <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 px-3 py-2"
-                style={{ backgroundColor: "rgba(246,241,233,0.72)" }}
+              {/* ── SVG ORBITAL GEOMETRY ─────────────────────────────── */}
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                viewBox="0 0 460 600"
+                preserveAspectRatio="none"
+                aria-hidden="true"
               >
-                <p className="font-sans text-[9px] font-bold tracking-[0.4em] uppercase text-obsidian/80 whitespace-nowrap">
-                  INVISIBLE PRESSURE
+                {/* Dashed radial lines — center (230,300) to each node */}
+                <line x1="230" y1="300" x2="22"  y2="74"  stroke="rgba(184,134,76,0.22)" strokeWidth="1.0" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="438" y2="86"  stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="14"  y2="338" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="438" y2="470" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
+                <line x1="230" y1="300" x2="230" y2="566" stroke="rgba(184,134,76,0.20)" strokeWidth="1.0" strokeDasharray="2,3" />
+                {/* Outer orbit ellipse */}
+                <ellipse cx="230" cy="300" rx="175" ry="145" fill="none" stroke="rgba(212,199,183,0.22)" strokeWidth="0.8" />
+              </svg>
+
+              {/* ── CENTER LABEL ─────────────────────────────────────── */}
+              <div
+                className="absolute z-10 text-center pointer-events-none"
+                style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+                aria-hidden="true"
+              >
+                <p className="font-sans text-[9px] font-bold tracking-[0.5em] uppercase text-obsidian/55 whitespace-nowrap">
+                  INVISIBLE
                 </p>
-                <p className="font-sans text-[9px] text-obsidian/40 mt-1.5 leading-snug" style={{ maxWidth: "128px" }}>
-                  The unseen weight you carry every day.
+                <div className="mx-auto my-2" style={{ width: "20px", height: "1px", background: "rgba(184,134,76,0.55)" }} />
+                <p className="font-sans text-[9px] font-bold tracking-[0.5em] uppercase text-obsidian/55 whitespace-nowrap">
+                  PRESSURE
                 </p>
               </div>
 
+              {/* ── PRESSURE NODES ───────────────────────────────────── */}
+
               {/* Decision Pressure — upper left */}
-              <div className="absolute top-[6%] left-0 z-10" style={{ maxWidth: "100px" }}>
-                <div className="w-3 h-px bg-bronze/40 mb-2" />
-                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
-                  Decision Pressure
-                </p>
-                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
-                  Too many decisions depend on you.
-                </p>
+              <div
+                className="absolute z-10"
+                style={{ top: "12%", left: "4%", animation: "pressureDrift 10s ease-in-out infinite 0s" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 2L8 8L4 14 M8 8L12 14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                </svg>
+                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px" }} />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Decision</p>
+                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
               </div>
 
               {/* Operational Pressure — upper right */}
-              <div className="absolute top-[6%] right-0 text-right z-10" style={{ maxWidth: "100px" }}>
-                <div className="w-3 h-px bg-bronze/40 mb-2 ml-auto" />
-                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
-                  Operational Pressure
-                </p>
-                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
-                  Too many moving parts break without you.
-                </p>
+              <div
+                className="absolute z-10 text-right"
+                style={{ top: "14%", right: "3%", animation: "pressureDrift 12s ease-in-out infinite 2s" }}
+              >
+                <div className="flex justify-end">
+                  <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="8" r="5.5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                    <line x1="8" y1="2.5" x2="8" y2="13.5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                    <line x1="2.5" y1="8" x2="13.5" y2="8" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                  </svg>
+                </div>
+                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px", marginLeft: "auto" }} />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Operational</p>
+                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
               </div>
 
-              {/* People Pressure — lower left */}
-              <div className="absolute bottom-[22%] left-0 z-10" style={{ maxWidth: "100px" }}>
-                <div className="w-3 h-px bg-bronze/40 mb-2" />
-                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
-                  People Pressure
-                </p>
-                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
-                  Too many people look to you for direction.
-                </p>
+              {/* People Pressure — left middle */}
+              <div
+                className="absolute z-10"
+                style={{ top: "56%", left: "2%", animation: "pressureDrift 11s ease-in-out infinite 1s" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="6" cy="5" r="2" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                  <circle cx="10" cy="5" r="2" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" />
+                  <path d="M2 14Q3 10.5 6 10.5Q8 10 10 10.5Q13 10.5 14 14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                </svg>
+                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px" }} />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">People</p>
+                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
               </div>
 
               {/* Growth Pressure — lower right */}
-              <div className="absolute bottom-[22%] right-0 text-right z-10" style={{ maxWidth: "100px" }}>
-                <div className="w-3 h-px bg-bronze/40 mb-2 ml-auto" />
-                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug">
-                  Growth Pressure
-                </p>
-                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1">
-                  Too much growth creates more complexity.
-                </p>
+              <div
+                className="absolute z-10 text-right"
+                style={{ bottom: "22%", right: "3%", animation: "pressureDrift 9s ease-in-out infinite 3s" }}
+              >
+                <div className="flex justify-end">
+                  <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M2 12L6 7L9 9L14 3" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M11 3L14 3L14 6" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px 0 6px", marginLeft: "auto" }} />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65">Growth</p>
+                <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5">Pressure</p>
               </div>
 
               {/* Standard Pressure — bottom center */}
-              <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 text-center z-10">
-                <div className="w-3 h-px bg-bronze/40 mb-2 mx-auto" />
-                <p className="font-sans text-[9px] font-semibold text-obsidian/58 leading-snug whitespace-nowrap">
-                  Standard Pressure
-                </p>
-                <p className="font-sans text-[8px] text-obsidian/35 leading-snug mt-1 mx-auto" style={{ maxWidth: "120px" }}>
-                  The standard lives in you, not the system.
-                </p>
+              {/* Outer wrapper handles centering; inner div takes the drift animation */}
+              <div className="absolute z-10" style={{ bottom: "6%", left: "50%", transform: "translateX(-50%)" }}>
+                <div className="text-center" style={{ animation: "pressureDrift 13s ease-in-out infinite 1.5s" }}>
+                  <div className="flex justify-center">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <line x1="8" y1="2" x2="8" y2="14" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="3" y1="5" x2="13" y2="5" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="4" y1="9" x2="12" y2="9" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                      <line x1="6" y1="13" x2="10" y2="13" stroke="rgba(184,134,76,0.78)" strokeWidth="1.3" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div style={{ width: "22px", height: "1px", background: "rgba(184,134,76,0.42)", margin: "8px auto 6px" }} />
+                  <p className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase leading-tight text-obsidian/65 whitespace-nowrap">Standard</p>
+                  <p className="font-sans text-[9px] tracking-[0.28em] uppercase leading-tight text-obsidian/42 mt-0.5 whitespace-nowrap">Pressure</p>
+                </div>
               </div>
 
             </div>
