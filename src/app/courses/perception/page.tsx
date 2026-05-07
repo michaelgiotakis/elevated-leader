@@ -274,7 +274,7 @@ export default function PerceptionPage() {
       </Section>
 
       {/* ── 3. THE EVOLUTION MODEL ───────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28 border-t border-warm-stone/30">
+      <section className="py-20 md:py-28 border-t border-warm-stone/30" style={{ backgroundColor: "#161D29" }}>
         <Container>
           <div className="max-w-xl mb-12 md:mb-16">
             <Eyebrow>The Framework</Eyebrow>
@@ -458,7 +458,7 @@ export default function PerceptionPage() {
       </Section>
 
       {/* ── 7. THE COST OF STAYING ───────────────────────────────────────── */}
-      <section className="bg-obsidian py-24 md:py-36 border-t border-warm-stone/30">
+      <section className="py-24 md:py-36 border-t border-warm-stone/30" style={{ backgroundColor: "#1F2633" }}>
         <Container>
           <div className="max-w-xl mb-14 md:mb-20">
             <Eyebrow>A Calm Truth</Eyebrow>
@@ -677,7 +677,7 @@ export default function PerceptionPage() {
       </Section>
 
       {/* ── 10. FINAL CTA ────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-36 border-t border-warm-stone/30">
+      <section className="py-20 md:py-36 border-t border-warm-stone/30" style={{ backgroundColor: "#232937" }}>
         <Container>
           <div className="max-w-xl mx-auto text-center">
             <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-muted-rose mb-8">
