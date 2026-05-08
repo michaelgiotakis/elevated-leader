@@ -2,7 +2,9 @@
 
 # EDITORIAL HERO SYSTEM
 
-## PURPOSE
+---
+
+# PURPOSE
 
 The Elevated Leader hero system is not a traditional SaaS or coaching hero structure.
 
@@ -37,6 +39,34 @@ The system should NEVER feel:
 
 ---
 
+# CORE HERO PRINCIPLE
+
+The hero section itself is the authoritative cinematic container.
+
+The hero image is NOT an independent responsive panel.
+
+The image is an integrated environmental layer that exists inside the hero system and must remain compositionally synchronized with the hero container across all standard desktop viewing conditions.
+
+The hero should behave as:
+
+“one integrated cinematic editorial frame.”
+
+NOT:
+
+“a text section beside an independently behaving responsive image.”
+
+All implementation decisions should preserve:
+
+* cinematic continuity
+* environmental immersion
+* compositional stability
+* atmospheric integration
+* editorial asymmetry
+* emotional pacing
+* restrained luxury
+
+---
+
 # CORE HERO STRUCTURE
 
 All major lever pages, module pages, and high-level ecosystem pages should use the editorial hero system unless intentionally overridden.
@@ -61,6 +91,69 @@ The image should NEVER appear:
 * hard-edged
 
 The image must feel integrated into the atmosphere of the page.
+
+---
+
+# CINEMATIC ASYMMETRY
+
+The editorial hero system intentionally uses cinematic asymmetry rather than balanced responsive symmetry.
+
+The image territory and editorial territory should feel emotionally weighted rather than mechanically equal.
+
+The system should preserve:
+
+* environmental breathing room
+* visual spaciousness
+* atmospheric depth
+* editorial restraint
+* integrated immersion
+
+Avoid responsive behavior that causes:
+
+* aggressive editorial-panel expansion
+* text territory overpowering image territory
+* environmental compression
+* rigid 50/50 layouts
+* startup-style responsive balancing
+* dashboard-like structure
+
+The asymmetry should feel:
+
+* intentional
+* stable
+* immersive
+* editorial
+* emotionally composed
+
+NOT:
+
+* mechanically responsive
+* mathematically equalized
+* visually rigid
+
+---
+
+# HERO OWNERSHIP HIERARCHY
+
+The hero container is the governing layout authority.
+
+The image layer must remain synchronized to the actual hero container dimensions.
+
+The hero should NEVER behave as:
+
+* a growing text container beside a static image
+* an independently sized image panel
+* a detached environmental region
+* an image floating inside expanding background territory
+
+The image must remain compositionally integrated with the hero across:
+
+* 75% browser zoom
+* 100% browser zoom
+* 125% browser zoom
+* standard desktop viewport variations
+
+The hero and image should scale together as one cinematic composition.
 
 ---
 
@@ -128,6 +221,135 @@ Images should preserve:
 * subtle tension
 * refined composition
 * tonal cohesion
+* foreground storytelling
+* environmental anchoring
+
+Environmental foreground details are part of the storytelling system and should not be unintentionally cropped, dissolved, or visually erased.
+
+Foreground environmental layers may include:
+
+* books
+* desks
+* tables
+* architecture
+* foreground lighting
+* spatial depth layers
+* interior objects
+* environmental framing elements
+
+These elements help create cinematic immersion and compositional realism.
+
+---
+
+# RESPONSIVE COMPOSITION STABILITY
+
+The editorial hero system must preserve compositional stability across browser zoom levels and responsive desktop viewport states.
+
+The hero should feel:
+
+like a stable cinematic frame adapting fluidly.
+
+NOT:
+
+like a responsive layout reallocating space aggressively.
+
+Avoid responsive behavior where:
+
+* the editorial/dark territory expands disproportionately
+* the image territory loses breathing room
+* the image becomes compositionally compressed
+* atmospheric asymmetry collapses
+* foreground environmental storytelling disappears
+* dark background territory extends beneath the image unintentionally
+* the image behaves independently from the hero container
+
+The relationship between:
+
+* editorial territory
+* atmospheric gradient territory
+* environmental image territory
+
+must remain emotionally balanced and compositionally stable.
+
+The visual relationship established at one standard desktop zoom state should remain emotionally and compositionally consistent across other standard zoom states.
+
+---
+
+# IMAGE RENDERING PRINCIPLES
+
+Desktop hero imagery should preserve immersive cinematic rendering.
+
+The system should avoid:
+
+* boxed containment behavior
+* thumbnail-style object containment
+* rigid image framing
+* visible responsive hacks
+* static card-like rendering
+
+Object-fit and image positioning decisions should preserve:
+
+* environmental storytelling
+* cinematic immersion
+* compositional stability
+* atmospheric continuity
+* editorial asymmetry
+
+When focal positioning is required:
+
+* use subtle editorial focal anchoring
+* preserve immersive image scale
+* avoid aggressive cropping
+* preserve environmental foreground visibility
+
+Image rendering should always feel:
+
+* cinematic
+* immersive
+* atmospheric
+* integrated
+* editorial
+
+NOT:
+
+* mechanically responsive
+* artificially constrained
+* technically obvious
+
+---
+
+# OVERLAY & ATMOSPHERIC COMPOSITING
+
+All hero images should use:
+
+* soft atmospheric overlays
+* tonal blending
+* gradient diffusion
+* cinematic shadow layering
+
+Avoid:
+
+* harsh black cutoffs
+* hard image edges
+* visible section splits
+* aggressive gradients
+* flashy visual effects
+
+The atmosphere should feel:
+natural,
+integrated,
+and restrained.
+
+Atmospheric compositing should NEVER unintentionally obscure important environmental storytelling.
+
+Gradients, dissolves, overlays, and atmospheric transitions must preserve:
+
+* foreground visibility
+* compositional clarity
+* environmental depth
+* cinematic integration
+
+Atmospheric transitions should blend the hero into the ecosystem without erasing environmental image content.
 
 ---
 
@@ -241,30 +463,6 @@ Avoid:
 
 ---
 
-# OVERLAY & ATMOSPHERIC BLENDING
-
-All hero images should use:
-
-* soft atmospheric overlays
-* tonal blending
-* gradient diffusion
-* cinematic shadow layering
-
-Avoid:
-
-* harsh black cutoffs
-* hard image edges
-* visible section splits
-* aggressive gradients
-* flashy visual effects
-
-The atmosphere should feel:
-natural,
-integrated,
-and restrained.
-
----
-
 # TYPOGRAPHY & SPACING
 
 Hero sections should preserve:
@@ -294,6 +492,7 @@ Mobile heroes should preserve:
 * spacing rhythm
 * calm stacking
 * editorial pacing
+* integrated environmental storytelling
 
 Mobile should NEVER feel:
 
@@ -308,6 +507,7 @@ Preserve:
 * atmospheric image visibility
 * elegant typography rhythm
 * soft transitions
+* environmental continuity
 
 ---
 
@@ -326,6 +526,12 @@ NEVER DRIFT INTO:
 * corporate consulting visuals
 * “girlboss” luxury clichés
 * ultra-polished ad aesthetics
+* mechanically responsive layouts
+* compositionally unstable zoom behavior
+* detached image panels
+* oversized editorial territory dominance
+* image/background desynchronization
+* environmental storytelling loss
 
 ---
 
@@ -334,6 +540,12 @@ NEVER DRIFT INTO:
 Every hero should feel like:
 
 “the opening frame of a premium editorial transformation film.”
+
+The hero should behave as:
+
+* one integrated cinematic composition
+* one emotionally unified environment
+* one atmospheric editorial frame
 
 NOT:
 

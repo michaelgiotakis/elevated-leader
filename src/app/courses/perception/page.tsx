@@ -177,13 +177,13 @@ export default function PerceptionPage() {
           </div>
 
           {/* Right — editorial atmosphere */}
-          <div className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]" style={{ backgroundColor: "#232937" }}>
+          <div className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:h-auto lg:w-[60%]" style={{ backgroundColor: "#232937" }}>
             <Image
               src="/images/editorial/homepage-editorial-hero.png"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover object-[42%_12%] lg:object-contain lg:object-top"
+              className="object-cover object-[42%_12%] lg:object-top"
               priority
             />
 

@@ -172,7 +172,7 @@ export default function HomePage() {
 
           {/* Right — editorial atmosphere */}
           <div
-            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[62%]"
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:h-auto lg:w-[62%]"
             style={{ backgroundColor: "#1A1618" }}
           >
             <Image
@@ -180,7 +180,7 @@ export default function HomePage() {
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 62vw"
-              className="object-cover object-[center_20%] lg:object-contain lg:object-top"
+              className="object-cover object-[center_20%] lg:object-top"
               priority
             />
 
@@ -198,9 +198,9 @@ export default function HomePage() {
               aria-hidden="true"
             />
 
-            {/* Bottom dissolve — atmospheric editorial continuity */}
+            {/* Bottom dissolve — mobile only: image fades back into atmosphere */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
               style={{ background: "linear-gradient(to top, #1A1618 0%, transparent 100%)" }}
               aria-hidden="true"
             />

@@ -202,7 +202,7 @@ export default function DiagnosticPage() {
 
           {/* Right — editorial atmosphere */}
           <div
-            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]"
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:h-auto lg:w-[60%]"
             style={{ backgroundColor: "#161D29" }}
           >
             <Image
@@ -210,7 +210,7 @@ export default function DiagnosticPage() {
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover object-[55%_15%] lg:object-contain lg:object-top"
+              className="object-cover object-[55%_15%] lg:object-top"
               priority
             />
 
@@ -228,9 +228,9 @@ export default function DiagnosticPage() {
               aria-hidden="true"
             />
 
-            {/* Bottom dissolve — atmospheric editorial continuity */}
+            {/* Bottom dissolve — mobile only: image fades back into atmosphere */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
               style={{ background: "linear-gradient(to top, #161D29 0%, transparent 100%)" }}
               aria-hidden="true"
             />
