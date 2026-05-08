@@ -217,8 +217,8 @@ export function CourseSelector() {
       {/* pb-28 ensures sticky bar never obscures the full-system card */}
       <div className="pb-28">
 
-        {/* Lever columns — natural block flow, compact consistent margins */}
-        <div className="grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-10 lg:gap-12">
+        {/* Lever columns — editorial breathing room, ecosystem orientation rhythm */}
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-3 md:gap-16 lg:gap-20">
           {LEVERS.map((lever) => {
             const isLeverComplete = lever.courses.every((c) =>
               selected.has(c.id)
@@ -227,56 +227,56 @@ export function CourseSelector() {
               <div
                 key={lever.id}
                 className={[
-                  "rounded transition-all duration-300",
-                  isLeverComplete ? "ring-1 ring-inset ring-warm-stone/50" : "",
+                  "transition-all duration-300",
+                  isLeverComplete ? "ring-1 ring-inset ring-warm-stone/30" : "",
                 ].join(" ")}
               >
                 {/* Accent line */}
-                <div className={`w-10 h-0.5 ${lever.accentBar} mb-3`} />
+                <div className={`w-10 h-0.5 ${lever.accentBar} mb-4`} />
 
                 {/* Lever label */}
                 <p
-                  className={`font-sans text-[10px] font-semibold tracking-[0.3em] uppercase ${lever.labelColor} mb-1`}
+                  className={`font-sans text-[10px] font-semibold tracking-[0.3em] uppercase ${lever.labelColor} mb-2`}
                 >
                   {lever.label}
                 </p>
 
                 {/* Lever heading */}
-                <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug mb-2">
+                <h3 className="font-sans font-bold text-[20px] md:text-[22px] text-obsidian leading-snug mb-3">
                   {lever.heading}
                 </h3>
 
                 {/* Tagline — md:h-[3rem] reserves consistent 2-line height so the
-                    first module card aligns across all three columns regardless
+                    first module row aligns across all three columns regardless
                     of how the tagline wraps. Mobile uses natural height. */}
-                <p className="font-sans text-sm text-obsidian/55 leading-relaxed mb-5 md:h-[3rem] md:overflow-hidden">
+                <p className="font-sans text-sm text-obsidian/55 leading-relaxed mb-6 md:h-[3rem] md:overflow-hidden">
                   {lever.tagline}
                 </p>
 
-                {/* Module cards */}
-                <div className="space-y-2 mb-3">
+                {/* Module rows */}
+                <div className="space-y-3 mb-5">
                   {lever.courses.map((course) => {
                     const isSelected = selected.has(course.id);
                     return (
                       <div
                         key={course.id}
                         className={[
-                          "rounded border-2 transition-all duration-150",
+                          "border transition-all duration-150",
                           isSelected
-                            ? "border-bronze bg-warm-stone/15 shadow-sm"
-                            : "border-warm-stone bg-ivory hover:shadow-sm",
+                            ? "border-bronze/65 bg-warm-stone/10"
+                            : "border-warm-stone/60 bg-ivory",
                         ].join(" ")}
                       >
                         {/* ── Info area ── */}
-                        <div className="px-5 pt-4 pb-3">
+                        <div className="px-5 pt-5 pb-3">
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex gap-3">
-                              <span className="font-sans text-[9px] tabular-nums text-warm-stone shrink-0 mt-0.5">
+                              <span className="font-sans text-[9px] tabular-nums text-warm-stone/70 shrink-0 mt-0.5">
                                 {course.id}
                               </span>
                               <div>
                                 <p
-                                  className={`font-sans text-[10px] font-bold tracking-[0.18em] uppercase leading-tight mb-1.5 ${
+                                  className={`font-sans text-[10px] font-semibold tracking-[0.18em] uppercase leading-tight mb-1.5 ${
                                     isSelected ? "text-obsidian" : "text-obsidian/65"
                                   }`}
                                 >
@@ -319,7 +319,7 @@ export function CourseSelector() {
                         </div>
 
                         {/* ── Action row ── */}
-                        <div className="px-5 pb-3.5 pt-3 border-t border-warm-stone/40 flex items-center justify-between gap-3">
+                        <div className="px-5 pb-3.5 pt-3 border-t border-warm-stone/25 flex items-center justify-between gap-3">
                           {/* Primary: View Module */}
                           <Link
                             href={`/courses/${course.slug}`}
@@ -331,7 +331,7 @@ export function CourseSelector() {
                             </svg>
                           </Link>
 
-                          {/* Secondary: Quick Add */}
+                          {/* Secondary: Add to path */}
                           <button
                             onClick={() => toggle(course.id)}
                             aria-pressed={isSelected}
@@ -339,7 +339,7 @@ export function CourseSelector() {
                               "flex items-center gap-1.5 font-sans text-[10px] transition-colors duration-150 cursor-pointer",
                               isSelected
                                 ? "text-bronze"
-                                : "text-obsidian/40 hover:text-obsidian/70",
+                                : "text-obsidian/35 hover:text-obsidian/60",
                             ].join(" ")}
                           >
                             {isSelected ? (
@@ -347,7 +347,7 @@ export function CourseSelector() {
                                 <svg width="11" height="9" viewBox="0 0 11 9" fill="none" aria-hidden="true">
                                   <path d="M1 4.5L3.8 7.5L10 1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span>Added</span>
+                                <span>Selected</span>
                               </>
                             ) : (
                               <>
@@ -356,7 +356,7 @@ export function CourseSelector() {
                                   <circle cx="5.5" cy="11.5" r="0.75" fill="currentColor" />
                                   <circle cx="10.5" cy="11.5" r="0.75" fill="currentColor" />
                                 </svg>
-                                <span>Quick Add</span>
+                                <span>Add</span>
                               </>
                             )}
                           </button>
@@ -366,14 +366,14 @@ export function CourseSelector() {
                   })}
                 </div>
 
-                {/* Bundle button */}
+                {/* Bundle option */}
                 <button
                   onClick={() => toggleLever(lever)}
                   className={[
-                    "w-full text-left rounded px-5 py-4 border-2 transition-all duration-150 mb-4",
+                    "w-full text-left px-5 py-4 border transition-all duration-150 mb-5",
                     isLeverComplete
                       ? "border-bronze/70 bg-warm-stone/15"
-                      : "border-warm-stone/50 bg-ivory/50 hover:border-warm-stone hover:shadow-sm",
+                      : "border-warm-stone/40 bg-ivory/40 hover:border-warm-stone/70",
                   ].join(" ")}
                 >
                   <div className="flex items-center justify-between gap-4">
@@ -389,7 +389,7 @@ export function CourseSelector() {
                       <p className="font-sans text-sm font-semibold text-obsidian">
                         ${LEVER_BUNDLE_PRICE}
                       </p>
-                      <p className="font-sans text-[10px] text-obsidian/35 line-through">
+                      <p className="font-sans text-[10px] text-obsidian/25 line-through">
                         ${MODULE_PRICE * 3}
                       </p>
                     </div>
@@ -397,7 +397,7 @@ export function CourseSelector() {
                 </button>
 
                 {/* Explore link */}
-                <div className="border-t border-warm-stone/40 pt-3">
+                <div className="border-t border-warm-stone/25 pt-4">
                   <Link
                     href={lever.learnMoreHref}
                     className={`font-sans text-sm font-medium ${lever.labelColor} opacity-70 hover:opacity-100 hover:underline underline-offset-2 decoration-1 transition-opacity duration-150`}
@@ -468,12 +468,13 @@ export function CourseSelector() {
        */}
       <div
         aria-live="polite"
-        className={`fixed bottom-0 inset-x-0 z-50 bg-ivory border-t border-warm-stone transition-transform duration-200 ease-out ${
+        className={`fixed bottom-0 inset-x-0 z-50 border-t border-warm-stone/30 transition-transform duration-300 ease-out ${
           count > 0 ? "translate-y-0" : "translate-y-full"
         }`}
+        style={{ backgroundColor: "rgba(246,241,233,0.95)", backdropFilter: "blur(12px)" }}
       >
-        <div className="mx-auto w-full max-w-[1280px] px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between gap-4">
-          {/* Left — price summary */}
+        <div className="mx-auto w-full max-w-[1280px] px-6 md:px-10 lg:px-16 py-5 flex items-center justify-between gap-4">
+          {/* Left — selection summary */}
           <div>
             <div className="flex items-baseline gap-3 flex-wrap">
               <p className="font-sans text-base font-semibold text-obsidian leading-tight">
@@ -485,21 +486,21 @@ export function CourseSelector() {
                 </p>
               )}
             </div>
-            <p className="font-sans text-xs text-obsidian/60 leading-tight mt-0.5">
+            <p className="font-sans text-xs text-obsidian/50 leading-tight mt-0.5">
               {label}
             </p>
           </div>
 
-          {/* Right — checkout CTA */}
+          {/* Right — proceed CTA */}
           <div className="flex flex-col items-end gap-1 shrink-0">
             <Link
               href="/checkout"
-              className="font-sans font-semibold tracking-widest uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-5 py-3 sm:text-sm sm:px-8 sm:py-4"
+              className="font-sans font-semibold tracking-[0.14em] uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-5 py-2.5 sm:px-7 sm:py-3"
             >
-              <span className="sm:hidden">Checkout</span>
+              <span className="sm:hidden">Proceed</span>
               <span className="hidden sm:inline">Continue to Checkout</span>
             </Link>
-            <p className="font-sans text-[10px] text-obsidian/40 hidden sm:block leading-tight">
+            <p className="font-sans text-[10px] text-obsidian/35 hidden sm:block leading-tight">
               Instant access after purchase.
             </p>
           </div>

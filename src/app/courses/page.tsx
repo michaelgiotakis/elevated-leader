@@ -126,6 +126,68 @@ export default function CoursesPage() {
         </Container>
       </Section>
 
+      {/* ── CINEMATIC INTERRUPTION — Ecosystem Atmosphere ────────────────── */}
+      <section
+        className="relative overflow-hidden h-[62vh] md:h-[75vh]"
+        style={{ backgroundColor: "#1A1B1D" }}
+      >
+        {/* Full-bleed editorial image with ambient drift */}
+        <div
+          className="absolute inset-0"
+          style={{ animation: "clarityDrift 36s ease-in-out infinite alternate" }}
+        >
+          <Image
+            src="/images/editorial/courses-editorial-interruption.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+
+        {/* Restrained editorial overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(10, 8, 7, 0.20)" }}
+          aria-hidden="true"
+        />
+
+        {/* Soft edge vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 88% 68% at 50% 50%, transparent 42%, rgba(10, 8, 7, 0.12) 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Top blend — emerges softly from Build Your System section */}
+        <div
+          className="absolute top-0 left-0 right-0 h-12 md:h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, rgba(246,241,233,0.60) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Bottom blend — dissolves into course grid warm stone atmosphere */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-12 md:h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.25) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Editorial statement — centered within bottom half, left-side composition */}
+        <div className="relative z-10 h-full flex flex-col">
+          <div className="flex-1" />
+          <div className="flex-1 flex items-center pl-8 sm:pl-12 md:pl-[10%] lg:pl-[12%]">
+            <div className="max-w-[280px] md:max-w-[360px] lg:max-w-[440px]">
+              <div className="w-8 h-px mb-5 md:mb-6" style={{ backgroundColor: "rgba(184,134,76,0.55)" }} aria-hidden="true" />
+              <p className="font-heading text-[18px] md:text-[23px] lg:text-[27px] leading-[1.5] text-ivory text-left tracking-tight">
+                Designed freedom is not about doing less. It&apos;s about building a business that creates more of what matters.
+              </p>
+              <div className="w-8 h-px mt-5 md:mt-6" style={{ backgroundColor: "rgba(184,134,76,0.55)" }} aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 3 + 4. COURSE GRID + PRICING PANEL ─────────────────────────── */}
       <Section className="border-t border-warm-stone bg-warm-stone/20">
         <Container>
@@ -139,14 +201,14 @@ export default function CoursesPage() {
           <div className="max-w-[960px] mx-auto">
 
             {/* ── Section header ── */}
-            <div className="text-center mb-16 md:mb-24">
+            <div className="text-center mb-20 md:mb-28">
               <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-5">
                 The Full Operating System
               </p>
               <h2 className="font-heading text-[30px] md:text-[44px] leading-tight text-obsidian tracking-tight mb-5">
                 Three Levers. Nine Modules.
               </h2>
-              <p className="font-sans text-sm md:text-base text-obsidian/45 leading-relaxed max-w-sm mx-auto">
+              <p className="font-sans text-sm md:text-base text-obsidian/60 leading-relaxed max-w-sm mx-auto">
                 One integrated architecture for removing yourself as the bottleneck.
               </p>
             </div>
@@ -157,55 +219,54 @@ export default function CoursesPage() {
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  background: "radial-gradient(ellipse 62% 100% at 50% 28%, rgba(184,134,76,0.055) 0%, transparent 68%)",
+                  background: "radial-gradient(ellipse 62% 100% at 50% 28%, rgba(184,134,76,0.09) 0%, transparent 68%)",
                 }}
               />
               {/* viewBox 960×92 gives 2px clearance below arc endpoints at y=90 */}
               <svg viewBox="0 0 960 92" fill="none" className="w-full relative">
-                {/* Arc runs edge-to-edge; endpoints land at y=90, 2px above grid border */}
                 <path
                   d="M 0 90 C 170 10, 790 10, 960 90"
-                  stroke="rgba(212,199,183,0.58)"
+                  stroke="rgba(212,199,183,0.50)"
                   strokeWidth="1.6"
                   fill="none"
                 />
-                {/* Identity node — t≈0.22 on curve: (168, 49) */}
-                <circle cx="168" cy="49" r="3.5" fill="rgba(201,140,140,0.82)" />
-                {/* Structure node — t=0.50 on curve: (480, 30) */}
-                <circle cx="480" cy="30" r="3.5" fill="rgba(50,56,71,0.68)" />
-                {/* Leverage node — t≈0.78 on curve: (792, 49) */}
-                <circle cx="792" cy="49" r="3.5" fill="rgba(62,95,82,0.80)" />
+                {/* Identity node */}
+                <circle cx="168" cy="49" r="3.5" fill="rgba(201,140,140,0.75)" />
+                {/* Structure node */}
+                <circle cx="480" cy="30" r="3.5" fill="rgba(50,56,71,0.60)" />
+                {/* Leverage node */}
+                <circle cx="792" cy="49" r="3.5" fill="rgba(62,95,82,0.72)" />
               </svg>
             </div>
 
             {/* ── Three lever territories ── */}
-            <div className="grid grid-cols-1 md:grid-cols-3 border-t border-warm-stone/40">
+            <div className="grid grid-cols-1 md:grid-cols-3 border-t border-warm-stone/30">
 
               {/* Identity */}
-              <div className="flex flex-col pt-10 md:pt-12 pb-12 md:pr-12 xl:pr-16 border-b border-warm-stone/40 md:border-b-0 md:border-r">
+              <div className="flex flex-col pt-12 md:pt-14 pb-14 md:pr-12 xl:pr-16 border-b border-warm-stone/30 md:border-b-0 md:border-r">
                 <div className="w-6 h-0.5 bg-muted-rose mb-5" />
                 <p className="font-sans text-[11px] font-semibold tracking-[0.35em] uppercase text-muted-rose mb-3">
                   Identity
                 </p>
-                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-8 min-h-[3.75rem]">
+                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-10 min-h-[3.75rem]">
                   Elevate Your Self
                 </h3>
-                <ul className="space-y-5">
+                <ul className="space-y-6">
                   {[
                     { num: "01", code: "PERCEPTION",   fw: "The Evolution Model"     },
                     { num: "02", code: "PRESENCE",     fw: "The Optimisation Cycle"  },
                     { num: "03", code: "INTELLIGENCE", fw: "The Leadership Codes"    },
                   ].map(({ num, code, fw }) => (
                     <li key={num} className="flex items-start gap-3">
-                      <span className="font-sans text-[10px] font-semibold text-warm-stone tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
+                      <span className="font-sans text-[10px] font-semibold text-warm-stone/70 tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
                       <div>
-                        <p className="font-sans text-[11px] font-bold tracking-[0.18em] uppercase text-obsidian/80 leading-tight">{code}</p>
-                        <p className="font-sans text-[12px] text-obsidian/50 leading-snug mt-0.5">{fw}</p>
+                        <p className="font-sans text-[11px] font-semibold tracking-[0.18em] uppercase text-obsidian/75 leading-tight">{code}</p>
+                        <p className="font-sans text-[12px] text-obsidian/60 leading-snug mt-0.5">{fw}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-auto pt-7 border-t border-warm-stone/40">
+                <div className="mt-auto pt-8 border-t border-warm-stone/30">
                   <Link
                     href="/courses/elevate-your-self"
                     className="font-sans text-[11px] font-semibold tracking-[0.25em] uppercase text-muted-rose opacity-70 hover:opacity-100 transition-opacity duration-150"
@@ -216,30 +277,30 @@ export default function CoursesPage() {
               </div>
 
               {/* Structure */}
-              <div className="flex flex-col pt-10 md:pt-12 pb-12 md:px-12 xl:px-16 border-b border-warm-stone/40 md:border-b-0 md:border-r">
+              <div className="flex flex-col pt-12 md:pt-14 pb-14 md:px-12 xl:px-16 border-b border-warm-stone/30 md:border-b-0 md:border-r">
                 <div className="w-6 h-0.5 bg-slate mb-5" />
                 <p className="font-sans text-[11px] font-semibold tracking-[0.35em] uppercase text-slate mb-3">
                   Structure
                 </p>
-                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-8 min-h-[3.75rem]">
+                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-10 min-h-[3.75rem]">
                   Streamline Your Structure
                 </h3>
-                <ul className="space-y-5">
+                <ul className="space-y-6">
                   {[
                     { num: "04", code: "ALIGNMENT", fw: "The Vision Vehicle"   },
                     { num: "05", code: "PRECISION", fw: "The One Focus"         },
                     { num: "06", code: "AWARENESS", fw: "The Altitude System"   },
                   ].map(({ num, code, fw }) => (
                     <li key={num} className="flex items-start gap-3">
-                      <span className="font-sans text-[10px] font-semibold text-warm-stone tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
+                      <span className="font-sans text-[10px] font-semibold text-warm-stone/70 tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
                       <div>
-                        <p className="font-sans text-[11px] font-bold tracking-[0.18em] uppercase text-obsidian/80 leading-tight">{code}</p>
-                        <p className="font-sans text-[12px] text-obsidian/50 leading-snug mt-0.5">{fw}</p>
+                        <p className="font-sans text-[11px] font-semibold tracking-[0.18em] uppercase text-obsidian/75 leading-tight">{code}</p>
+                        <p className="font-sans text-[12px] text-obsidian/60 leading-snug mt-0.5">{fw}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-auto pt-7 border-t border-warm-stone/40">
+                <div className="mt-auto pt-8 border-t border-warm-stone/30">
                   <Link
                     href="/courses/streamline-your-structure"
                     className="font-sans text-[11px] font-semibold tracking-[0.25em] uppercase text-slate opacity-70 hover:opacity-100 transition-opacity duration-150"
@@ -250,30 +311,30 @@ export default function CoursesPage() {
               </div>
 
               {/* Leverage */}
-              <div className="flex flex-col pt-10 md:pt-12 pb-12 md:pl-12 xl:pl-16">
+              <div className="flex flex-col pt-12 md:pt-14 pb-14 md:pl-12 xl:pl-16">
                 <div className="w-6 h-0.5 bg-eucalyptus mb-5" />
                 <p className="font-sans text-[11px] font-semibold tracking-[0.35em] uppercase text-eucalyptus mb-3">
                   Leverage
                 </p>
-                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-8 min-h-[3.75rem]">
+                <h3 className="font-sans font-bold text-[19px] md:text-[21px] text-obsidian leading-snug tracking-tight mb-10 min-h-[3.75rem]">
                   Unlock Your Leverage
                 </h3>
-                <ul className="space-y-5">
+                <ul className="space-y-6">
                   {[
                     { num: "07", code: "FLOW",      fw: "The Cruise Control"      },
                     { num: "08", code: "EMPOWER",   fw: "The Autonomy Blueprint"   },
                     { num: "09", code: "HARMONISE", fw: "The Progressive Edge"     },
                   ].map(({ num, code, fw }) => (
                     <li key={num} className="flex items-start gap-3">
-                      <span className="font-sans text-[10px] font-semibold text-warm-stone tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
+                      <span className="font-sans text-[10px] font-semibold text-warm-stone/70 tabular-nums w-4 shrink-0 mt-0.5">{num}</span>
                       <div>
-                        <p className="font-sans text-[11px] font-bold tracking-[0.18em] uppercase text-obsidian/80 leading-tight">{code}</p>
-                        <p className="font-sans text-[12px] text-obsidian/50 leading-snug mt-0.5">{fw}</p>
+                        <p className="font-sans text-[11px] font-semibold tracking-[0.18em] uppercase text-obsidian/75 leading-tight">{code}</p>
+                        <p className="font-sans text-[12px] text-obsidian/60 leading-snug mt-0.5">{fw}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-auto pt-7 border-t border-warm-stone/40">
+                <div className="mt-auto pt-8 border-t border-warm-stone/30">
                   <Link
                     href="/courses/unlock-your-leverage"
                     className="font-sans text-[11px] font-semibold tracking-[0.25em] uppercase text-eucalyptus opacity-70 hover:opacity-100 transition-opacity duration-150"
@@ -286,15 +347,15 @@ export default function CoursesPage() {
             </div>
 
             {/* ── Closing footnote ── */}
-            <div className="pt-14 md:pt-16 border-t border-warm-stone/40">
+            <div className="pt-14 md:pt-16 border-t border-warm-stone/30">
               <div className="flex items-center gap-8">
-                <span className="h-px flex-1" style={{ background: "rgba(212,199,183,0.40)" }} />
-                <p className="font-sans text-[11px] font-semibold tracking-[0.5em] uppercase text-bronze shrink-0">
+                <span className="h-px flex-1" style={{ background: "rgba(212,199,183,0.45)" }} />
+                <p className="font-sans text-[11px] font-semibold tracking-[0.35em] uppercase text-bronze shrink-0">
                   Freedom
                 </p>
-                <span className="h-px flex-1" style={{ background: "rgba(212,199,183,0.40)" }} />
+                <span className="h-px flex-1" style={{ background: "rgba(212,199,183,0.45)" }} />
               </div>
-              <p className="font-sans text-[13px] text-obsidian/50 leading-snug text-center mt-4">
+              <p className="font-sans text-sm text-obsidian/65 leading-snug text-center mt-5">
                 A business that runs without you.
               </p>
             </div>

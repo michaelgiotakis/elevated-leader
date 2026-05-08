@@ -260,12 +260,71 @@ export default function MethodPage() {
         </Container>
       </Section>
 
+      {/* ── CINEMATIC INTERRUPTION — Architectural Atmosphere ────────────── */}
+      <section
+        className="relative overflow-hidden h-[62vh] md:h-[75vh]"
+        style={{ backgroundColor: "#181917" }}
+      >
+        {/* Full-bleed editorial image with ambient drift */}
+        <div
+          className="absolute inset-0"
+          style={{ animation: "clarityDrift 38s ease-in-out infinite alternate" }}
+        >
+          <Image
+            src="/images/editorial/method-editorial-architecture.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+
+        {/* Restrained editorial overlay — readability without burial */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(10, 8, 7, 0.18)" }}
+          aria-hidden="true"
+        />
+
+        {/* Soft architectural edge vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 88% 68% at 50% 50%, transparent 42%, rgba(10, 8, 7, 0.12) 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Top blend — emerges softly from The Real Problem section */}
+        <div
+          className="absolute top-0 left-0 right-0 h-12 md:h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, rgba(246,241,233,0.65) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Bottom blend — dissolves softly into Three Lever section */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-12 md:h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.20) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Editorial statement — lower-left anchor, environmental silence above and right */}
+        <div className="relative z-10 h-full flex items-center pl-8 md:pl-12 lg:pl-16">
+          <div>
+            <div className="w-6 h-px mb-4 md:mb-5" style={{ backgroundColor: "rgba(184,134,76,0.50)" }} aria-hidden="true" />
+            <p className="font-heading text-[19px] md:text-[24px] lg:text-[28px] leading-[1.3] text-ivory text-left max-w-[240px] md:max-w-[300px] lg:max-w-[350px] tracking-tight">
+              Structure creates the space clarity can finally operate inside.
+            </p>
+            <div className="w-6 h-px mt-4 md:mt-5" style={{ backgroundColor: "rgba(184,134,76,0.50)" }} aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+
       {/* ── 3. THE THREE LEVER SYSTEM ────────────────────────────────────── */}
-      <Section className="bg-warm-stone/20 border-t border-warm-stone">
+      <section className="pt-24 pb-28 md:pt-32 md:pb-36 bg-warm-stone/20 border-t border-warm-stone">
         <Container>
 
           {/* Editorial split — narrative left, monolith right */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-24 mb-14 md:mb-20">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-24 mb-20 md:mb-28">
 
             {/* Left — section intro + strategic insights */}
             <div className="lg:w-[44%] shrink-0">
@@ -319,29 +378,26 @@ export default function MethodPage() {
 
           </div>
 
-          {/* Lever cards */}
-          <div className="pt-14 md:pt-16 border-t border-warm-stone/60 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+          {/* Lever columns — borderless editorial rhythm */}
+          <div className="pt-16 md:pt-20 grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-16">
             {LEVERS.map((lever) => (
-              <div
-                key={lever.id}
-                className="bg-ivory border border-warm-stone p-10 md:p-12 flex flex-col"
-              >
+              <div key={lever.id} className="flex flex-col">
                 <div className={`w-10 h-0.5 ${lever.accentBar} mb-6`} />
                 <p
                   className={`font-sans text-[10px] font-semibold tracking-[0.35em] uppercase ${lever.labelColor} mb-3`}
                 >
                   {lever.label}
                 </p>
-                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug tracking-tight mb-4">
+                <h3 className="font-sans font-bold text-[22px] md:text-[24px] text-obsidian leading-snug tracking-tight mb-5">
                   {lever.heading}
                 </h3>
-                <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed mb-4 flex-1">
+                <p className="font-sans text-sm md:text-base text-obsidian/65 leading-relaxed mb-6 flex-1">
                   {lever.description}
                 </p>
-                <p className={`font-sans text-sm font-semibold ${lever.labelColor} leading-snug mb-8`}>
+                <p className={`font-sans text-sm font-semibold ${lever.labelColor} leading-snug mb-6`}>
                   {lever.tagline}
                 </p>
-                <div className="border-t border-warm-stone/60 pt-5">
+                <div>
                   <Link
                     href={lever.href}
                     className={`font-sans text-sm font-semibold ${lever.labelColor} opacity-75 hover:opacity-100 hover:underline underline-offset-4 decoration-1 transition-opacity duration-150`}
@@ -354,7 +410,20 @@ export default function MethodPage() {
           </div>
 
         </Container>
-      </Section>
+      </section>
+
+      {/* ── EDITORIAL SILENCE ────────────────────────────────────────────── */}
+      <section className="py-28 md:py-40">
+        <Container>
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="w-10 h-px bg-warm-stone/35 mx-auto mb-10 md:mb-12" aria-hidden="true" />
+            <p className="font-heading text-[22px] md:text-[28px] lg:text-[34px] leading-[1.5] text-obsidian/75 tracking-tight">
+              The business eventually mirrors the nervous system leading it.
+            </p>
+            <div className="w-10 h-px bg-warm-stone/35 mx-auto mt-10 md:mt-12" aria-hidden="true" />
+          </div>
+        </Container>
+      </section>
 
       {/* ── 4. WHY MOST PROGRAMS FAIL ────────────────────────────────────── */}
       <section className="py-20 md:py-28" style={{ backgroundColor: "#161D29" }}>
@@ -473,6 +542,18 @@ export default function MethodPage() {
         </Container>
       </Section>
 
+      {/* ── EDITORIAL PAUSE ──────────────────────────────────────────────── */}
+      <section className="py-28 md:py-40" style={{ backgroundColor: "#EDE2D8" }}>
+        <Container>
+          <div className="max-w-md lg:max-w-lg">
+            <div className="w-8 h-px mb-8 md:mb-10" style={{ backgroundColor: "rgba(184,134,76,0.50)" }} aria-hidden="true" />
+            <p className="font-heading text-[19px] md:text-[24px] lg:text-[29px] leading-[1.55] text-obsidian/70 tracking-tight">
+              The business cannot become regulated if the founder remains in survival mode.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       {/* ── 6. DIAGNOSTIC ────────────────────────────────────────────────── */}
       <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>
@@ -509,9 +590,9 @@ export default function MethodPage() {
       </Section>
 
       {/* ── 7. THE 9-MODULE SYSTEM ───────────────────────────────────────── */}
-      <Section className="border-t border-warm-stone">
+      <section className="pt-24 pb-28 md:pt-32 md:pb-36 border-t border-warm-stone">
         <Container>
-          <div className="max-w-xl mb-14">
+          <div className="max-w-xl mb-16 md:mb-20">
             <Eyebrow>The Full System</Eyebrow>
             <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-5">
               The 9-Module Operating System
@@ -522,7 +603,7 @@ export default function MethodPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-14">
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-3 md:gap-20">
             {MODULES_GRID.map((lever) => (
               <div key={lever.lever}>
                 <div className={`w-10 h-0.5 ${lever.accentBar} mb-4`} />
@@ -535,20 +616,20 @@ export default function MethodPage() {
                   {lever.modules.map((mod, i) => (
                     <li
                       key={mod.num}
-                      className={`flex items-baseline gap-4 py-4 ${
+                      className={`flex items-baseline gap-4 py-5 ${
                         i < lever.modules.length - 1
-                          ? "border-b border-warm-stone/50"
+                          ? "border-b border-warm-stone/30"
                           : ""
                       }`}
                     >
-                      <span className="font-sans text-[9px] font-semibold tabular-nums text-warm-stone shrink-0 w-4">
+                      <span className="font-sans text-[9px] font-semibold tabular-nums text-warm-stone/60 shrink-0 w-4">
                         {mod.num}
                       </span>
                       <div>
-                        <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-obsidian leading-tight">
+                        <p className="font-sans text-[10px] font-semibold tracking-[0.18em] uppercase text-obsidian leading-tight">
                           {mod.codename}
                         </p>
-                        <p className="font-sans text-xs text-obsidian/60 leading-snug">
+                        <p className="font-sans text-xs text-obsidian/55 leading-snug">
                           {mod.framework}
                         </p>
                       </div>
@@ -565,13 +646,16 @@ export default function MethodPage() {
             ))}
           </div>
 
-          <div className="mt-14 md:mt-20 pt-10 border-t border-warm-stone">
-            <Button href="/courses" variant="primary">
+          <div className="mt-16 md:mt-24 pt-8 border-t border-warm-stone/40">
+            <Link
+              href="/courses"
+              className="inline-block font-sans font-medium text-[11px] tracking-[0.14em] uppercase bg-[#A07848] text-ivory hover:bg-[#8B6035] px-5 py-2.5 transition-colors duration-200"
+            >
               View All Courses
-            </Button>
+            </Link>
           </div>
         </Container>
-      </Section>
+      </section>
 
       {/* ── 8. FINAL CTA ─────────────────────────────────────────────────── */}
       <CTASection
