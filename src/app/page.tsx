@@ -287,6 +287,73 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* ── CINEMATIC INTERRUPTION — Clarity Atmosphere ─────────────────── */}
+      <section
+        className="relative overflow-hidden h-[65vh] md:h-[78vh]"
+        style={{ backgroundColor: "#1A1618" }}
+      >
+        {/* Full-bleed cinematic image — ambient drift */}
+        <div
+          className="absolute inset-0"
+          style={{ animation: "clarityDrift 28s ease-in-out infinite alternate" }}
+        >
+          <Image
+            src="/images/editorial/editorial-interruption-clarity.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+
+        {/* Light atmospheric overlay — just enough for text contrast */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(12, 10, 9, 0.30)" }}
+          aria-hidden="true"
+        />
+
+        {/* Edge vignette — subtle framing only */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 90% 70% at 50% 50%, transparent 40%, rgba(10, 8, 7, 0.18) 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Top atmospheric blend — soft ivory dissolve */}
+        <div
+          className="absolute top-0 left-0 right-0 h-8 md:h-12 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, rgba(246,241,233,0.45) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Bottom atmospheric blend — soft ivory dissolve */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-8 md:h-12 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(246,241,233,0.45) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Editorial statement — slightly left of center */}
+        <div className="relative z-10 h-full flex items-center pl-6 sm:pl-12 md:pl-[15%] lg:pl-[18%]">
+          <div>
+            <div
+              className="w-8 h-px mb-5 md:mb-6"
+              style={{ backgroundColor: "rgba(184,134,76,0.55)" }}
+              aria-hidden="true"
+            />
+            <p className="font-heading text-[22px] md:text-[30px] lg:text-[36px] leading-[1.2] text-ivory text-left max-w-[240px] md:max-w-[280px] lg:max-w-[360px] tracking-tight">
+              Clarity changes the emotional temperature of a business.
+            </p>
+            <div
+              className="w-8 h-px mt-5 md:mt-6"
+              style={{ backgroundColor: "rgba(184,134,76,0.55)" }}
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── 3. DIAGNOSTIC OVERVIEW ──────────────────────────────────────── */}
       <Section className="bg-warm-stone/20 border-t border-warm-stone">
         <Container>

@@ -17,6 +17,12 @@
   --font-heading: var(--font-playfair);
 }
 
+/* Clarity Interruption — ambient image drift */
+@keyframes clarityDrift {
+  from { transform: scale(1.0);   }
+  to   { transform: scale(1.055); }
+}
+
 /* Invisible Pressure composition — ambient motion */
 @keyframes pressureGlow {
   0%, 100% { opacity: 0.75; }
