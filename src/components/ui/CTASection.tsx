@@ -23,7 +23,7 @@ export function CTASection({
   secondaryHref,
 }: CTASectionProps) {
   return (
-    <section className="bg-obsidian py-20 md:py-28">
+    <section className="py-20 md:py-28" style={{ backgroundColor: "#1F2633" }}>
       <Container>
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl text-ivory mb-5 leading-snug">

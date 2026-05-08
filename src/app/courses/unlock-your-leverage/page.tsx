@@ -154,15 +154,22 @@ export default function UnlockYourLeveragePage() {
               aria-hidden="true"
             />
 
-            {/* Mobile bottom dissolve — image fades back into atmosphere */}
+            {/* Bottom dissolve — atmospheric editorial continuity */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
               style={{ background: "linear-gradient(to top, #111816 0%, transparent 100%)" }}
               aria-hidden="true"
             />
           </div>
 
         </div>
+
+        {/* Section-level atmospheric bridge — editorial hero-to-section continuity */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.12) 0%, transparent 100%)", zIndex: 5 }}
+          aria-hidden="true"
+        />
       </section>
 
       {/* ── LEVER NAV ───────────────────────────────────────────────────── */}

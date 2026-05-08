@@ -126,16 +126,16 @@ export default function HomePage() {
   return (
     <>
       {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian relative overflow-hidden">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#1A1618" }}>
         <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[880px]">
 
           {/* Copy — z-10 floats above the background image on desktop */}
           <div className="relative z-10 flex items-center lg:w-[44%] px-6 md:px-10 lg:px-16 py-24 md:py-28 lg:py-20">
             <div className="w-full max-w-[560px]">
-              {/* Eyebrow with bronze accent line */}
+              {/* Eyebrow */}
               <div className="mb-9">
-                <div className="w-10 h-px bg-bronze mb-5" />
-                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-ivory">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
                   For $1–5M Female Founders
                 </p>
               </div>
@@ -172,12 +172,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Editorial Image — mobile: stacks below copy, object-cover shows upper composition.
-              Desktop: absolute layer at 62% width. Switching to object-contain renders the
-              full image at ~0.94× scale — no vertical cropping — revealing the complete
-              editorial scene (woman, books, table, coffee, vase, window light, atmosphere).
-              Obsidian bg fills the side gaps; short gradient blends the left edge in. */}
-          <div className="relative h-[72vw] overflow-hidden bg-obsidian lg:absolute lg:right-0 lg:inset-y-0 lg:w-[62%]">
+          {/* Right — editorial atmosphere */}
+          <div
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[62%]"
+            style={{ backgroundColor: "#1A1618" }}
+          >
             <Image
               src="/images/editorial/homepage-editorial-hero.png"
               alt=""
@@ -186,14 +185,37 @@ export default function HomePage() {
               className="object-cover object-[center_20%] lg:object-contain lg:object-top"
               priority
             />
+
+            {/* Left atmospheric blend — warm dark into text column */}
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "linear-gradient(to right, #060708 0%, transparent 22%)" }}
+              style={{ background: "linear-gradient(to right, #1A1618 0%, transparent 22%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from atmosphere */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #1A1618 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Bottom dissolve — atmospheric editorial continuity */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+              style={{ background: "linear-gradient(to top, #1A1618 0%, transparent 100%)" }}
               aria-hidden="true"
             />
           </div>
 
         </div>
+
+        {/* Section-level atmospheric bridge — editorial hero-to-section continuity */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.12) 0%, transparent 100%)", zIndex: 5 }}
+          aria-hidden="true"
+        />
       </section>
 
       {/* ── 2. WHY THIS EXISTS ──────────────────────────────────────────── */}
@@ -222,21 +244,21 @@ export default function HomePage() {
 
           {/* Problem cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
-            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve outgrown &ldquo;hustle harder&rdquo; and vague
                 &ldquo;CEO mindset&rdquo; platitudes.
               </p>
             </Card>
-            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve hired a team… but you&apos;re still the brain,
                 bottleneck, and safety net.
               </p>
             </Card>
-            <Card className="bg-warm-stone/15 rounded border-2 shadow-sm hover:shadow transition-shadow duration-200 p-12 md:p-14">
+            <Card className="bg-warm-stone/15 p-12 md:p-14">
               <div className="w-10 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve tried adding tools, offers, and tactics. And somehow
@@ -287,7 +309,7 @@ export default function HomePage() {
 
           {/* Three lever blocks */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 md:mb-24">
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
+            <Card className="p-12 md:p-14 flex flex-col">
               <div className="w-10 h-0.5 bg-muted-rose mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-rose mb-6">
                 Identity
@@ -310,7 +332,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
+            <Card className="p-12 md:p-14 flex flex-col">
               <div className="w-10 h-0.5 bg-slate mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-6">
                 Structure
@@ -333,7 +355,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            <Card className="rounded p-12 md:p-14 shadow hover:shadow-md transition-shadow duration-200 flex flex-col">
+            <Card className="p-12 md:p-14 flex flex-col">
               <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-6">
                 Leverage
@@ -514,7 +536,14 @@ export default function HomePage() {
       </Section>
 
       {/* ── 5. FOUNDING COHORT ──────────────────────────────────────────── */}
-      <section className="bg-obsidian py-24 md:py-36">
+      <section className="relative py-24 md:py-36" style={{ backgroundColor: "#1F2633" }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(184,134,76,0.052) 0%, transparent 68%)",
+          }}
+          aria-hidden="true"
+        />
         <Container>
 
           {/* Header */}

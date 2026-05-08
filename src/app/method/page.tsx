@@ -125,37 +125,95 @@ const STAGES = [
 export default function MethodPage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-28 md:py-40">
-        <Container>
-          <div className="max-w-3xl">
-            <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-8">
-              The Elevated Leader Method
-            </p>
-            <h1 className="font-heading text-[48px] md:text-[64px] leading-[1.04] text-ivory mb-8 tracking-tight">
-              Build a Business That Runs With Clarity, Structure, and Leverage
-            </h1>
-            <p className="font-sans text-lg md:text-xl text-warm-stone font-medium leading-snug mb-6">
-              Most businesses do not fail because of lack of ambition.
-              <br className="hidden sm:block" />
-              They fail because the founder becomes the operating system.
-            </p>
-            <p className="font-sans text-base md:text-lg text-ivory/60 leading-relaxed mb-14 max-w-2xl">
-              High-performing founders hit a threshold where intelligence and
-              effort are no longer the constraint. The real constraint is an
-              operating model that was never designed to run without them.
-              This method changes that.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <Button href={CTA_LINKS.diagnostic} variant="primary" external>
-                Take the Diagnostic
-              </Button>
-              <Button href="/courses" variant="ghost">
-                Explore the System
-              </Button>
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#1C2230" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[860px]">
+
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
+                  The Elevated Leader Method
+                </p>
+              </div>
+
+              <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-8 tracking-tight">
+                Build a Business That Runs With Clarity, Structure, and Leverage
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium leading-snug mb-6">
+                Most businesses do not fail because of lack of ambition.
+                <br className="hidden sm:block" />
+                They fail because the founder becomes the operating system.
+              </p>
+
+              <p className="font-sans text-base md:text-lg text-ivory/60 leading-relaxed mb-12">
+                High-performing founders hit a threshold where intelligence and
+                effort are no longer the constraint. The real constraint is an
+                operating model that was never designed to run without them.
+                This method changes that.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Button href={CTA_LINKS.diagnostic} variant="primary" external>
+                  Take the Diagnostic
+                </Button>
+                <Button href="/courses" variant="ghost">
+                  Explore the System
+                </Button>
+              </div>
+
             </div>
           </div>
-        </Container>
+
+          {/* Right — editorial atmosphere */}
+          <div
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]"
+            style={{ backgroundColor: "#1C2230" }}
+          >
+            <Image
+              src="/images/editorial/method-hero-editorial.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-center lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — midnight into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #1C2230 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from atmosphere */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #1C2230 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Bottom dissolve — atmospheric editorial continuity */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+              style={{ background: "linear-gradient(to top, #1C2230 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
+
+        {/* Section-level atmospheric bridge — editorial hero-to-section continuity */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.12) 0%, transparent 100%)", zIndex: 5 }}
+          aria-hidden="true"
+        />
       </section>
 
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
@@ -299,7 +357,7 @@ export default function MethodPage() {
       </Section>
 
       {/* ── 4. WHY MOST PROGRAMS FAIL ────────────────────────────────────── */}
-      <section className="bg-obsidian py-20 md:py-28">
+      <section className="py-20 md:py-28" style={{ backgroundColor: "#161D29" }}>
         <Container>
           <div className="max-w-xl mb-14">
             <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-4">

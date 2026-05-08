@@ -229,15 +229,22 @@ export default function DiagnosticPage() {
               aria-hidden="true"
             />
 
-            {/* Mobile bottom dissolve — image fades back into atmosphere */}
+            {/* Bottom dissolve — atmospheric editorial continuity */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none lg:hidden"
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
               style={{ background: "linear-gradient(to top, #161D29 0%, transparent 100%)" }}
               aria-hidden="true"
             />
           </div>
 
         </div>
+
+        {/* Section-level atmospheric bridge — editorial hero-to-section continuity */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.12) 0%, transparent 100%)", zIndex: 5 }}
+          aria-hidden="true"
+        />
       </section>
 
       {/* ── 2. THE REAL PROBLEM ──────────────────────────────────────────── */}
@@ -645,7 +652,7 @@ export default function DiagnosticPage() {
           </div>
 
           {/* ── DIAGNOSTIC_EMBED_SLOT ── */}
-          <div className="border border-warm-stone/60 bg-ivory rounded p-10 md:p-16 text-center max-w-2xl">
+          <div className="border border-warm-stone/60 bg-ivory p-10 md:p-16 text-center max-w-2xl">
             <div className="w-8 h-px bg-bronze/40 mx-auto mb-6" />
             <p className="font-sans text-[10px] font-semibold tracking-[0.4em] uppercase text-bronze/60 mb-4">
               Coming Soon

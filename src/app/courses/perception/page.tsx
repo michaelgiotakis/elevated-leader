@@ -122,7 +122,7 @@ export default function PerceptionPage() {
                 <span className="font-sans text-[10px] text-ivory/20" aria-hidden="true">→</span>
                 <Link
                   href="/courses/elevate-your-self"
-                  className="font-sans text-[10px] text-muted-rose opacity-65 hover:opacity-100 transition-opacity duration-150"
+                  className="font-sans text-[10px] text-warm-stone opacity-65 hover:opacity-100 transition-opacity duration-150"
                 >
                   Elevate Your Self
                 </Link>

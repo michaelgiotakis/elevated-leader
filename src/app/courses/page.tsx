@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -14,22 +15,84 @@ export const metadata: Metadata = {
 export default function CoursesPage() {
   return (
     <>
-      {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="bg-obsidian py-28 md:py-40">
-        <Container>
-          <div className="max-w-2xl">
-            <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-8 tracking-tight">
-              Build a Business That Runs Without You
-            </h1>
-            <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed mb-10">
-              Choose where to start, or follow the full system based on your
-              diagnostic.
-            </p>
-            <Button href={CTA_LINKS.diagnostic} variant="primary" external>
-              Take the Diagnostic
-            </Button>
+      {/* ── 1. CINEMATIC EDITORIAL HERO ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#1B1D22" }}>
+        <div className="flex flex-col lg:flex-row lg:min-h-[820px] xl:min-h-[860px]">
+
+          {/* Left — typography */}
+          <div className="relative z-10 flex items-center lg:w-[46%] px-6 md:px-10 lg:px-16 pt-16 pb-12 lg:py-20">
+            <div className="w-full max-w-[520px]">
+
+              {/* Eyebrow */}
+              <div className="mb-10">
+                <div className="w-10 h-px bg-warm-stone/40 mb-5" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
+                  The Elevated Leader Ecosystem
+                </p>
+              </div>
+
+              <h1 className="font-heading text-[48px] md:text-[60px] leading-[1.06] text-ivory mb-8 tracking-tight">
+                The Architecture Behind Designed Freedom
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-warm-stone font-medium leading-snug mb-12">
+                Three levers. Nine modules. One integrated system for building
+                a business that runs without you.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Button href={CTA_LINKS.diagnostic} variant="primary" external>
+                  Take the Diagnostic
+                </Button>
+              </div>
+
+            </div>
           </div>
-        </Container>
+
+          {/* Right — editorial atmosphere */}
+          <div
+            className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:w-[60%]"
+            style={{ backgroundColor: "#1B1D22" }}
+          >
+            <Image
+              src="/images/editorial/courses-ecosystem-hero-editorial.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-[50%_20%] lg:object-contain lg:object-top"
+              priority
+            />
+
+            {/* Left atmospheric blend — hero bg dissolves into text column */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to right, #1B1D22 0%, transparent 24%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Mobile top dissolve — image emerges from atmosphere */}
+            <div
+              className="absolute top-0 left-0 right-0 h-20 pointer-events-none lg:hidden"
+              style={{ background: "linear-gradient(to bottom, #1B1D22 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+
+            {/* Bottom dissolve — atmospheric editorial continuity */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+              style={{ background: "linear-gradient(to top, #1B1D22 0%, transparent 100%)" }}
+              aria-hidden="true"
+            />
+          </div>
+
+        </div>
+
+        {/* Section-level atmospheric bridge — editorial hero-to-section continuity */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(212,199,183,0.12) 0%, transparent 100%)", zIndex: 5 }}
+          aria-hidden="true"
+        />
       </section>
 
       {/* ── 2. BUILD YOUR SYSTEM ─────────────────────────────────────────── */}
@@ -179,7 +242,7 @@ export default function CoursesPage() {
                 <div className="mt-auto pt-7 border-t border-warm-stone/40">
                   <Link
                     href="/courses/streamline-your-structure"
-                    className="font-sans text-[11px] font-semibold tracking-[0.25em] uppercase text-slate opacity-65 hover:opacity-100 transition-opacity duration-150"
+                    className="font-sans text-[11px] font-semibold tracking-[0.25em] uppercase text-slate opacity-70 hover:opacity-100 transition-opacity duration-150"
                   >
                     View Lever →
                   </Link>
