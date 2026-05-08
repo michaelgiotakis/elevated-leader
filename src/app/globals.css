@@ -23,20 +23,12 @@
   to   { transform: scale(1.055); }
 }
 
-/* Invisible Pressure composition — ambient motion */
-@keyframes pressureGlow {
-  0%, 100% { opacity: 0.75; }
-  50%       { opacity: 1;    }
+/* Diagnostic Recognition — restrained drift, preserves cinematic stillness */
+@keyframes recognitionDrift {
+  from { transform: scale(1.0);   }
+  to   { transform: scale(1.018); }
 }
-@keyframes pressurePulse {
-  0%, 100% { opacity: 0.80; }
-  50%       { opacity: 1;    }
-}
-@keyframes pressureDrift {
-  0%, 100% { transform: translateY(0px);  }
-  33%       { transform: translateY(-3px); }
-  66%       { transform: translateY(2px);  }
-}
+
 
 html {
   scroll-behavior: smooth;
