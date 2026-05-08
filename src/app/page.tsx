@@ -3,11 +3,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
-import { CTASection } from "@/components/ui/CTASection";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { Section } from "@/components/ui/Section";
-import { CTA_LINKS } from "@/lib/site";
 
 // ─── Placeholder data ────────────────────────────────────────────────────────
 
@@ -133,36 +131,36 @@ export default function HomePage() {
           <div className="relative z-10 flex items-center lg:w-[44%] px-6 md:px-10 lg:px-16 py-24 md:py-28 lg:py-20">
             <div className="w-full max-w-[560px]">
               {/* Eyebrow */}
-              <div className="mb-9">
+              <div className="mb-12">
                 <div className="w-10 h-px bg-warm-stone/40 mb-5" />
                 <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-warm-stone">
                   For $1–5M Female Founders
                 </p>
               </div>
 
-              <h1 className="font-heading text-[48px] md:text-[56px] lg:text-[60px] leading-[1.02] text-ivory mb-8 tracking-[-0.02em]">
+              <h1 className="font-heading text-[48px] md:text-[56px] lg:text-[60px] leading-[1.02] text-ivory mb-10 tracking-[-0.02em]">
                 How Elevated Is Your Leadership for a $1–5M Business?
               </h1>
-              <p className="font-sans text-base md:text-lg text-ivory/75 mb-5 leading-relaxed max-w-[480px]">
+              <p className="font-sans text-base md:text-lg text-ivory/75 mb-6 leading-relaxed max-w-[480px]">
                 In just 7 minutes, the Elevated Leader Diagnostic scores your
                 identity, structure, and leverage across 9 dimensions. You&apos;ll
                 see exactly what&apos;s stopping your business from running
                 without you.
               </p>
-              <p className="font-sans text-base md:text-lg text-warm-stone mb-5 leading-relaxed max-w-[480px]">
+              <p className="font-sans text-base md:text-lg text-warm-stone mb-3 leading-relaxed max-w-[480px]">
                 Most businesses at this level don&apos;t break because of
                 strategy. They break because the founder becomes the bottleneck.
               </p>
-              <p className="font-sans text-sm text-warm-stone mb-12 leading-relaxed max-w-[440px]">
+              <p className="font-sans text-sm text-warm-stone mb-14 leading-relaxed max-w-[440px]">
                 Designed for female founders leading $1–5M companies who are
                 done with generic advice and ready for clear, grounded direction.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 mb-8">
-                <Button href="/diagnostic" variant="primary" className="px-10 py-5">
+              <div className="flex flex-col sm:flex-row gap-5 mb-10">
+                <Button href="/diagnostic" variant="primary">
                   Take the Diagnostic
                 </Button>
-                <Button href="/courses" variant="ghost" className="px-10 py-5">
-                  Browse the 9-Course System
+                <Button href="/method" variant="ghost">
+                  Explore The Method
                 </Button>
               </div>
               <p className="font-sans text-[11px] text-ivory/35 leading-relaxed">
@@ -252,14 +250,14 @@ export default function HomePage() {
               </p>
             </Card>
             <Card className="bg-warm-stone/15 p-12 md:p-14">
-              <div className="w-10 h-0.5 bg-bronze mb-8" />
+              <div className="w-7 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve hired a team… but you&apos;re still the brain,
                 bottleneck, and safety net.
               </p>
             </Card>
             <Card className="bg-warm-stone/15 p-12 md:p-14">
-              <div className="w-10 h-0.5 bg-bronze mb-8" />
+              <div className="w-12 h-0.5 bg-bronze mb-8" />
               <p className="font-sans text-base md:text-lg text-obsidian/80 leading-relaxed">
                 You&apos;ve tried adding tools, offers, and tactics. And somehow
                 it all feels heavier.
@@ -334,8 +332,8 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        {/* Editorial statement — slightly left of center */}
-        <div className="relative z-10 h-full flex items-center pl-6 sm:pl-12 md:pl-[15%] lg:pl-[18%]">
+        {/* Editorial statement — suspended, inward of left edge */}
+        <div className="relative z-10 h-full flex items-center pl-8 sm:pl-16 md:pl-[20%] lg:pl-[22%]">
           <div>
             <div
               className="w-8 h-px mb-5 md:mb-6"
@@ -355,7 +353,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 3. DIAGNOSTIC OVERVIEW ──────────────────────────────────────── */}
-      <Section className="bg-warm-stone/20 border-t border-warm-stone">
+      <Section className="bg-warm-stone/20 border-t border-warm-stone py-24 md:py-36">
         <Container>
 
           {/* Header */}
@@ -400,7 +398,7 @@ export default function HomePage() {
             </Card>
 
             <Card className="p-12 md:p-14 flex flex-col">
-              <div className="w-10 h-0.5 bg-slate mb-8" />
+              <div className="w-8 h-0.5 bg-slate mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-6">
                 Structure
               </p>
@@ -423,7 +421,7 @@ export default function HomePage() {
             </Card>
 
             <Card className="p-12 md:p-14 flex flex-col">
-              <div className="w-10 h-0.5 bg-eucalyptus mb-8" />
+              <div className="w-11 h-0.5 bg-eucalyptus mb-8" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-6">
                 Leverage
               </p>
@@ -466,7 +464,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── 4. SYSTEM BREAKDOWN ──────────────────────────────────────────── */}
-      <Section className="border-t border-warm-stone">
+      <section className="py-16 md:py-24 border-t border-warm-stone">
         <Container>
 
           {/* Header */}
@@ -521,7 +519,7 @@ export default function HomePage() {
 
             {/* Lever 2: Structure */}
             <div className="flex flex-col">
-              <div className="w-8 h-0.5 bg-slate mb-6" />
+              <div className="w-6 h-0.5 bg-slate mb-6" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-slate mb-3">
                 Structure
               </p>
@@ -555,7 +553,7 @@ export default function HomePage() {
 
             {/* Lever 3: Leverage */}
             <div className="flex flex-col">
-              <div className="w-8 h-0.5 bg-eucalyptus mb-6" />
+              <div className="w-10 h-0.5 bg-eucalyptus mb-6" />
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-eucalyptus mb-3">
                 Leverage
               </p>
@@ -600,10 +598,10 @@ export default function HomePage() {
           </div>
 
         </Container>
-      </Section>
+      </section>
 
       {/* ── 5. FOUNDING COHORT ──────────────────────────────────────────── */}
-      <section className="relative py-24 md:py-36" style={{ backgroundColor: "#1F2633" }}>
+      <section className="relative py-28 md:py-44" style={{ backgroundColor: "#1F2633" }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -720,7 +718,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 7. THE PATHWAY ──────────────────────────────────────────────── */}
-      <Section className="border-t border-warm-stone">
+      <Section className="bg-warm-stone/10 border-t border-warm-stone py-20 md:py-36">
         <Container>
 
           {/* Header */}
@@ -779,26 +777,99 @@ export default function HomePage() {
       </Section>
 
       {/* ── 8. FAQ ──────────────────────────────────────────────────────── */}
-      <Section className="border-t border-warm-stone">
+      <section className="relative pt-28 pb-24 md:pt-36 md:pb-32" style={{ backgroundColor: "#232937" }}>
+        {/* Atmospheric entry — barely-perceptible warm easing from The Pathway above */}
+        <div
+          className="absolute top-0 left-0 right-0 h-20 md:h-28 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, rgba(212,199,183,0.05) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-14 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-28">
             <div>
               <Eyebrow>Common Questions</Eyebrow>
-              <h2 className="font-sans font-semibold text-[32px] md:text-[40px] leading-tight text-obsidian mb-8">
+              <h2 className="font-sans font-medium text-[26px] md:text-[32px] leading-tight text-ivory mb-8">
                 Frequently Asked Questions
               </h2>
-              <Button href="/faq" variant="secondary">
-                View All FAQs
-              </Button>
+              <Link
+                href="/faq"
+                className="font-sans text-sm font-semibold text-bronze underline underline-offset-4 decoration-1 hover:text-ivory transition-colors duration-200"
+              >
+                View all questions →
+              </Link>
             </div>
 
-            <FAQAccordion items={FAQ_ITEMS} />
+            <FAQAccordion items={FAQ_ITEMS} dark />
           </div>
         </Container>
-      </Section>
+      </section>
+
+      {/* ── CINEMATIC INTERRUPTION — Relief Atmosphere ──────────────────── */}
+      <section
+        className="relative overflow-hidden h-[65vh] md:h-[78vh]"
+        style={{ backgroundColor: "#232937" }}
+      >
+        {/* Full-bleed cinematic image — atmospheric stillness */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/editorial/editorial-relief-atmosphere.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+
+        {/* Restrained atmospheric overlay — warmth without obscuring the image */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(10, 8, 7, 0.22)" }}
+          aria-hidden="true"
+        />
+
+        {/* Edge vignette — soft cinematic framing */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 90% 70% at 50% 50%, transparent 40%, rgba(10, 8, 7, 0.14) 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Top atmospheric blend — image emerges from FAQ atmosphere */}
+        <div
+          className="absolute top-0 left-0 right-0 h-8 md:h-12 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, #232937 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Bottom atmospheric blend — soft ivory dissolve into Result section */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-8 md:h-12 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(246,241,233,0.45) 0%, transparent 100%)" }}
+          aria-hidden="true"
+        />
+
+        {/* Editorial statement — vertically centered, slightly left of center */}
+        <div className="relative z-10 h-full flex items-center pl-6 sm:pl-12 md:pl-[15%] lg:pl-[18%]">
+          <div>
+            <div
+              className="w-8 h-px mb-5 md:mb-6"
+              style={{ backgroundColor: "rgba(184,134,76,0.55)" }}
+              aria-hidden="true"
+            />
+            <p className="font-heading text-[22px] md:text-[30px] lg:text-[36px] leading-[1.2] text-ivory text-left max-w-[240px] md:max-w-[280px] lg:max-w-[360px] tracking-tight">
+              The business finally feels lighter to lead.
+            </p>
+            <div
+              className="w-8 h-px mt-5 md:mt-6"
+              style={{ backgroundColor: "rgba(184,134,76,0.55)" }}
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── THE RESULT ───────────────────────────────────────────────────── */}
-      <Section className="border-t border-warm-stone">
+      <Section className="border-t border-warm-stone py-28 md:py-36">
         <Container>
           <div className="max-w-2xl mb-16 md:mb-20">
             <Eyebrow>The Result</Eyebrow>
@@ -837,16 +908,44 @@ export default function HomePage() {
       </Section>
 
       {/* ── 9. FINAL CTA ────────────────────────────────────────────────── */}
-      <CTASection
-        heading="Ready to lead differently?"
-        subheading="Most founders don't need more information. They need clarity on what to fix next."
-        body="Start with the diagnostic. Then build what actually matters."
-        primaryLabel="Take the Diagnostic"
-        primaryHref={CTA_LINKS.diagnostic}
-        primaryExternal
-        secondaryLabel="Explore the System"
-        secondaryHref="/courses"
-      />
+      <section className="relative py-28 md:py-44" style={{ backgroundColor: "#1F2633" }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 65% 60% at 35% 65%, rgba(184,134,76,0.07) 0%, transparent 68%)",
+          }}
+          aria-hidden="true"
+        />
+        <Container>
+          <div className="max-w-xl">
+
+            <div className="w-10 h-px bg-warm-stone/30 mb-10" aria-hidden="true" />
+
+            <h2 className="font-heading text-[32px] md:text-[42px] leading-[1.1] text-ivory mb-10 tracking-tight">
+              Ready to lead differently?
+            </h2>
+
+            <p className="font-sans text-warm-stone text-base md:text-lg leading-relaxed mb-16 max-w-md">
+              Most founders don&apos;t need more information. They need clarity
+              on what to fix next.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start gap-5 mb-10">
+              <Button href="/diagnostic" variant="primary">
+                Take the Diagnostic
+              </Button>
+              <Button href="/courses" variant="ghost">
+                Explore the System
+              </Button>
+            </div>
+
+            <p className="font-sans text-ivory/35 text-sm leading-relaxed">
+              Start with the diagnostic. Then build what actually matters.
+            </p>
+
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

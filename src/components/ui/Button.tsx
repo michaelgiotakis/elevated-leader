@@ -14,15 +14,15 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-bronze text-ivory hover:bg-rosewood",
+    "bg-[#A07848] text-ivory hover:bg-[#8B6035]",
   secondary:
-    "border border-obsidian text-obsidian hover:bg-obsidian hover:text-ivory",
+    "border border-[rgba(6,7,8,0.60)] text-obsidian hover:bg-obsidian hover:text-ivory",
   ghost:
-    "border border-ivory text-ivory hover:bg-ivory hover:text-obsidian",
+    "border border-[rgba(246,241,233,0.45)] text-ivory hover:border-[rgba(246,241,233,0.70)] hover:bg-[rgba(246,241,233,0.06)]",
 };
 
 const base =
-  "inline-block font-sans font-semibold text-sm tracking-widest uppercase px-8 py-4 transition-colors duration-200 cursor-pointer";
+  "inline-block font-sans font-medium text-[11px] tracking-[0.14em] uppercase px-7 py-3 transition-colors duration-200 cursor-pointer";
 
 export function Button({
   href,

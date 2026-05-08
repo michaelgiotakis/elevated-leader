@@ -160,12 +160,9 @@ export default function PerceptionPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-5 mb-8">
-                <a
-                  href="#purchase"
-                  className="font-sans font-semibold tracking-widest uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-6 py-3 sm:text-sm sm:px-8 sm:py-4 inline-block"
-                >
+                <Button href="#purchase" variant="primary">
                   Enrol in PERCEPTION
-                </a>
+                </Button>
                 <Button href="/courses/elevate-your-self" variant="ghost">
                   Explore The Lever
                 </Button>
@@ -696,12 +693,9 @@ export default function PerceptionPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-              <a
-                href="#purchase"
-                className="font-sans font-semibold tracking-widest uppercase bg-bronze text-ivory hover:bg-rosewood transition-colors duration-200 text-[11px] px-6 py-3 sm:text-sm sm:px-8 sm:py-4"
-              >
+              <Button href="#purchase" variant="primary">
                 Enrol in PERCEPTION
-              </a>
+              </Button>
               <Button href="/courses/elevate-your-self" variant="ghost">
                 Explore The Lever
               </Button>
