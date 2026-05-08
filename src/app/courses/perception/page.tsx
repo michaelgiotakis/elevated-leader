@@ -185,6 +185,8 @@ export default function PerceptionPage() {
               sizes="(max-width: 1024px) 100vw, 60vw"
               className="object-cover object-[42%_12%] lg:object-top"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPjxyZWN0IHdpZHRoPSc4JyBoZWlnaHQ9JzgnIGZpbGw9JyMyMzI5MzcnLz48L3N2Zz4="
             />
 
             {/* Left atmospheric blend — slate into text column */}

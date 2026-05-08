@@ -182,6 +182,8 @@ export default function HomePage() {
               sizes="(max-width: 1024px) 100vw, 62vw"
               className="object-cover object-[center_20%] lg:object-top"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPjxyZWN0IHdpZHRoPSc4JyBoZWlnaHQ9JzgnIGZpbGw9JyMxQTE2MTgnLz48L3N2Zz4="
             />
 
             {/* Left atmospheric blend — warm dark into text column */}

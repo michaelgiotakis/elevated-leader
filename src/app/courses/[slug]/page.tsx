@@ -7,6 +7,10 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Section } from "@/components/ui/Section";
 
+function heroBlurDataURL(hex: string): string {
+  return `data:image/svg+xml;base64,${btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="${hex}"/></svg>`)}`;
+}
+
 interface ModuleEntry {
   id: string;
   codename: string;
@@ -262,6 +266,8 @@ export default async function ModulePage({
               sizes="(max-width: 1024px) 100vw, 60vw"
               className="object-cover object-[42%_12%] lg:object-top"
               priority
+              placeholder="blur"
+              blurDataURL={heroBlurDataURL(mod.heroBg)}
             />
 
             {/* Left atmospheric blend — hero bg dissolves into text column */}
