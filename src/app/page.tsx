@@ -614,7 +614,7 @@ export default function HomePage() {
         <Container>
 
           {/* Header */}
-          <div className="max-w-2xl mb-16 md:mb-20">
+          <div className="max-w-2xl mb-16 md:mb-24">
             <p className="font-sans text-[10px] font-semibold tracking-[0.45em] uppercase text-bronze mb-6">
               Founding Access
             </p>
@@ -636,46 +636,45 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Two columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-16 md:mb-20">
-            {/* Left */}
-            <div className="border-t border-warm-stone/30 pt-10 md:pr-16 lg:pr-20">
-              <h3 className="font-sans font-semibold text-lg md:text-xl text-ivory mb-6">
-                Why this exists
-              </h3>
+          {/* Editorial qualification — asymmetric flow, no grid */}
+          <div className="mb-16 md:mb-24">
+
+            {/* Precision context — narrow, left-anchored */}
+            <div className="border-t border-warm-stone/20 pt-10 md:pt-12 mb-12 md:mb-16 max-w-lg">
               <p className="font-sans text-base text-warm-stone leading-relaxed mb-5">
                 Most programs are built for reach.
                 This is built for precision.
               </p>
-              <p className="font-sans text-base text-warm-stone leading-relaxed mb-5">
+              <p className="font-sans text-base text-warm-stone leading-relaxed">
                 Rather than launching to thousands, this is being built with a
                 smaller group, so the system gets refined, pressure-tested, and
                 developed properly from the inside out.
               </p>
+            </div>
+
+            {/* Qualifier list — offset, restrained */}
+            <div className="mb-12 md:mb-16 md:pl-10 lg:pl-16 max-w-sm">
               <p className="font-sans text-[10px] font-semibold tracking-[0.3em] uppercase text-bronze mb-5">
                 That means:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-bronze shrink-0">—</span>
                   <span className="font-sans text-base text-warm-stone">no noise</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-bronze shrink-0">—</span>
                   <span className="font-sans text-base text-warm-stone">no generic advice</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-sans text-bronze shrink-0">-</span>
+                  <span className="font-sans text-bronze shrink-0">—</span>
                   <span className="font-sans text-base text-warm-stone">no watered-down frameworks</span>
                 </li>
               </ul>
             </div>
 
-            {/* Right */}
-            <div className="border-t border-warm-stone/30 md:border-l border-warm-stone/30 mt-12 md:mt-0 pt-12 md:pt-10 md:pl-16 lg:pl-20">
-              <h3 className="font-sans font-semibold text-lg md:text-xl text-ivory mb-6">
-                What that means for you
-              </h3>
+            {/* Access context — wider, soft top rule */}
+            <div className="border-t border-warm-stone/15 pt-10 md:pt-12 max-w-xl">
               <div className="space-y-5">
                 <p className="font-sans text-base text-warm-stone leading-relaxed">
                   You&apos;re accessing the full system before it&apos;s been
@@ -690,9 +689,10 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+
           </div>
 
-          {/* Statement */}
+          {/* Closing qualifier */}
           <div className="max-w-2xl mb-12 md:mb-14">
             <p className="font-sans text-base md:text-lg text-warm-stone leading-relaxed mb-1">
               This is not for beginners.
