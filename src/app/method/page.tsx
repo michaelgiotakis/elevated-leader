@@ -373,7 +373,6 @@ export default function MethodPage() {
                   width={900}
                   height={720}
                   className="relative w-full h-auto"
-                  priority
                 />
               </div>
             </div>
