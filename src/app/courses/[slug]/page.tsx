@@ -40,7 +40,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-muted-rose",
     metaText: "text-warm-stone",
     heroBg: "#232937",
-    heroImage: "/images/editorial/homepage-editorial-hero.png",
+    heroImage: "/images/editorial-webp/homepage-editorial-hero.webp",
   },
   presence: {
     id: "02",
@@ -54,7 +54,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-muted-rose",
     metaText: "text-warm-stone",
     heroBg: "#232937",
-    heroImage: "/images/editorial/homepage-editorial-hero.png",
+    heroImage: "/images/editorial-webp/homepage-editorial-hero.webp",
     description:
       "The Optimisation Cycle builds the internal regulation and personal bandwidth that allows you to lead consistently from your best state — rather than from depletion, reactivity, or accumulated noise.",
   },
@@ -70,7 +70,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-muted-rose",
     metaText: "text-warm-stone",
     heroBg: "#232937",
-    heroImage: "/images/editorial/homepage-editorial-hero.png",
+    heroImage: "/images/editorial-webp/homepage-editorial-hero.webp",
     description:
       "The Leadership Codes develop the decision intelligence and leadership clarity that turns reactive choices into deliberate, high-quality standards — made fast, and held consistently across the business.",
   },
@@ -86,7 +86,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-slate",
     metaText: "text-warm-stone",
     heroBg: "#1C1D21",
-    heroImage: "/images/editorial/streamline-hero-editorial.png",
+    heroImage: "/images/editorial-webp/streamline-hero-editorial.webp",
   },
   precision: {
     id: "05",
@@ -100,7 +100,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-slate",
     metaText: "text-warm-stone",
     heroBg: "#1C1D21",
-    heroImage: "/images/editorial/streamline-hero-editorial.png",
+    heroImage: "/images/editorial-webp/streamline-hero-editorial.webp",
   },
   awareness: {
     id: "06",
@@ -114,7 +114,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-slate",
     metaText: "text-warm-stone",
     heroBg: "#1C1D21",
-    heroImage: "/images/editorial/streamline-hero-editorial.png",
+    heroImage: "/images/editorial-webp/streamline-hero-editorial.webp",
   },
   flow: {
     id: "07",
@@ -128,7 +128,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-eucalyptus",
     metaText: "text-warm-stone",
     heroBg: "#111816",
-    heroImage: "/images/editorial/leverage-hero-editorial.png",
+    heroImage: "/images/editorial-webp/leverage-hero-editorial.webp",
   },
   empower: {
     id: "08",
@@ -142,7 +142,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-eucalyptus",
     metaText: "text-warm-stone",
     heroBg: "#111816",
-    heroImage: "/images/editorial/leverage-hero-editorial.png",
+    heroImage: "/images/editorial-webp/leverage-hero-editorial.webp",
   },
   harmonise: {
     id: "09",
@@ -156,7 +156,7 @@ const MODULE_REGISTRY: Record<string, ModuleEntry> = {
     accentText: "text-eucalyptus",
     metaText: "text-warm-stone",
     heroBg: "#111816",
-    heroImage: "/images/editorial/leverage-hero-editorial.png",
+    heroImage: "/images/editorial-webp/leverage-hero-editorial.webp",
   },
 };
 

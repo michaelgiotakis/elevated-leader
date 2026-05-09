@@ -176,7 +176,7 @@ export default function HomePage() {
             style={{ backgroundColor: "#1A1618" }}
           >
             <Image
-              src="/images/editorial/homepage-editorial-hero.png"
+              src="/images/editorial-webp/homepage-editorial-hero.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 62vw"
@@ -298,7 +298,7 @@ export default function HomePage() {
           style={{ animation: "clarityDrift 28s ease-in-out infinite alternate" }}
         >
           <Image
-            src="/images/editorial/editorial-interruption-clarity.png"
+            src="/images/editorial-webp/editorial-interruption-clarity.webp"
             alt=""
             fill
             sizes="100vw"
@@ -814,7 +814,7 @@ export default function HomePage() {
         {/* Full-bleed cinematic image — atmospheric stillness */}
         <div className="absolute inset-0">
           <Image
-            src="/images/editorial/editorial-relief-atmosphere.png"
+            src="/images/editorial-webp/editorial-relief-atmosphere.webp"
             alt=""
             fill
             sizes="100vw"

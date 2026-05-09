@@ -206,7 +206,7 @@ export default function DiagnosticPage() {
             style={{ backgroundColor: "#161D29" }}
           >
             <Image
-              src="/images/editorial/diagnostic-hero-editorial.png"
+              src="/images/editorial-webp/diagnostic-hero-editorial.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -367,7 +367,7 @@ export default function DiagnosticPage() {
           style={{ animation: "recognitionDrift 44s ease-in-out infinite alternate" }}
         >
           <Image
-            src="/images/editorial/diagnostic-recognition-editorial-wider.png"
+            src="/images/editorial-webp/diagnostic-recognition-editorial-wider.webp"
             alt=""
             fill
             sizes="100vw"

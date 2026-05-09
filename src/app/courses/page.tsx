@@ -55,7 +55,7 @@ export default function CoursesPage() {
             style={{ backgroundColor: "#1B1D22" }}
           >
             <Image
-              src="/images/editorial/courses-ecosystem-hero-editorial.png"
+              src="/images/editorial-webp/courses-ecosystem-hero-editorial.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -139,7 +139,7 @@ export default function CoursesPage() {
           style={{ animation: "clarityDrift 36s ease-in-out infinite alternate" }}
         >
           <Image
-            src="/images/editorial/courses-editorial-interruption.png"
+            src="/images/editorial-webp/courses-editorial-interruption.webp"
             alt=""
             fill
             sizes="100vw"

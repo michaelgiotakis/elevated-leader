@@ -132,7 +132,7 @@ export default function UnlockYourLeveragePage() {
             style={{ backgroundColor: "#111816" }}
           >
             <Image
-              src="/images/editorial/leverage-hero-editorial.png"
+              src="/images/editorial-webp/leverage-hero-editorial.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"

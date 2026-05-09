@@ -132,7 +132,7 @@ export default function StreamlineYourStructurePage() {
             style={{ backgroundColor: "#1E1C19" }}
           >
             <Image
-              src="/images/editorial/streamline-hero-editorial.png"
+              src="/images/editorial-webp/streamline-hero-editorial.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"

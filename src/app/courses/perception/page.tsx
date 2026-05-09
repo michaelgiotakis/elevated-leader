@@ -179,7 +179,7 @@ export default function PerceptionPage() {
           {/* Right — editorial atmosphere */}
           <div className="relative h-[64vw] md:h-[52vw] overflow-hidden lg:absolute lg:right-0 lg:inset-y-0 lg:h-auto lg:w-[60%]" style={{ backgroundColor: "#232937" }}>
             <Image
-              src="/images/editorial/homepage-editorial-hero.png"
+              src="/images/editorial-webp/homepage-editorial-hero.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"

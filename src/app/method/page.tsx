@@ -176,7 +176,7 @@ export default function MethodPage() {
             style={{ backgroundColor: "#1C2230" }}
           >
             <Image
-              src="/images/editorial/method-hero-editorial.png"
+              src="/images/editorial-webp/method-hero-editorial.webp"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
