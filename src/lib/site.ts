@@ -2,9 +2,15 @@ export const SITE_NAME = "The Elevated Leader";
 export const SITE_TAGLINE = "Lead a business that runs itself.";
 export const SITE_URL = "https://theelevatedleader.com";
 
+export interface NavDropdownModule {
+  label: string;
+  href: string;
+}
+
 export interface NavDropdownItem {
   label: string;
   href: string;
+  modules?: NavDropdownModule[];
 }
 
 export interface NavItem {
@@ -22,9 +28,33 @@ export const NAV_LINKS: NavItem[] = [
     href: "/courses",
     dropdown: [
       { label: "Overview", href: "/courses" },
-      { label: "Elevate Your Self", href: "/courses/elevate-your-self" },
-      { label: "Streamline Your Structure", href: "/courses/streamline-your-structure" },
-      { label: "Unlock Your Leverage", href: "/courses/unlock-your-leverage" },
+      {
+        label: "Elevate Your Self",
+        href: "/courses/elevate-your-self",
+        modules: [
+          { label: "Perception", href: "/courses/perception" },
+          { label: "Presence", href: "/courses/presence" },
+          { label: "Intelligence", href: "/courses/intelligence" },
+        ],
+      },
+      {
+        label: "Streamline Your Structure",
+        href: "/courses/streamline-your-structure",
+        modules: [
+          { label: "Alignment", href: "/courses/alignment" },
+          { label: "Precision", href: "/courses/precision" },
+          { label: "Awareness", href: "/courses/awareness" },
+        ],
+      },
+      {
+        label: "Unlock Your Leverage",
+        href: "/courses/unlock-your-leverage",
+        modules: [
+          { label: "Flow", href: "/courses/flow" },
+          { label: "Empower", href: "/courses/empower" },
+          { label: "Harmonise", href: "/courses/harmonise" },
+        ],
+      },
     ],
   },
 ];

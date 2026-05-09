@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { NAV_LINKS, CTA_LINKS } from "@/lib/site";
 
@@ -115,21 +115,32 @@ export function MobileNav() {
                   {/* Sub-items slide in when open */}
                   <div
                     className={`overflow-hidden transition-all duration-200 ${
-                      coursesOpen ? "max-h-64 pb-4" : "max-h-0"
+                      coursesOpen ? "max-h-[420px] pb-4" : "max-h-0"
                     }`}
                   >
                     {link.dropdown.map((item, i) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={closeAll}
-                        className={[
-                          "flex items-center font-sans font-medium text-obsidian/55 hover:text-obsidian py-2.5 pl-4 transition-colors duration-150",
-                          i === 0 ? "text-[16px]" : "text-[18px]",
-                        ].join(" ")}
-                      >
-                        {item.label}
-                      </Link>
+                      <React.Fragment key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={closeAll}
+                          className={[
+                            "flex items-center font-sans font-medium text-obsidian/55 hover:text-obsidian py-2.5 pl-4 transition-colors duration-150",
+                            i === 0 ? "text-[16px]" : "text-[18px]",
+                          ].join(" ")}
+                        >
+                          {item.label}
+                        </Link>
+                        {item.modules?.map((mod) => (
+                          <Link
+                            key={mod.href}
+                            href={mod.href}
+                            onClick={closeAll}
+                            className="block font-sans text-[13px] font-medium text-obsidian/40 hover:text-obsidian/70 py-1.5 pl-8 transition-colors duration-150"
+                          >
+                            {mod.label}
+                          </Link>
+                        ))}
+                      </React.Fragment>
                     ))}
                   </div>
                 </div>

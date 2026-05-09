@@ -60,17 +60,61 @@ export function Header() {
                           {i === 1 && (
                             <div className="h-px bg-warm-stone/40 my-1" />
                           )}
-                          <Link
-                            href={item.href}
-                            className={[
-                              "block font-sans text-sm px-4 py-2.5 transition-colors duration-150 hover:bg-warm-stone/10",
-                              i === 0
-                                ? "text-obsidian/60 hover:text-obsidian"
-                                : "text-obsidian/70 hover:text-obsidian",
-                            ].join(" ")}
-                          >
-                            {item.label}
-                          </Link>
+                          {item.modules ? (
+                            /* Lever item — side submenu on hover */
+                            <div className="relative group/lever">
+                              <Link
+                                href={item.href}
+                                className="flex items-center justify-between font-sans text-sm px-4 py-2.5 text-obsidian/70 hover:text-obsidian hover:bg-warm-stone/10 transition-colors duration-150"
+                              >
+                                {item.label}
+                                <svg
+                                  width="5"
+                                  height="8"
+                                  viewBox="0 0 5 8"
+                                  fill="none"
+                                  aria-hidden="true"
+                                  className="shrink-0 ml-2 opacity-35"
+                                >
+                                  <path
+                                    d="M1 1L4 4L1 7"
+                                    stroke="currentColor"
+                                    strokeWidth="1.2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </Link>
+                              {/* pl-1 creates a transparent bridge so the mouse
+                                  can travel from the lever row to the panel without
+                                  losing the group/lever hover state */}
+                              <div className="absolute left-full top-0 pl-1 invisible opacity-0 group-hover/lever:visible group-hover/lever:opacity-100 transition-opacity duration-150 z-50 w-44">
+                                <div className="bg-ivory border border-warm-stone/60 shadow-sm py-1.5">
+                                  {item.modules.map((mod) => (
+                                    <Link
+                                      key={mod.href}
+                                      href={mod.href}
+                                      className="block font-sans text-sm px-4 py-2 text-obsidian/55 hover:text-obsidian hover:bg-warm-stone/10 transition-colors duration-150"
+                                    >
+                                      {mod.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className={[
+                                "block font-sans text-sm px-4 py-2.5 transition-colors duration-150 hover:bg-warm-stone/10",
+                                i === 0
+                                  ? "text-obsidian/60 hover:text-obsidian"
+                                  : "text-obsidian/70 hover:text-obsidian",
+                              ].join(" ")}
+                            >
+                              {item.label}
+                            </Link>
+                          )}
                         </React.Fragment>
                       ))}
                     </div>
