@@ -266,6 +266,7 @@ export default async function ModulePage({
               sizes="(max-width: 1024px) 100vw, 60vw"
               className="object-cover object-[42%_12%] lg:object-top"
               priority
+              unoptimized
               placeholder="blur"
               blurDataURL={heroBlurDataURL(mod.heroBg)}
             />

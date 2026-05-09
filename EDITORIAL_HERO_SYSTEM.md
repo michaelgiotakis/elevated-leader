@@ -316,6 +316,79 @@ NOT:
 * artificially constrained
 * technically obvious
 
+# HERO IMAGE DELIVERY PRINCIPLES
+
+Hero imagery is not decorative content.
+
+Within The Elevated Leader ecosystem, hero imagery forms part of:
+- emotional entry pacing
+- atmospheric continuity
+- cinematic immersion
+- compositional identity
+- luxury perception
+
+Delayed hero-image rendering weakens:
+- emotional impact
+- cinematic continuity
+- perceived sophistication
+- nervous-system calmness
+- ecosystem cohesion
+
+Therefore:
+above-the-fold editorial hero imagery should appear as part of the immediate cinematic frame, not load noticeably after surrounding typography and layout.
+
+---
+
+## DELIVERY PHILOSOPHY
+
+The ecosystem prioritises:
+- immediate atmospheric rendering
+- compositional stability
+- emotional continuity
+- luxury smoothness
+- cinematic first-paint experience
+
+Performance perception directly affects:
+perceived luxury quality.
+
+---
+
+## HERO IMAGE OPTIMIZATION RULES
+
+Above-the-fold editorial hero imagery should:
+
+- use optimized local WebP assets
+- preserve cinematic tonal quality
+- preserve atmospheric gradients
+- preserve environmental storytelling detail
+- prioritize immediate rendering over unnecessary optimization pipelines
+
+Avoid:
+- oversized PNG hero imagery
+- unnecessary dynamic image processing
+- delayed hero-image pop-in
+- visible loading interruption
+- aggressive compression that damages atmospheric quality
+
+---
+
+## DELIVERY IMPLEMENTATION DIRECTION
+
+For already-optimized local editorial hero imagery:
+
+Preferred implementation:
+- WebP source assets
+- priority loading
+- direct static delivery where appropriate
+- preserve blur placeholders and atmospheric transitions
+
+Avoid routing already-optimized local cinematic hero assets through unnecessary dynamic optimization pipelines when this introduces perceptible loading delay.
+
+Hero imagery should feel:
+immediate,
+integrated,
+and compositionally present from the first emotional frame.
+
 ---
 
 # OVERLAY & ATMOSPHERIC COMPOSITING

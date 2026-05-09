@@ -182,6 +182,7 @@ export default function MethodPage() {
               sizes="(max-width: 1024px) 100vw, 60vw"
               className="object-cover object-center lg:object-top"
               priority
+              unoptimized
               placeholder="blur"
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPjxyZWN0IHdpZHRoPSc4JyBoZWlnaHQ9JzgnIGZpbGw9JyMxQzIyMzAnLz48L3N2Zz4="
             />
